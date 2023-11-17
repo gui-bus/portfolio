@@ -1,3 +1,4 @@
+import HeroSection from "@/sections/hero-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center w-full max-w-[90%] mx-auto">
-      <h1>Homepage</h1>
+    <main className="flex flex-col items-center justify-center text-center">
+      <HeroSection />
     </main>
   );
 }
