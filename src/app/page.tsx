@@ -1,8 +1,10 @@
 import AboutSection from "@/sections/about-section";
+import ContactSection from "@/sections/contact-section";
 import HeroSection from "@/sections/hero-section";
 import ProjectSection from "@/sections/project-section";
 import TechSection from "@/sections/tech-section";
 import { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "Portfólio | Guilherme Bustamante",
@@ -15,11 +17,15 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center overflow-hidden text-center">
-      <HeroSection />
-      <AboutSection />
-      <TechSection />
+      <HeroSection id="Hero"/>
 
-      <ProjectSection />
+      <AboutSection id="About"/>
+
+      <TechSection id="Tech"/>
+
+      <ProjectSection id="Projects"/>
+
+      <ContactSection id="Contact"/>
     </main>
   );
 }
