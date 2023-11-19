@@ -82,7 +82,8 @@ export default function Header() {
   return (
     <Navbar
       className="z-50 bg-transparent drop-shadow-md md:z-[999]"
-      isBlurred={false}
+      isBlurred={true}
+
     >
       <NavbarContent>
         <NavbarBrand>
