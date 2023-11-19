@@ -51,7 +51,7 @@ const icons: { title: string; href: string; icon: ReactNode }[] = [
 
 const ContactSection = ({ id }: { id: string }) => {
   return (
-    <section className="relative mx-auto flex h-screen max-h-[36rem] w-full md:max-w-6xl select-none  flex-col items-center justify-center rounded-t-[3rem] bg-stone-100 md:max-h-[32rem]" id={id}>
+    <section className="relative mx-auto flex h-screen max-h-[42rem] w-full md:max-w-6xl select-none  flex-col items-center justify-center rounded-t-[3rem] bg-stone-100 md:max-h-[32rem]" id={id}>
       <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-black md:absolute">
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-8">
           <p className="flex select-none items-center justify-center gap-2 text-3xl font-black uppercase text-black">
