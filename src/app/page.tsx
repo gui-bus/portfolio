@@ -1,5 +1,6 @@
 import AboutSection from "@/sections/about-section";
 import HeroSection from "@/sections/hero-section";
+import ProjectSection from "@/sections/project-section";
 import TechSection from "@/sections/tech-section";
 import { Metadata } from "next";
 
@@ -13,10 +14,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center text-center overflow-hidden">
+    <main className="flex flex-col items-center justify-center overflow-hidden text-center">
       <HeroSection />
       <AboutSection />
       <TechSection />
+
+      <ProjectSection />
     </main>
   );
 }
