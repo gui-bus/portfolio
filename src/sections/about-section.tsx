@@ -22,10 +22,10 @@ const quality: { title: string; text: string }[] = [
   },
 ];
 
-const AboutSection = () => {
+const AboutSection = ({ id }: { id: string }) => {
   return (
-    <section className="w-full max-w-[90%] select-none py-10">
-      <p className="select-none mb-8 text-3xl font-black text-white">
+    <section className="mx-auto w-full max-w-[90%] select-none py-10" id={id}>
+      <p className="mb-8 select-none text-3xl font-black text-white">
         <span className="text-xl text-lime-500">{`. `}</span>Sobre Mim
       </p>
 
@@ -34,7 +34,7 @@ const AboutSection = () => {
           Olá, eu sou o Guilherme Bustamante!
         </h2>
         <div className="flex flex-col rounded-b-3xl border  border-white pb-5 md:rounded-b-[3rem] md:rounded-t-[3rem] md:py-5">
-          <div className="flex flex-col items-center justify-center gap-8 px-4 md:flex-row md:px-8">
+          <div className="flex flex-col items-center justify-center gap-8 px-4 lg:flex-row md:px-8">
             <Image
               src={Profile}
               alt="Profile"
