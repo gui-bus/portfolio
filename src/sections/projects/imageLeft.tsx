@@ -1,8 +1,9 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
+import { Button, Tooltip } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
-import { LuClipboardList } from "react-icons/lu";
+import { LuGithub } from "react-icons/lu";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 interface ImageLeftProps {
   imageUrl: string;
@@ -10,6 +11,8 @@ interface ImageLeftProps {
   subtitle: string;
   description: string;
   link: string;
+  linkRepo: string;
+  id: string;
 }
 
 const ImageLeft = ({
@@ -18,9 +21,11 @@ const ImageLeft = ({
   subtitle,
   description,
   link,
+  linkRepo,
+  id
 }: ImageLeftProps) => {
   return (
-    <section className="mx-auto mt-10 w-full overflow-hidden text-center dark:text-gray-200">
+    <section className="mx-auto mt-10 w-full overflow-hidden text-center dark:text-gray-200" id={id}>
       <div className="flex flex-col justify-center xl:flex-row">
         <Image
           src={imageUrl}
@@ -29,6 +34,7 @@ const ImageLeft = ({
           height={0}
           sizes="100vw"
           className="aspect-video h-full w-full object-contain object-center px-8 xl:w-2/4"
+          draggable={false}
         />
 
         <div className="flex w-full flex-col items-center justify-center p-5 text-center md:items-start md:text-start xl:w-2/4">
@@ -44,15 +50,34 @@ const ImageLeft = ({
             </p>
           </div>
 
-          <Link href={link} className="mt-4 w-full">
-            <Button
-              className=" w-full p-8 font-bold text-white transition-all duration-300 ease-in-out hover:border-lime-400 hover:text-lime-400"
-              endContent={<LuClipboardList size={24} />}
-              variant="bordered"
+          <div className="flex w-full items-center justify-between gap-2">
+            <Link href={link} className="mt-4 w-full" target="_blank">
+              <Button
+                className="w-full p-8 font-bold text-white transition-all duration-300 ease-in-out hover:border-lime-400 hover:text-lime-400"
+                endContent={<HiOutlineExternalLink size={24} />}
+                variant="bordered"
+              >
+                Ver projeto
+              </Button>
+            </Link>
+
+            <Tooltip
+              content={<p className="text-tiny">Repositório</p>}
+              delay={0}
+              closeDelay={0}
+              placement="bottom"
+              color="foreground"
             >
-              Ver projeto
-            </Button>
-          </Link>
+              <Link href={linkRepo} className="mt-4" target="_blank">
+                <Button
+                  className="w-fit p-8 font-bold text-white transition-all duration-300 ease-in-out hover:border-lime-400 hover:text-lime-400"
+                  endContent={<LuGithub size={24} />}
+                  variant="bordered"
+                  isIconOnly
+                />
+              </Link>
+            </Tooltip>
+          </div>
         </div>
       </div>
     </section>
