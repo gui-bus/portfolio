@@ -20,28 +20,28 @@ import Code from "../../../public/code.webp";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Gamtech",
-    href: "/project/gamtech",
+    href: "/#Gamtech",
     description: "A Gamtech é um e-commerce de hardware para computadores.",
   },
   {
     title: "Hotefy",
-    href: "/project/hotefy",
+    href: "/#Hotefy",
     description: "A Hotefy é uma plataforma de reserva de viagens incríveis.",
   },
   {
     title: "DriveX",
-    href: "/project/drivex",
+    href: "/#DriveX",
     description: "A DriveX é um sistema web de compra e venda de veículos.",
   },
   {
     title: "Cinedex",
-    href: "/project/cinedex",
+    href: "/#Cinedex",
     description:
       "A Cinedex é um catálogo de informaçoes sobre filmes e séries.",
   },
   {
     title: "O Pedal Café",
-    href: "/project/o-pedal-cafe",
+    href: "/#oPedalCafe",
     description: "O Pedal Café é um sistema de administração de pedidos.",
   },
 ];
@@ -49,12 +49,12 @@ const components: { title: string; href: string; description: string }[] = [
 const landings: { title: string; href: string; description: string }[] = [
   // {
   //   title: "Thiago Mecânico",
-  //   href: "/project/thiago-mecanico",
+  //   href: "/#Thiago-mecanico",
   //   description: "Landing Page para um instrutor e mecânico de bicicletas.",
   // },
   {
     title: "Geoway",
-    href: "/project/geoway",
+    href: "/#Geoway",
     description:
       "Landing Page para um app fictício de rotas para trilhas e viagens.",
   },
@@ -79,21 +79,21 @@ export function Navmenu() {
               </div>
               <div className="flex w-2/3 flex-col text-center">
                 <ListItem
-                  href="/docs"
+                  href="/#About"
                   title="Sobre Mim"
                   className="whitespace-pre-wrap"
                 >
                   Descubra mais sobre a pessoa que está por trás dos códigos.
                 </ListItem>
                 <ListItem
-                  href="/docs/installation"
+                  href="/#Tech"
                   title="Tecnologias"
                   className="whitespace-pre-wrap"
                 >
                   Navegue pelas tecnologias que permeiam meu dia a dia.
                 </ListItem>
                 <ListItem
-                  href="/docs/primitives/typography"
+                  href="/#Projects"
                   title="Projetos"
                   className="whitespace-pre-wrap"
                 >
@@ -146,7 +146,7 @@ export function Navmenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/#Contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contato
             </NavigationMenuLink>
