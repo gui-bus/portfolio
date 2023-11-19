@@ -42,7 +42,7 @@ const icons: { title: string; href: string; icon: ReactNode }[] = [
 
 const HeroSection = () => {
   return (
-    <section className="w-full max-w-[90%] h-screen max-h-[43rem] mb-16 select-none">
+    <section className="w-full max-w-[90%] h-screen max-h-[43rem] select-none">
       <video autoPlay muted loop className="pt-10 sm:pt-0">
         <source src="/videos/hero.mp4" type="video/mp4"></source>
       </video>

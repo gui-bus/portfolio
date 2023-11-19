@@ -24,8 +24,8 @@ const quality: { title: string; text: string }[] = [
 
 const AboutSection = () => {
   return (
-    <section className="w-full max-w-[90%] select-none bg-black">
-      <p className="select-none text-3xl font-black text-white md:my-10">
+    <section className="w-full max-w-[90%] select-none py-10">
+      <p className="select-none mb-8 text-3xl font-black text-white">
         <span className="text-xl text-lime-500">{`. `}</span>Sobre Mim
       </p>
 

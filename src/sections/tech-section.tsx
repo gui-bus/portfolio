@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import { Tooltip } from "@nextui-org/react";
+import { Separator } from "@/components/ui/separator";
 
 const icons: { name: string; src: string }[] = [
   {
@@ -120,20 +121,17 @@ const icons: { name: string; src: string }[] = [
 
 const TechSection = () => {
   return (
-    <section className="relative mt-36 flex h-screen max-h-[43rem]  w-full select-none flex-col items-center justify-center">
-      <video autoPlay muted loop className="w-full md:opacity-40">
-        <source src="/videos/tech.mp4" type="video/mp4"></source>
-      </video>
-
-      <div className="z-50 mt-10 flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-white md:absolute md:mt-0">
+    <section className="relative flex h-screen max-h-[43rem] w-full max-w-7xl mx-auto  select-none flex-col items-center justify-center bg-stone-100 rounded-[3rem]">
+      <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-black md:absolute">
         <div className="mx-auto w-full">
-          <p className="mb-8 select-none text-3xl font-black text-white">
+          <p className="mb-8 select-none text-3xl font-black text-black">
             <span className="text-xl text-lime-500">{`. `}</span>Tecnologias
           </p>
           <h2 className="text-light px-5 text-sm">
             Abaixo está uma lista das tecnologias com as quais ja tive contato e
             constantemente utilizo em meus projetos pessoais.
           </h2>
+          <Separator className="mt-4 opacity-30" />
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2">
@@ -152,7 +150,7 @@ const TechSection = () => {
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="h-16 w-16 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 md:h-20 md:w-20"
+                className="h-16 w-16 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 xl:h-20 xl:w-20"
               />
             </Tooltip>
           ))}
