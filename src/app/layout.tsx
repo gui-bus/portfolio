@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "../providers/theme-providers";
 import Header from "@/components/common/navbar";
 import UIProvider from "@/providers/ui-provider";
+import Footer from "@/components/common/footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
           <UIProvider>
             <Header />
             <main> {children}</main>
+            <Footer />
           </UIProvider>
         </ThemeProvider>
       </body>
