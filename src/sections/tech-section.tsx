@@ -119,9 +119,9 @@ const icons: { name: string; src: string }[] = [
   },
 ];
 
-const TechSection = () => {
+const TechSection = ({ id }: { id: string }) => {
   return (
-    <section className="relative flex h-screen max-h-[43rem] w-full max-w-7xl mx-auto  select-none flex-col items-center justify-center bg-stone-100 rounded-[3rem]">
+    <section className="relative mx-auto flex h-screen max-h-[43rem] w-full max-w-6xl select-none  flex-col items-center justify-center rounded-[3rem] bg-stone-100 md:max-h-[33rem]" id={id}>
       <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-black md:absolute">
         <div className="mx-auto w-full">
           <p className="mb-8 select-none text-3xl font-black text-black">
