@@ -44,20 +44,14 @@ const components: { title: string; href: string; description: string }[] = [
     href: "/project/o-pedal-cafe",
     description: "O Pedal Café é um sistema de administração de pedidos.",
   },
-  {
-    title: "Taskify",
-    href: "/project/taskify",
-    description:
-      "O Taskify é uma plataforma para gerenciar suas tarefas a fazer.",
-  },
 ];
 
 const landings: { title: string; href: string; description: string }[] = [
-  {
-    title: "Thiago Mecânico",
-    href: "/project/thiago-mecanico",
-    description: "Landing Page para um instrutor e mecânico de bicicletas.",
-  },
+  // {
+  //   title: "Thiago Mecânico",
+  //   href: "/project/thiago-mecanico",
+  //   description: "Landing Page para um instrutor e mecânico de bicicletas.",
+  // },
   {
     title: "Geoway",
     href: "/project/geoway",

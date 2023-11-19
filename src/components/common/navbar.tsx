@@ -61,17 +61,13 @@ const system: { title: string; href: string }[] = [
     title: "O Pedal Café",
     href: "/project/o-pedal-cafe",
   },
-  {
-    title: "Taskify",
-    href: "/project/taskify",
-  },
 ];
 
 const landings: { title: string; href: string }[] = [
-  {
-    title: "Thiago Mecânico",
-    href: "/project/thiago-mecanico",
-  },
+  // {
+  //   title: "Thiago Mecânico",
+  //   href: "/project/thiago-mecanico",
+  // },
   {
     title: "Geoway",
     href: "/project/geoway",
