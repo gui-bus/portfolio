@@ -1,4 +1,6 @@
+import AboutSection from "@/sections/about-section";
 import HeroSection from "@/sections/hero-section";
+import TechSection from "@/sections/tech-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center text-center">
+    <main className="flex flex-col items-center justify-center text-center overflow-hidden">
       <HeroSection />
+      <AboutSection />
+      <TechSection />
     </main>
   );
 }
