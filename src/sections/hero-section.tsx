@@ -3,7 +3,7 @@ import { Button } from "@nextui-org/react";
 import React, { ReactNode } from "react";
 import Link from "next/link";
 
-import { FaBehance, FaLinkedinIn, FaGithub, FaWhatsapp } from "react-icons/fa6";
+import { FaBehance, FaLinkedinIn, FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa6";
 import { FaMailBulk } from "react-icons/fa";
 
 import { Tooltip } from "@nextui-org/react";
@@ -38,21 +38,26 @@ const icons: { title: string; href: string; icon: ReactNode }[] = [
     )}`,
     icon: <FaWhatsapp size={20} />,
   },
+  {
+    title: "Instagram",
+    href: "https://www.instagram.com/guibus_dev/",
+    icon: <FaInstagram size={20} />,
+  },
 ];
 
-const HeroSection = () => {
+const HeroSection = ({ id }: { id: string }) => {
   return (
-    <section className="w-full max-w-[90%] h-screen max-h-[43rem] select-none">
+    <section className="w-full max-w-[90%] h-screen max-h-[43rem] select-none" id={id}>
       <video autoPlay muted loop className="pt-10 sm:pt-0">
         <source src="/videos/hero.mp4" type="video/mp4"></source>
       </video>
 
       <div className="mt-10 flex items-center justify-center sm:inset-0 sm:mt-0 md:absolute">
-        <div className="z-50 flex h-full w-full flex-col items-center justify-center">
-          <h2 className="px-5 text-center text-3xl md:text-4xl font-extralight text-white">
+        <div className="flex h-full w-full flex-col items-center justify-center">
+          <h2 className="px-5 text-center text-3xl md:text-4xl font-black text-white">
             Desenvolvedor Frontend & UI/UX Designer
           </h2>
-          <h3 className="mx-auto mt-5 flex w-full max-w-[90%] md:max-w-2xl text-center">
+          <h3 className="mx-auto mt-5 flex w-full max-w-[90%] md:max-w-2xl text-center font-light">
             Explore meu portfólio e descubra como posso transformar sua visão
             digital em realidade, trazendo vida às suas ideias com design
             responsivo, UI/UX excepcional e desenvolvimento de
