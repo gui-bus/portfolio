@@ -42,23 +42,20 @@ const icons: { title: string; href: string; icon: ReactNode }[] = [
 
 const HeroSection = () => {
   return (
-    <section className="h-full w-full max-w-[90%] bg-black select-none">
+    <section className="w-full max-w-[90%] h-screen max-h-[43rem] mb-16 select-none">
       <video autoPlay muted loop className="pt-10 sm:pt-0">
         <source src="/videos/hero.mp4" type="video/mp4"></source>
       </video>
 
       <div className="mt-10 flex items-center justify-center sm:inset-0 sm:mt-0 md:absolute">
         <div className="z-50 flex h-full w-full flex-col items-center justify-center">
-          <h1 className="mt-3 mb-5 px-8 py-3 text-center text-2xl font-semibold text-black lg:text-white bg-lime-400 lg:bg-transparent rounded-tr-[2rem]  rounded-bl-[2rem] md:mt-0 md:mb-2 md:text-3xl lg:text-5xl">
-            Guilherme Bustamante
-          </h1>
-          <h2 className="px-5 text-center text-2xl  font-extralight text-white">
+          <h2 className="px-5 text-center text-3xl md:text-4xl font-extralight text-white">
             Desenvolvedor Frontend & UI/UX Designer
           </h2>
-          <h3 className="mx-auto mt-5 flex w-full max-w-2xl text-center">
+          <h3 className="mx-auto mt-5 flex w-full max-w-[90%] md:max-w-2xl text-center">
             Explore meu portfólio e descubra como posso transformar sua visão
             digital em realidade, trazendo vida às suas ideias com design
-            responsivo, experiência do usuário excepcional e desenvolvimento de
+            responsivo, UI/UX excepcional e desenvolvimento de
             última geração.
           </h3>
 
