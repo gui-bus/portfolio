@@ -34,6 +34,11 @@ const components: { title: string; href: string; description: string }[] = [
     description: "A DriveX é um sistema web de compra e venda de veículos.",
   },
   {
+    title: "ONDesk",
+    href: "/#ONDesk",
+    description: "A ONDesk facilita o gerenciamento empresárial.",
+  },
+  {
     title: "Cinedex",
     href: "/#Cinedex",
     description:
@@ -47,11 +52,11 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 const landings: { title: string; href: string; description: string }[] = [
-  // {
-  //   title: "Thiago Mecânico",
-  //   href: "/#Thiago-mecanico",
-  //   description: "Landing Page para um instrutor e mecânico de bicicletas.",
-  // },
+  {
+    title: "POWERVET",
+    href: "/#POWERVET",
+    description: "Landing Page para uma clínica veterinária fictícia.",
+  },
   {
     title: "Geoway",
     href: "/#Geoway",

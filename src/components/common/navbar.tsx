@@ -54,6 +54,10 @@ const system: { title: string; href: string }[] = [
     href: "/#DriveX",
   },
   {
+    title: "ONDesk",
+    href: "/#ONDesk",
+  },
+  {
     title: "Cinedex",
     href: "/#Cinedex",
   },
@@ -64,10 +68,10 @@ const system: { title: string; href: string }[] = [
 ];
 
 const landings: { title: string; href: string }[] = [
-  // {
-  //   title: "Thiago Mecânico",
-  //   href: "/#Thiago-mecanico",
-  // },
+  {
+    title: "POWERVET",
+    href: "/#POWERVET",
+  },
   {
     title: "Geoway",
     href: "/#Geoway",

@@ -45,13 +45,13 @@ const ProjectSection = ({ id }: { id: string }) => {
       />
       <Separator className="my-5" />
       <ImageRight
-        imageUrl="https://github.com/gui-bus/Cinedex/blob/main/github/desktop_home_light.png?raw=true"
-        title="Cinedex"
-        subtitle="Seu catálogo definitivo de filmes e series!"
-        description="A Cinedex é uma plataforma online de catálogo de filmes, desenvolvido com React, Typescript, Next.js, NextUI, Tailwind CSS e Vercel. O projeto conta com uma ampla gama de opções de filmes separados por categorias e gêneros para explorar!"
-        link="https://cinedex.vercel.app/discover/now_playing"
-        linkRepo="https://github.com/gui-bus/Cinedex"
-        id="Cinedex"
+        imageUrl="https://github.com/gui-bus/ONDesk/blob/main/github/desktop_01.png?raw=true"
+        title="ONDesk"
+        subtitle="Simplificando sua gestão empresarial!"
+        description="A ONDesk é um sistema de gestão de clientes e chamados desenvolvido com React, Typescript, Next.js, NextUI, Tailwind CSS, Prisma, MongoDB e Vercel. Este projeto oferece uma solução abrangente para simplificar a gestão empresarial, permitindo que você organize, monitore e aprimore o relacionamento com seus clientes."
+        link="https://ondesk.vercel.app/"
+        linkRepo="https://github.com/gui-bus/ONDesk"
+        id="ONDesk"
       />
       <Separator className="my-5" />
       <ImageLeft
@@ -63,7 +63,27 @@ const ProjectSection = ({ id }: { id: string }) => {
         linkRepo="https://github.com/gui-bus/oPedalCafe"
         id="oPedalCafe"
       />
-       <Separator className="my-5" />
+      <Separator className="my-5" />
+      <ImageRight
+        imageUrl="https://github.com/gui-bus/Cinedex/blob/main/github/desktop_home_light.png?raw=true"
+        title="Cinedex"
+        subtitle="Seu catálogo definitivo de filmes e series!"
+        description="A Cinedex é uma plataforma online de catálogo de filmes, desenvolvido com React, Typescript, Next.js, NextUI, Tailwind CSS e Vercel. O projeto conta com uma ampla gama de opções de filmes separados por categorias e gêneros para explorar!"
+        link="https://cinedex.vercel.app/discover/now_playing"
+        linkRepo="https://github.com/gui-bus/Cinedex"
+        id="Cinedex"
+      />
+      <Separator className="my-5" />
+      <ImageLeft
+        imageUrl="https://github.com/gui-bus/powervet/blob/main/github/desktop_01.png?raw=true"
+        title="POWERVET"
+        subtitle="Sua clínica veterinária de confiança!"
+        description="A POWERVET é uma Landing Page para uma clínica veterinária fictícia desenvolvido com React, Typescript, Next.js, Tailwind CSS, NextUI e Vercel. O projeto conta com diversas informações sobre a clínica como serviços oferecidos, planos de saúde e mais..."
+        link="https://powervet.vercel.app/"
+        linkRepo="https://github.com/gui-bus/powervet"
+        id="POWERVET"
+      />
+      <Separator className="my-5" />
       <ImageRight
         imageUrl="https://github.com/gui-bus/Geoway/blob/main/Github/desktop_7.png?raw=true"
         title="Geoway"
