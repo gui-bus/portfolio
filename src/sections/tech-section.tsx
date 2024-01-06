@@ -38,6 +38,10 @@ const icons: { name: string; src: string }[] = [
     src: "https://raw.githubusercontent.com/gui-bus/TechIcons/24f9a20420b3a7c5ba7bd7b629a2f9e1912db0e2/Light/PostgreSQL.svg",
   },
   {
+    name: "MongoDB",
+    src: "https://raw.githubusercontent.com/gui-bus/TechIcons/4abfec039d303a5889b5731d0a46075fb1029eb4/Light/MongoDB.svg",
+  },
+  {
     name: "Supabase",
     src: "https://raw.githubusercontent.com/gui-bus/TechIcons/0e844255c1b6c18ce6558324e2b0acabeca7725d/Light/Supabase.svg",
   },
@@ -52,6 +56,18 @@ const icons: { name: string; src: string }[] = [
   {
     name: "Express.js",
     src: "https://raw.githubusercontent.com/gui-bus/TechIcons/24f9a20420b3a7c5ba7bd7b629a2f9e1912db0e2/Light/ExpressJS.svg",
+  },
+  {
+    name: "Jest",
+    src: "https://raw.githubusercontent.com/gui-bus/TechIcons/4abfec039d303a5889b5731d0a46075fb1029eb4/Light/Jest.svg",
+  },
+  {
+    name: "Docker",
+    src: "https://raw.githubusercontent.com/gui-bus/TechIcons/4abfec039d303a5889b5731d0a46075fb1029eb4/Light/Docker.svg",
+  },
+  {
+    name: "Kubernetes",
+    src: "https://raw.githubusercontent.com/gui-bus/TechIcons/4abfec039d303a5889b5731d0a46075fb1029eb4/Light/Kubernetes.svg",
   },
   {
     name: "NextUI",
@@ -121,7 +137,10 @@ const icons: { name: string; src: string }[] = [
 
 const TechSection = ({ id }: { id: string }) => {
   return (
-    <section className="relative mx-auto flex h-screen max-h-[43rem] w-full max-w-6xl select-none  flex-col items-center justify-center rounded-[3rem] bg-stone-100 md:max-h-[33rem]" id={id}>
+    <section
+      className="relative mx-auto flex h-screen max-h-[43rem] w-full max-w-6xl select-none  flex-col items-center justify-center rounded-[3rem] bg-stone-100 md:max-h-[33rem]"
+      id={id}
+    >
       <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-black md:absolute">
         <div className="mx-auto w-full">
           <p className="mb-8 select-none text-3xl font-black text-black">
