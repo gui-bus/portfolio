@@ -138,7 +138,7 @@ const icons: { name: string; src: string }[] = [
 const TechSection = ({ id }: { id: string }) => {
   return (
     <section
-      className="relative mx-auto flex h-screen max-h-[43rem] w-full max-w-6xl select-none  flex-col items-center justify-center rounded-[3rem] bg-stone-100 md:max-h-[33rem]"
+      className="relative mx-auto flex h-screen max-h-[53rem] w-full max-w-6xl select-none  flex-col items-center justify-center rounded-[3rem] bg-stone-100 md:max-h-[33rem]"
       id={id}
     >
       <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-4 px-5 text-black md:absolute">
