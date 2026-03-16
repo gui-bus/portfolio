@@ -13,7 +13,7 @@ export default async function Home() {
   const t = await getTranslations("Index");
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-background text-foreground selection:bg-primary/20 transition-colors duration-500">
+    <div className="relative min-h-screen w-full overflow-hidden bg-background text-foreground selection:bg-primary/20 transition-colors duration-500 max-w-640 mx-auto">
       {/* Background Decor */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-[0.15] dark:opacity-[0.08]">
         <div className="absolute top-[-10%] left-[-10%] h-[40%] w-[40%] rounded-full bg-primary blur-[120px] animate-pulse" />
