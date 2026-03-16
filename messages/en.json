@@ -1,0 +1,21 @@
+{
+  "Index": {
+    "title": "Coming Soon",
+    "subtitle": "Portfolio & Creative Space",
+    "description": "I'm crafting a new digital experience to showcase my work and thoughts. A fusion of design, code, and minimal aesthetics.",
+    "backSoon": "Under Construction",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "Locale": {
+    "en": "English",
+    "pt": "Portuguese"
+  },
+  "Metadata": {
+    "title": "Guibus | Portfolio & Creative Space",
+    "description": "Minimalist portfolio showcasing design and code experiments."
+  }
+}

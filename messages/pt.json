@@ -1,0 +1,21 @@
+{
+  "Index": {
+    "title": "Em Breve",
+    "subtitle": "Portfólio & Espaço Criativo",
+    "description": "Estou criando uma nova experiência digital para apresentar meus trabalhos e ideias. Uma fusão de design, código e estética minimalista.",
+    "backSoon": "Em Construção",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "Locale": {
+    "en": "Inglês",
+    "pt": "Português"
+  },
+  "Metadata": {
+    "title": "Guibus | Portfólio & Espaço Criativo",
+    "description": "Portfólio minimalista apresentando experimentos de design e código."
+  }
+}
