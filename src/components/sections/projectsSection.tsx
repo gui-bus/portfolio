@@ -4,7 +4,7 @@ import React, { useRef, useCallback, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRightIcon, CaretLeftIcon, CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
 import Link from "next/link";
-import { PROJECTS_DATA, Project } from "@/lib/projects-data";
+import { projectsData, Project } from "@/lib/projectsData";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { useTranslations } from "next-intl";
 import useEmblaCarousel from "embla-carousel-react";
@@ -177,7 +177,7 @@ export function ProjectsSection() {
 
         <div className="embla overflow-hidden" ref={emblaRef}>
           <div className="embla__container flex">
-            {PROJECTS_DATA.map((project, index) => (
+            {projectsData.map((project, index) => (
               <ProjectCard
                 key={project.id}
                 project={project}

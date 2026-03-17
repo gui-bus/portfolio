@@ -20,16 +20,16 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="w-[70px] h-10 bg-muted/30 dark:bg-white/[0.03] border border-border dark:border-white/5 animate-pulse" />;
+    return <div className="w-17.5 h-10 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 animate-pulse" />;
   }
 
   const isLight = resolvedTheme === "light";
 
   return (
-    <div className="flex bg-muted/30 dark:bg-white/[0.03] border border-border dark:border-white/5 p-1 relative overflow-hidden group h-10 backdrop-blur-md">
+    <div className="flex bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 p-1 relative overflow-hidden group h-10 backdrop-blur-md">
       <motion.div
         className={cn(
-          "absolute h-8 w-[32px] z-0",
+          "absolute h-8 w-8 z-0",
           isLight 
             ? "bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]" 
             : "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
@@ -48,7 +48,7 @@ export function ThemeToggle() {
       <button
         onClick={() => (isLight ? null : toggleTheme())}
         className={cn(
-          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-[32px] group/sun",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/sun cursor-pointer",
           isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
         )}
         title={t("light")}
@@ -58,7 +58,6 @@ export function ThemeToggle() {
           size={16} 
           className={cn(
             "transition-transform duration-500",
-            isLight ? "rotate-0" : "rotate-45 group-hover/sun:rotate-12"
           )}
         />
       </button>
@@ -66,7 +65,7 @@ export function ThemeToggle() {
       <button
         onClick={() => (!isLight ? null : toggleTheme())}
         className={cn(
-          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-[32px] group/moon",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/moon cursor-pointer",
           !isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
         )}
         title={t("dark")}
@@ -76,7 +75,6 @@ export function ThemeToggle() {
           size={16} 
           className={cn(
             "transition-transform duration-500",
-            !isLight ? "rotate-0" : "-rotate-45 group-hover/moon:rotate-0"
           )}
         />
       </button>

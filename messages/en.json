@@ -151,64 +151,64 @@
     "cta_case_study": "Initialize Case Study"
   },
   "Projects": {
-    "nexus-ai": {
-      "category": "Web Platform",
-      "description": "An enterprise-grade IA orchestration platform that revolutionizes how companies deploy and manage machine learning models at scale.",
-      "challenge": "Enterprise clients struggled with fragmented ML workflows, spending 70% of their time on infrastructure instead of innovation. Model deployment took weeks, and monitoring was scattered across multiple tools.",
-      "solution": "We architected a unified command center that abstracts away infrastructure complexity. A visual pipeline builder lets teams drag-and-drop models into production, while real-time observability surfaces performance insights instantly.",
+    "power-fit": {
+      "category": "Full-stack Platform",
+      "description": "The next generation of fitness management: Generative AI, gamification and high-performance architecture.",
+      "challenge": "POWER.FIT was developed to solve the fragmentation between workout logging, nutritional tracking and social motivation, using the state of the art of the TypeScript ecosystem.",
+      "solution": "We architected an SPA with SSR performance, integrated native AI via Vercel AI SDK for workout generation and a contract-driven architecture for zero integration errors.",
       "results": [
-        "Reduced deployment time from 3 weeks to 2 hours",
-        "40% decrease in infrastructure costs",
-        "99.9% uptime achieved across all client deployments",
-        "Featured in TechCrunch as 'Platform of the Year'"
+        "Automatic workout generation via natural language",
+        "100% Type-Safe architecture with Swagger/Orval sync",
+        "Consistency visualization inspired by GitHub's grid",
+        "Asynchronous achievement and XP pipeline for retention"
       ]
     },
-    "pulse": {
-      "category": "Mobile App",
-      "description": "A biometric-driven health companion that transforms raw sensor data into actionable wellness insights.",
-      "challenge": "Health apps overwhelm users with raw data without context. Users see heart rates and step counts but don't understand what it means for their personal wellness journey.",
-      "solution": "We built an AI layer that contextualizes every metric. The app learns your baseline, detects anomalies, and delivers personalized nudges. A 'Wellness Score' gamifies progress without creating anxiety.",
+    "powervet": {
+      "category": "Veterinary Medicine",
+      "description": "Expert veterinary care for cats, combining advanced medical treatment with personalized attention for feline wellbeing.",
+      "challenge": "Creating a digital presence that reflects technical specialization and trust in the feline health niche, focusing on long-term wellness.",
+      "solution": "A high-conversion landing page focused on accessibility and modern React patterns for a seamless user experience.",
       "results": [
-        "4.9 star rating across 50K+ reviews",
-        "78% of users report improved sleep within 30 days",
-        "Acquired by major health tech company",
-        "Featured in Apple's 'Apps We Love'"
+        "Premium brand positioning in the veterinary sector",
+        "Responsive interface optimized for quick bookings",
+        "Integrated educational modules on preventive care",
+        "Exceptional technical performance for organic SEO"
       ]
     },
-    "vertex": {
-      "category": "E-commerce",
-      "description": "A luxury fashion marketplace that blends editorial content with seamless commerce, redefining digital retail.",
-      "challenge": "High-end fashion brands struggled to translate their in-store luxury experience to digital. Generic e-commerce templates felt cheap and eroded brand equity.",
-      "solution": "We created an immersive shopping experience with editorial storytelling. 3D product visualization lets customers examine items from every angle. AI styling recommendations feel like a personal shopper.",
+    "horizon-travels": {
+      "category": "Travel Agency",
+      "description": "Immersive journeys connecting travelers with authentic experiences and seamless global planning.",
+      "challenge": "The travel industry requires high-impact visual storytelling to convert interest into bookings in a highly competitive environment.",
+      "solution": "A media-rich platform with immersive scroll animations and a curated UX that guides the user through global destinations.",
       "results": [
-        "180% increase in average session duration",
-        "45% higher conversion rate vs industry average",
-        "Reduced returns by 32% through better visualization",
-        "Won FWA Site of the Day"
+        "120% increase in engagement through immersive storytelling",
+        "Simplified planning flow with interactive cards",
+        "Image loading strategy optimized for high resolution",
+        "Mobile-first design for travelers on the go"
       ]
     },
-    "quantum": {
-      "category": "Dashboard",
-      "description": "A real-time financial analytics dashboard that processes millions of transactions to surface actionable trading signals.",
-      "challenge": "Quantitative traders were drowning in data streams. Existing tools either lagged behind market movements or required PhD-level expertise to operate.",
-      "solution": "We built a WebSocket-powered dashboard that visualizes complex market patterns in real-time. Custom-built charting components handle 10K+ data points without lag. AI alerts surface anomalies before they hit mainstream news.",
+    "voltage-festival": {
+      "category": "Music Event",
+      "description": "An immersive indoor electronic music experience featuring world-class DJs and nonstop energy.",
+      "challenge": "Capturing the vibrant energy and pulse of a techno rave in a static web environment while maintaining performance.",
+      "solution": "A high-intensity dark UI with neon accents and dynamic visual elements that react to the rhythm of electronic music.",
       "results": [
-        "Sub-100ms data latency achieved",
-        "Traders report 3x faster decision making",
-        "Scaled to handle $500M daily transaction volume",
-        "Featured case study by Vercel"
+        "Interactive lineup exploration with real-time DJ status",
+        "Neon design system with OKLCH color optimization",
+        "High-performance ticket integration flow",
+        "Viral landing page with social sharing features"
       ]
     },
-    "aurora": {
-      "category": "SaaS",
-      "description": "A collaborative design system platform that keeps distributed teams in sync across Figma, code, and documentation.",
-      "challenge": "Design systems break down at scale. Designers update Figma, but developers never see it. Documentation goes stale. Tokens drift between platforms.",
-      "solution": "We created a single source of truth that bridges the designer-developer gap. Figma changes automatically sync to code. A visual diff tool surfaces inconsistencies before they ship.",
+    "haven-barbershop": {
+      "category": "Premium Grooming",
+      "description": "Premium barbershop experience with precision cuts, classic techniques, and modern ritual-focused style.",
+      "challenge": "Transforming a standard service into a luxury ritual through a digital experience that exudes craftsmanship.",
+      "solution": "Zinc-based color palette with high-contrast typography and focus on architectural layout and quality photography.",
       "results": [
-        "60% reduction in design-dev handoff time",
-        "Zero design drift incidents reported",
-        "Adopted by 3 Fortune 500 companies",
-        "Open-source version has 15K+ GitHub stars"
+        "Elevation of brand perception as a ritual experience",
+        "Integrated booking system with intuitive flow",
+        "Ritual gallery optimized for mobile devices",
+        "SEO strategy focused on local luxury keywords"
       ]
     }
   },

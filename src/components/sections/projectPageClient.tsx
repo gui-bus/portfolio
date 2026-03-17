@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, ArrowRight, Cpu, Target, Rocket } from "lucide-react";
 import Link from "next/link";
 import { ReadingProgress } from "@/components/sections/readingProgress";
-import { Project } from "@/lib/projects-data";
+import { Project } from "@/lib/projectsData";
 import { useTranslations } from "next-intl";
 
 interface TechMarqueeProps {

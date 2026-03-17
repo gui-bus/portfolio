@@ -2,12 +2,12 @@ import { notFound } from "next/navigation";
 import {
   getProjectBySlug,
   getNextProject,
-  PROJECTS_DATA,
-} from "@/lib/projects-data";
+  projectsData,
+} from "@/lib/projectsData";
 import { ProjectPageClient } from "@/components/sections/projectPageClient";
 
 export function generateStaticParams() {
-  return PROJECTS_DATA.map((project) => ({
+  return projectsData.map((project) => ({
     slug: project.slug,
   }));
 }

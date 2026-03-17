@@ -155,64 +155,64 @@
     "cta_case_study": "Iniciar Estudo de Caso"
   },
   "Projects": {
-    "nexus-ai": {
-      "category": "Plataforma Web",
-      "description": "Uma plataforma de orquestração de IA de nível empresarial que revoluciona como as empresas implantam e gerenciam modelos de machine learning em escala.",
-      "challenge": "Clientes corporativos lutavam com fluxos de trabalho de ML fragmentados, gastando 70% do seu tempo em infraestrutura em vez de inovação. A implantação de modelos levava semanas, e o monitoramento estava disperso em várias ferramentas.",
-      "solution": "Arquitetamos um centro de comando unificado que abstrai a complexidade da infraestrutura. Um construtor de pipeline visual permite que as equipes arrastem e soltem modelos na produção, enquanto a observabilidade em tempo real apresenta insights de desempenho instantaneamente.",
+    "power-fit": {
+      "category": "Plataforma Full-stack",
+      "description": "A próxima geração de gestão fitness: IA Generativa, gamificação e arquitetura de alta performance.",
+      "challenge": "O POWER.FIT foi desenvolvido para resolver a fragmentação entre o registro de treinos, acompanhamento nutricional e motivação social, utilizando o estado da arte do ecossistema TypeScript.",
+      "solution": "Arquitetamos uma SPA com performance de SSR, IA nativa integrada via Vercel AI SDK para geração de treinos e uma arquitetura orientada a contratos para erro zero em integração.",
       "results": [
-        "Tempo de implantação reduzido de 3 semanas para 2 horas",
-        "Redução de 40% nos custos de infraestrutura",
-        "Uptime de 99,9% alcançado em todas as implantações de clientes",
-        "Destaque no TechCrunch como 'Plataforma do Ano'"
+        "Geração automática de treinos via linguagem natural",
+        "Arquitetura 100% Type-Safe com sincronização Swagger/Orval",
+        "Visualização de constância inspirada no grid do GitHub",
+        "Pipeline de conquistas e XP assíncrono para retenção"
       ]
     },
-    "pulse": {
-      "category": "App Mobile",
-      "description": "Um companheiro de saúde orientado por biometria que transforma dados brutos de sensores em insights de bem-estar acionáveis.",
-      "challenge": "Apps de saúde sobrecarregam os usuários com dados brutos sem contexto. Os usuários veem batimentos cardíacos e contagem de passos, mas não entendem o que isso significa para sua jornada pessoal de bem-estar.",
-      "solution": "Criamos uma camada de IA que contextualiza cada métrica. O app aprende seu baseline, detecta anomalias e fornece toques personalizados. Um 'Score de Bem-estar' gamifica o progresso sem criar ansiedade.",
+    "powervet": {
+      "category": "Medicina Veterinária",
+      "description": "Cuidado especializado para felinos, combinando tecnologia médica avançada com atenção personalizada.",
+      "challenge": "Criar uma presença digital que transmita confiança e especialização técnica no nicho de saúde felina, focando em bem-estar de longo prazo.",
+      "solution": "Desenvolvimento de uma landing page de alta conversão com foco em acessibilidade, utilizando padrões modernos de React para uma experiência fluida.",
       "results": [
-        "Avaliação de 4,9 estrelas em mais de 50 mil avaliações",
-        "78% dos usuários relatam melhora no sono em 30 dias",
-        "Adquirido por uma grande empresa de tecnologia de saúde",
-        "Destaque na Apple em 'Apps que Amamos'"
+        "Posicionamento de marca premium no setor veterinário",
+        "Interface responsiva otimizada para agendamentos rápidos",
+        "Módulos educativos integrados sobre medicina preventiva",
+        "Performance técnica excepcional para melhor SEO orgânico"
       ]
     },
-    "vertex": {
-      "category": "E-commerce",
-      "description": "Um marketplace de moda de luxo que mistura conteúdo editorial com comércio perfeito, redefinindo o varejo digital.",
-      "challenge": "Marcas de moda de alta tecnologia lutavam para traduzir sua experiência de luxo na loja para o digital. Templates genéricos de e-commerce pareciam baratos e corroíam o valor da marca.",
-      "solution": "Criamos uma experiência de compra imersiva com storytelling editorial. A visualização de produtos em 3D permite que os clientes examinem os itens de todos os ângulos. Recomendações de estilo por IA parecem um personal shopper.",
+    "horizon-travels": {
+      "category": "Agência de Viagens",
+      "description": "Experiências imersivas que conectam viajantes a destinos autênticos com planejamento global sem fricção.",
+      "challenge": "O mercado de turismo exige um storytelling visual impactante para converter desejo em agendamentos em um ambiente altamente competitivo.",
+      "solution": "Plataforma rica em mídia com animações de scroll imersivas e uma UX curada que guia o usuário por destinos globais.",
       "results": [
-        "Aumento de 180% na duração média da sessão",
-        "Taxa de conversão 45% maior que a média da indústria",
-        "Retornos reduzidos em 32% através de melhor visualização",
-        "Vencedor do FWA Site do Dia"
+        "Aumento de 120% no engajamento através de storytelling imersivo",
+        "Fluxo de planejamento simplificado com cards interativos",
+        "Estratégia de carregamento de imagens otimizada para alta resolução",
+        "Design mobile-first para viajantes em movimento"
       ]
     },
-    "quantum": {
-      "category": "Dashboard",
-      "description": "Um dashboard de análise financeira em tempo real que processa milhões de transações para apresentar sinais de trading acionáveis.",
-      "challenge": "Traders quantitativos estavam se afogando em fluxos de dados. Ferramentas existentes ou estavam atrasadas em relação aos movimentos do mercado ou exigiam especialização de nível PhD para operar.",
-      "solution": "Construímos um dashboard alimentado por WebSocket que visualiza padrões complexos de mercado em tempo real. Componentes de gráfico personalizados lidam com mais de 10 mil pontos de dados sem lag. Alertas de IA apresentam anomalias antes de chegarem às notícias convencionais.",
+    "voltage-festival": {
+      "category": "Evento de Música",
+      "description": "Uma experiência imersiva de música eletrônica indoor com DJs de classe mundial e energia ininterrupta.",
+      "challenge": "Capturar a energia vibrante e o pulso de uma rave techno em um ambiente web estático, mantendo alta performance.",
+      "solution": "Interface dark de alta intensidade com acentos neon e elementos visuais dinâmicos que reagem ao ritmo da música eletrônica.",
       "results": [
-        "Latência de dados inferior a 100ms alcançada",
-        "Traders relatam tomada de decisão 3x mais rápida",
-        "Escalado para lidar com volume diário de transações de US$ 500 milhões",
-        "Estudo de caso em destaque pela Vercel"
+        "Exploração interativa do lineup com status de DJ em tempo real",
+        "Design system neon com otimização de cores OKLCH",
+        "Fluxo de integração de tickets de alta performance",
+        "Landing page viral com recursos de compartilhamento social"
       ]
     },
-    "aurora": {
-      "category": "SaaS",
-      "description": "Uma plataforma colaborativa de design system que mantém equipes distribuídas em sincronia entre Figma, código e documentação.",
-      "challenge": "Design systems quebram em escala. Designers atualizam o Figma, mas os desenvolvedores nunca veem. A documentação fica desatualizada. Tokens variam entre plataformas.",
-      "solution": "Criamos uma única fonte da verdade que preenche a lacuna entre designer e desenvolvedor. Alterações no Figma sincronizam automaticamente com o código. Uma ferramenta de diff visual apresenta inconsistências antes do envio.",
+    "haven-barbershop": {
+      "category": "Grooming Premium",
+      "description": "Experiência de barbearia premium com cortes de precisão, técnicas clássicas e estilo moderno focado no ritual.",
+      "challenge": "Transformar um serviço padrão em um ritual de luxo através de uma experiência digital que exala artesanato e cuidado.",
+      "solution": "Paleta de cores baseada em Zinc com tipografia de alto contraste e foco em layout arquitetônico e fotografia de alta qualidade.",
       "results": [
-        "Redução de 60% no tempo de handoff entre design e dev",
-        "Zero incidentes de design drift relatados",
-        "Adotado por 3 empresas da Fortune 500",
-        "Versão open-source tem mais de 15 mil estrelas no GitHub"
+        "Elevação da percepção de marca como experiência de ritual",
+        "Sistema de agendamento integrado com fluxo intuitivo",
+        "Galeria de rituais otimizada para dispositivos móveis",
+        "Estratégia de SEO focada em palavras-chave locais de luxo"
       ]
     }
   },
