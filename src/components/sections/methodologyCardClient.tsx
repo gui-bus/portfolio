@@ -58,13 +58,14 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
       variants={fadeInUp}
       className="group relative bg-background p-10 md:p-14 overflow-hidden transition-colors hover:bg-muted/50 dark:hover:bg-zinc-900/20"
     >
-      <div className="absolute inset-0 bg-yellow-500/[0.03] dark:bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-yellow-500/3 dark:bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative z-10">
         <div className="flex justify-between items-center mb-12">
-          <span className="text-4xl font-black text-muted/20 dark:text-zinc-900 group-hover:text-muted/40 dark:group-hover:text-zinc-800 transition-colors">
+          <span className="text-4xl font-black text-muted dark:text-zinc-900 group-hover:text-black dark:group-hover:text-white transition-colors">
             {step.id}
           </span>
+          
           <motion.div
             whileHover={{ rotate: 15, scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
@@ -88,7 +89,7 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
         </p>
       </div>
 
-      <div className="animated-line absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-600 dark:bg-yellow-500" />
+      <div className="animated-line absolute bottom-0 left-0 h-0.5 w-0 bg-yellow-600 dark:bg-yellow-500" />
     </motion.div>
   );
 }

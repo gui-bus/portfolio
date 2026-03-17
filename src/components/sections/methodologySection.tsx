@@ -32,13 +32,13 @@ export async function MethodologySection() {
   return (
     <section
       id="methodology"
-      className="relative py-32 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
+      className="relative py-44 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[60px_60px] opacity-10 pointer-events-none" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+      <div className="max-w-350 mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
@@ -94,14 +94,6 @@ export async function MethodologySection() {
               {t("footer_text")}
             </p>
             <div className="hidden lg:block h-px w-12 bg-border" />
-          </div>
-        </div>
-
-        <div className="hidden xl:block absolute top-0 right-10 h-full pt-32 pointer-events-none">
-          <div className="sticky top-32 rotate-90 origin-top-right">
-            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
-              {t("tag")} — SYSTEM_PROTOCOL
-            </span>
           </div>
         </div>
       </div>
