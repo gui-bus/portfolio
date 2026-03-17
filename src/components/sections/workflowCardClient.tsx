@@ -2,15 +2,15 @@
 
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { MagnifyingGlass, PaintBrush, Code, RocketLaunch, Icon } from "@phosphor-icons/react";
+import { MagnifyingGlassIcon, PaintBrushIcon, CodeIcon, RocketLaunchIcon, Icon } from "@phosphor-icons/react";
 import { gsap } from "gsap";
 import { fadeInUp } from "@/lib/animations";
 
 const iconsMap: Record<string, Icon> = {
-  MagnifyingGlass,
-  PaintBrush,
-  Code,
-  RocketLaunch,
+  MagnifyingGlass: MagnifyingGlassIcon,
+  PaintBrush: PaintBrushIcon,
+  Code: CodeIcon,
+  RocketLaunch: RocketLaunchIcon,
 };
 
 interface WorkflowCardClientProps {
@@ -24,7 +24,7 @@ interface WorkflowCardClientProps {
 }
 
 export function WorkflowCardClient({ step, cardLabel }: WorkflowCardClientProps) {
-  const IconComponent = iconsMap[step.iconName] || Code;
+  const IconComponent = iconsMap[step.iconName] || CodeIcon;
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

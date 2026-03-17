@@ -1,13 +1,8 @@
 "use client";
 
-import { useCallback, useState, useEffect } from "react";
+import React, { useRef, useCallback, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  CaretLeft,
-  CaretRight,
-  Plus,
-} from "@phosphor-icons/react";
+import { ArrowUpRightIcon, CaretLeftIcon, CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { PROJECTS_DATA, Project } from "@/lib/projects-data";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
@@ -28,7 +23,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
       <Link href={`/project/${project.slug}`} className="block group">
-        <div className="relative aspect-16/10 md:aspect-16/8 bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-blue-500/50">
+        <div className="relative aspect-[16/10] md:aspect-[16/8] bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-blue-500/50">
           <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 flex items-center gap-3">
             <span className="text-[10px] font-mono text-white bg-blue-600 px-2 py-0.5 font-bold">
               0{index + 1}
@@ -70,9 +65,9 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
                 </p>
               </div>
 
-              <div className="shrink-0">
+              <div className="flex-shrink-0">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 transition-all duration-500 shadow-2xl backdrop-blur-sm">
-                  <ArrowUpRight
+                  <ArrowUpRightIcon
                     size={24}
                     weight="light"
                     className="text-white group-hover:rotate-45 transition-transform duration-500"
@@ -82,8 +77,8 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
             </div>
           </div>
 
-          <div className="absolute top-0 right-0 w-0.5 h-0 bg-blue-600 group-hover:h-full transition-all duration-700" />
-          <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-700 delay-100" />
+          <div className="absolute top-0 right-0 w-[2px] h-0 bg-blue-600 group-hover:h-full transition-all duration-700" />
+          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 group-hover:w-full transition-all duration-700 delay-100" />
         </div>
       </Link>
     </div>
@@ -134,7 +129,7 @@ export function ProjectsSection() {
       id="projects"
       className="relative py-24 bg-background transition-colors duration-500 overflow-hidden grid-projects"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[40px_40px] opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none" />
 
       <div className="relative z-10">
         <div className="px-6 mb-16">
@@ -167,13 +162,13 @@ export function ProjectsSection() {
                   onClick={scrollPrev}
                   className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-blue-600 transition-colors"
                 >
-                  <CaretLeft size={20} />
+                  <CaretLeftIcon size={20} />
                 </button>
                 <button
                   onClick={scrollNext}
                   className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-blue-600 transition-colors"
                 >
-                  <CaretRight size={20} />
+                  <CaretRightIcon size={20} />
                 </button>
               </div>
             </div>
@@ -221,7 +216,7 @@ export function ProjectsSection() {
               </span>
             </div>
 
-            <Plus
+            <PlusIcon
               size={32}
               weight="bold"
               className="text-blue-600 dark:text-blue-500 mb-8 transition-transform duration-700 group-hover:rotate-180"

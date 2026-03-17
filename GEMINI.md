@@ -63,6 +63,7 @@ pnpm prepare
 - **No Filler Labels:** Avoid adding generic or 'nonsense' technical labels in English that do not add real value to the user (e.g., 'SYSTEM_v3.0_INITIALIZED', 'UTC_TIME', 'STATUS: STABLE_CONNECTION', 'PROTO_ID'). Focus on clean, meaningful content.
 - **Mandatory Internationalization:** NEVER use hardcoded English or Portuguese strings for user-facing content. All text MUST use the `next-intl` library (translations from `messages/`). This applies to UI labels, button text, decorative background text, and technical placeholder strings. Hardcoded text is strictly prohibited.
 - **No Code Comments:** DO NOT add comments to the code (e.g., //, /* */, or {/* */}). The code should be clean, semantic, and self-explanatory.
+- **Phosphor Icons Naming:** All Phosphor icons MUST be imported and used directly with the "Icon" suffix (e.g., `FingerprintIcon`, `CpuIcon`, `EnvelopeSimpleIcon`). Aliasing (e.g., `import { Cpu as CpuIcon }`) is STRICTLY PROHIBITED. The icons must be used exactly as exported by the library with the suffix.
 
 ## Key Files & Directories
 - `src/app/[locale]`: Root of the application with locale support.

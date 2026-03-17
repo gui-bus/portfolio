@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PaperPlaneTilt } from "@phosphor-icons/react";
+import { PaperPlaneTiltIcon } from "@phosphor-icons/react";
 import { useContactForm } from "@/lib/providers/contactFormProvider";
 import { SectionAnimationWrapper, FadeInAnimationWrapper } from "@/components/common/sectionAnimationWrapper";
 import { ContactCTAClient } from "./contactSectionClient";
@@ -28,7 +28,7 @@ export function ContactHeaderClient({
       className="lg:col-span-8 border border-border dark:border-white/5 bg-muted/5 p-8 md:p-16 flex flex-col justify-center relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 p-8 opacity-[0.02] pointer-events-none text-blue-600 dark:text-blue-500">
-        <PaperPlaneTilt size={300} weight="fill" />
+        <PaperPlaneTiltIcon size={300} weight="fill" />
       </div>
 
       <FadeInAnimationWrapper className="flex items-center gap-4 mb-8">

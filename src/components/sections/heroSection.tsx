@@ -1,4 +1,4 @@
-import { Fingerprint, Cpu } from "@phosphor-icons/react/dist/ssr";
+import { FingerprintIcon, CpuIcon } from "@phosphor-icons/react/dist/ssr";
 import { getTranslations } from "next-intl/server";
 import {
   HeroSectionClient,
@@ -43,7 +43,7 @@ export async function HeroSection() {
 
                 <div className="flex flex-wrap gap-4">
                   <div className="flex items-center gap-3 px-5 py-3 border border-border dark:border-white/5 bg-muted/5 backdrop-blur-sm group hover:border-blue-600/30 transition-colors">
-                    <Cpu
+                    <CpuIcon
                       size={20}
                       weight="thin"
                       className="text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform"
@@ -53,11 +53,8 @@ export async function HeroSection() {
                     </span>
                   </div>
                   <div className="flex items-center gap-3 px-5 py-3 border border-border dark:border-white/5 bg-muted/5 backdrop-blur-sm group hover:border-blue-600/30 transition-colors">
-                    <Fingerprint
-                      size={20}
-                      weight="thin"
-                      className="text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform"
-                    />
+                    <FingerprintIcon size={20} weight="thin" className="text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform" />
+
                     <span className="text-[10px] font-mono uppercase tracking-widest font-bold">
                       {t("design_specialist")}
                     </span>

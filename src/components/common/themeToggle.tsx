@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Moon, Sun } from "@phosphor-icons/react";
+import { MoonIcon, SunIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useThemeTransition } from "@/lib/hooks/useThemeTransition";
@@ -53,7 +53,7 @@ export function ThemeToggle() {
         )}
         title={t("light")}
       >
-        <Sun 
+        <SunIcon 
           weight={isLight ? "fill" : "bold"} 
           size={16} 
           className={cn(
@@ -71,7 +71,7 @@ export function ThemeToggle() {
         )}
         title={t("dark")}
       >
-        <Moon 
+        <MoonIcon 
           weight={!isLight ? "fill" : "bold"} 
           size={16} 
           className={cn(
@@ -82,4 +82,4 @@ export function ThemeToggle() {
       </button>
     </div>
   );
-  }
+}

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Check, CaretDown } from "@phosphor-icons/react";
+import { CheckIcon, CaretDownIcon } from "@phosphor-icons/react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import ReactCountryFlag from "react-country-flag";
@@ -61,7 +61,7 @@ export function LanguageSwitcher() {
           <span className="text-[10px] font-mono font-bold text-muted-foreground dark:text-zinc-400 group-hover:text-foreground dark:group-hover:text-white uppercase tracking-[0.2em] transition-colors">
             {currentLocale}
           </span>
-          <CaretDown
+          <CaretDownIcon
             size={10}
             weight="bold"
             className="text-muted-foreground/50 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
@@ -103,7 +103,7 @@ export function LanguageSwitcher() {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <Check weight="bold" size={14} />
+                <CheckIcon weight="bold" size={14} />
               </motion.div>
             )}
           </DropdownMenuItem>

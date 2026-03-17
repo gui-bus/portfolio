@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/lib/animations";
 import { cn } from "@/lib/utils";
-import { ArrowsOutSimple, Icon, PaperPlaneTilt, GithubLogo, LinkedinLogo, InstagramLogo, EnvelopeSimple } from "@phosphor-icons/react";
+import { ArrowsOutSimpleIcon, Icon, PaperPlaneTiltIcon, GithubLogoIcon, LinkedinLogoIcon, InstagramLogoIcon, EnvelopeSimpleIcon } from "@phosphor-icons/react";
 
 const iconsMap: Record<string, Icon> = {
-  GithubLogo,
-  LinkedinLogo,
-  InstagramLogo,
-  EnvelopeSimple,
+  GithubLogo: GithubLogoIcon,
+  LinkedinLogo: LinkedinLogoIcon,
+  InstagramLogo: InstagramLogoIcon,
+  EnvelopeSimple: EnvelopeSimpleIcon,
 };
 
 interface ContactModuleClientProps {
@@ -22,7 +22,7 @@ interface ContactModuleClientProps {
 }
 
 export function ContactModuleClient({ title, value, iconName, href, className, index }: ContactModuleClientProps) {
-  const IconComponent = iconsMap[iconName] || EnvelopeSimple;
+  const IconComponent = iconsMap[iconName] || EnvelopeSimpleIcon;
 
   return (
     <motion.a
@@ -58,7 +58,7 @@ export function ContactModuleClient({ title, value, iconName, href, className, i
       </div>
 
       <div className="absolute bottom-0 right-0 p-1 opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">
-        <ArrowsOutSimple size={10} />
+        <ArrowsOutSimpleIcon size={10} />
       </div>
     </motion.a>
   );
@@ -74,7 +74,7 @@ export function ContactCTAClient({ onClick, label }: { onClick: () => void; labe
       className="inline-flex items-center justify-between px-8 py-6 bg-blue-600 dark:bg-blue-500 text-white font-black text-xs uppercase tracking-[0.4em] max-w-md w-full shadow-2xl hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all duration-500 group cursor-pointer"
     >
       {label}
-      <PaperPlaneTilt size={20} weight="bold" className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
+      <PaperPlaneTiltIcon size={20} weight="bold" className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
     </motion.button>
   );
 }

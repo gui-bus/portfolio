@@ -3,13 +3,13 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { Wind, PencilCircle, Code, Icon } from "@phosphor-icons/react";
+import { WindIcon, PencilCircleIcon, CodeIcon, Icon } from "@phosphor-icons/react";
 import { fadeInUp } from "@/lib/animations";
 
 const iconsMap: Record<string, Icon> = {
-  Wind,
-  PencilCircle,
-  Code,
+  Wind: WindIcon,
+  PencilCircle: PencilCircleIcon,
+  Code: CodeIcon,
 };
 
 interface MethodologyCardClientProps {
@@ -23,7 +23,7 @@ interface MethodologyCardClientProps {
 }
 
 export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
-  const IconComponent = iconsMap[step.iconName] || Code;
+  const IconComponent = iconsMap[step.iconName] || CodeIcon;
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, CheckCircle, Warning } from "@phosphor-icons/react";
+import { XIcon, ArrowRightIcon, CheckCircleIcon, WarningIcon } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -117,7 +117,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
               onClick={onClose}
               className="absolute top-8 right-8 text-muted-foreground hover:text-foreground transition-colors z-20"
             >
-              <X size={32} weight="light" />
+              <XIcon size={32} weight="light" />
             </button>
 
             {isSuccess ? (
@@ -127,7 +127,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   animate={{ scale: 1 }}
                   className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white"
                 >
-                  <CheckCircle size={56} weight="bold" />
+                  <CheckCircleIcon size={56} weight="bold" />
                 </motion.div>
                 <h3 className="text-4xl font-black uppercase tracking-tighter text-foreground dark:text-white leading-none">
                   Inquiry Received.
@@ -291,7 +291,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                     className="w-full py-6 bg-blue-600 text-white font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? t("btn_sending") : t("btn_send")}{" "}
-                    <ArrowRight size={18} />
+                    <ArrowRightIcon size={18} />
                   </button>
                 </form>
               </div>

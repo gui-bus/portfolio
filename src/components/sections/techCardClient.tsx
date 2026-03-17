@@ -4,27 +4,27 @@ import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Icon,
-  Globe,
-  Code,
-  PaintBrush,
-  BoundingBox,
-  Lightning,
-  Database,
-  Cloud,
-  DeviceMobile,
+  GlobeIcon,
+  CodeIcon,
+  PaintBrushIcon,
+  BoundingBoxIcon,
+  LightningIcon,
+  DatabaseIcon,
+  CloudIcon,
+  DeviceMobileIcon,
 } from "@phosphor-icons/react";
 import { gsap } from "gsap";
 import { fadeInUp } from "@/lib/animations";
 
 const iconsMap: Record<string, Icon> = {
-  Globe,
-  Code,
-  PaintBrush,
-  BoundingBox,
-  Lightning,
-  Database,
-  Cloud,
-  DeviceMobile,
+  Globe: GlobeIcon,
+  Code: CodeIcon,
+  PaintBrush: PaintBrushIcon,
+  BoundingBox: BoundingBoxIcon,
+  Lightning: LightningIcon,
+  Database: DatabaseIcon,
+  Cloud: CloudIcon,
+  DeviceMobile: DeviceMobileIcon,
 };
 
 interface TechCardClientProps {
@@ -37,7 +37,7 @@ interface TechCardClientProps {
 }
 
 export function TechCardClient({ tech, index }: TechCardClientProps) {
-  const IconComponent = iconsMap[tech.iconName] || Code;
+  const IconComponent = iconsMap[tech.iconName] || CodeIcon;
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
