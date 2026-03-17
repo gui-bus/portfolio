@@ -44,5 +44,5 @@ export function useThemeTransition() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [toggleTheme]);
 
-  return { theme, toggleTheme };
+  return { theme, resolvedTheme, toggleTheme };
 }
