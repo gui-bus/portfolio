@@ -18,8 +18,8 @@ export async function HeroSection() {
     <section className="relative bg-background text-foreground flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden transition-colors duration-500 grid-hero py-44!">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[60px_60px] opacity-20 pointer-events-none" />
 
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -top-24 -left-24 w-96 h-96 bg-yellow-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" />
 
       <div className="max-w-350 mx-auto w-full relative z-10">
@@ -28,8 +28,8 @@ export async function HeroSection() {
             <HeroTitleAnimation>
               <div className="flex flex-wrap items-center gap-4 mb-10">
                 <div className="flex items-center gap-3">
-                  <span className="w-8 h-px bg-blue-600 dark:bg-blue-500" />
-                  <span className="text-[10px] font-mono text-blue-600 dark:text-blue-500 uppercase tracking-[0.4em] font-black">
+                  <span className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
+                  <span className="text-[10px] font-mono text-yellow-600 dark:text-yellow-500 uppercase tracking-[0.4em] font-black">
                     {t("location")}
                   </span>
                 </div>
@@ -50,12 +50,12 @@ export async function HeroSection() {
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-12">
-                  <div className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-blue-600/40 transition-all duration-500 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-blue-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+                  <div className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-yellow-600/40 transition-all duration-500 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-yellow-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
                     <CpuIcon
                       size={24}
                       weight="thin"
-                      className="text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform duration-500"
+                      className="text-yellow-600 dark:text-yellow-500 group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="flex flex-col">
                       <span className="text-[11px] font-mono uppercase tracking-widest font-black">
@@ -64,12 +64,12 @@ export async function HeroSection() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-blue-600/40 transition-all duration-500 relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-0.5 bg-blue-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+                  <div className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-yellow-600/40 transition-all duration-500 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-yellow-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
                     <FingerprintIcon
                       size={24}
                       weight="thin"
-                      className="text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform duration-500"
+                      className="text-yellow-600 dark:text-yellow-500 group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="flex flex-col">
                       <span className="text-[11px] font-mono uppercase tracking-widest font-black">
@@ -92,7 +92,7 @@ export async function HeroSection() {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 group cursor-pointer">
-                      <span className="text-[10px] font-mono uppercase tracking-widest font-black group-hover:text-blue-600 transition-colors">
+                      <span className="text-[10px] font-mono uppercase tracking-widest font-black group-hover:text-yellow-600 transition-colors">
                         {t("cta_projects")}
                       </span>
                       <ArrowRightIcon

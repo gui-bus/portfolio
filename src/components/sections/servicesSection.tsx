@@ -43,13 +43,11 @@ export async function ServicesSection() {
       id="services"
       className="relative py-32 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-services"
     >
-
-      
       <div className=" px-6 relative z-10">
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-12 h-px bg-blue-600 dark:bg-blue-500" />
-            <span className="text-[10px] font-mono tracking-[0.5em] uppercase text-blue-600 dark:text-blue-500 font-black">
+            <div className="w-12 h-px bg-yellow-600 dark:bg-yellow-500" />
+            <span className="text-[10px] font-mono tracking-[0.5em] uppercase text-yellow-600 dark:text-yellow-500 font-black">
               {t("tag")}
             </span>
           </div>
@@ -61,7 +59,7 @@ export async function ServicesSection() {
         </div>
 
         <SectionAnimationWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <ServiceModuleClient 
+          <ServiceModuleClient
             index={0}
             isLarge
             ctaText={t("cta_initialize")}
@@ -69,7 +67,7 @@ export async function ServicesSection() {
               title: t("step5_title"),
               desc: t("step5_desc"),
               tag: t("step5_tag"),
-              iconName: "Code"
+              iconName: "Code",
             }}
           />
 

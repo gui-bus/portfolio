@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { XIcon, ArrowRightIcon, CheckCircleIcon, WarningIcon } from "@phosphor-icons/react";
+import {
+  XIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  WarningIcon,
+} from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -44,7 +49,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
       project_type: "Full-stack",
       budget: "budget_range_2",
       deadline: "deadline_2",
-    }
+    },
   });
 
   const selectedType = watch("project_type");
@@ -69,7 +74,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        body: formData,
       });
 
       const result = await response.json();
@@ -125,7 +130,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white"
+                  className="w-24 h-24 bg-yellow-600 rounded-full flex items-center justify-center text-white"
                 >
                   <CheckCircleIcon size={56} weight="bold" />
                 </motion.div>
@@ -133,28 +138,35 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   Inquiry Received.
                 </h3>
                 <p className="text-muted-foreground max-w-xs text-lg">
-                  Protocol established. I will review your requirements and respond within 24 hours.
+                  Protocol established. I will review your requirements and
+                  respond within 24 hours.
                 </p>
               </div>
             ) : (
               <div className="relative">
                 <div className="mb-16">
-                  <span className="text-[10px] font-mono tracking-[0.5em] text-blue-600 dark:text-blue-500 uppercase mb-4 block font-black">
+                  <span className="text-[10px] font-mono tracking-[0.5em] text-yellow-600 dark:text-yellow-500 uppercase mb-4 block font-black">
                     PROJECT_INQUIRY_FORM
                   </span>
                   <h3 className="text-5xl font-black text-foreground dark:text-white tracking-tighter uppercase leading-none">
                     {t("form_title_top")} <br />{" "}
-                    <span className="outline-text-form">{t("form_title_bottom")}</span>
+                    <span className="outline-text-form">
+                      {t("form_title_bottom")}
+                    </span>
                   </h3>
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-12">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-2">
-                      <div className={cn(
-                        "group border-b transition-colors py-2",
-                        errors.name ? "border-red-500" : "border-border dark:border-zinc-800 focus-within:border-blue-600 dark:focus-within:border-blue-500"
-                      )}>
+                      <div
+                        className={cn(
+                          "group border-b transition-colors py-2",
+                          errors.name
+                            ? "border-red-500"
+                            : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                        )}
+                      >
                         <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
                           {t("label_name")}
                         </label>
@@ -164,14 +176,22 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                           placeholder={t("placeholder_name")}
                         />
                       </div>
-                      {errors.name && <span className="text-[10px] text-red-500 font-mono uppercase">{errors.name.message}</span>}
+                      {errors.name && (
+                        <span className="text-[10px] text-red-500 font-mono uppercase">
+                          {errors.name.message}
+                        </span>
+                      )}
                     </div>
 
                     <div className="space-y-2">
-                      <div className={cn(
-                        "group border-b transition-colors py-2",
-                        errors.email ? "border-red-500" : "border-border dark:border-zinc-800 focus-within:border-blue-600 dark:focus-within:border-blue-500"
-                      )}>
+                      <div
+                        className={cn(
+                          "group border-b transition-colors py-2",
+                          errors.email
+                            ? "border-red-500"
+                            : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                        )}
+                      >
                         <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
                           {t("label_email")}
                         </label>
@@ -181,11 +201,15 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                           placeholder={t("placeholder_email")}
                         />
                       </div>
-                      {errors.email && <span className="text-[10px] text-red-500 font-mono uppercase">{errors.email.message}</span>}
+                      {errors.email && (
+                        <span className="text-[10px] text-red-500 font-mono uppercase">
+                          {errors.email.message}
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  <div className="group border-b border-border dark:border-zinc-800 focus-within:border-blue-600 dark:focus-within:border-blue-500 transition-colors py-2">
+                  <div className="group border-b border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500 transition-colors py-2">
                     <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
                       {t("label_company")}
                     </label>
@@ -201,7 +225,12 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                       {t("label_project")}
                     </label>
                     <div className="flex flex-wrap gap-3">
-                      {["Full-stack", "UI/UX Design", "Consultoria", "Outro"].map((type) => (
+                      {[
+                        "Full-stack",
+                        "UI/UX Design",
+                        "Consultoria",
+                        "Outro",
+                      ].map((type) => (
                         <button
                           key={type}
                           type="button"
@@ -209,8 +238,8 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                           className={cn(
                             "px-5 py-2 border text-[10px] font-mono uppercase tracking-widest transition-all",
                             selectedType === type
-                              ? "bg-blue-600 border-blue-600 text-white"
-                              : "border-border dark:border-zinc-900 text-muted-foreground hover:border-blue-600 dark:hover:border-blue-500 bg-muted/20 dark:bg-transparent"
+                              ? "bg-yellow-600 border-yellow-600 text-white"
+                              : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600 dark:hover:border-yellow-500 bg-muted/20 dark:bg-transparent",
                           )}
                         >
                           {type}
@@ -225,7 +254,12 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                         {t("label_budget")}
                       </label>
                       <div className="flex flex-col gap-2">
-                        {["budget_range_1", "budget_range_2", "budget_range_3", "budget_range_4"].map((range) => (
+                        {[
+                          "budget_range_1",
+                          "budget_range_2",
+                          "budget_range_3",
+                          "budget_range_4",
+                        ].map((range) => (
                           <button
                             key={range}
                             type="button"
@@ -234,7 +268,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                               "px-4 py-2 border text-[9px] font-mono uppercase text-left transition-all",
                               selectedBudget === range
                                 ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white"
-                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-blue-600/50"
+                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600/50",
                             )}
                           >
                             {t(range)}
@@ -248,7 +282,12 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                         {t("label_deadline")}
                       </label>
                       <div className="flex flex-col gap-2">
-                        {["deadline_1", "deadline_2", "deadline_3", "deadline_4"].map((dl) => (
+                        {[
+                          "deadline_1",
+                          "deadline_2",
+                          "deadline_3",
+                          "deadline_4",
+                        ].map((dl) => (
                           <button
                             key={dl}
                             type="button"
@@ -257,7 +296,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                               "px-4 py-2 border text-[9px] font-mono uppercase text-left transition-all",
                               selectedDeadline === dl
                                 ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white"
-                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-blue-600/50"
+                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600/50",
                             )}
                           >
                             {t(dl)}
@@ -268,10 +307,14 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <div className={cn(
-                      "group border-b transition-colors py-2",
-                      errors.message ? "border-red-500" : "border-border dark:border-zinc-800 focus-within:border-blue-600 dark:focus-within:border-blue-500"
-                    )}>
+                    <div
+                      className={cn(
+                        "group border-b transition-colors py-2",
+                        errors.message
+                          ? "border-red-500"
+                          : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                      )}
+                    >
                       <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
                         {t("label_briefing")}
                       </label>
@@ -282,13 +325,17 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                         placeholder={t("placeholder_briefing")}
                       />
                     </div>
-                    {errors.message && <span className="text-[10px] text-red-500 font-mono uppercase">{errors.message.message}</span>}
+                    {errors.message && (
+                      <span className="text-[10px] text-red-500 font-mono uppercase">
+                        {errors.message.message}
+                      </span>
+                    )}
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-6 bg-blue-600 text-white font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-6 bg-yellow-600 text-white font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? t("btn_sending") : t("btn_send")}{" "}
                     <ArrowRightIcon size={18} />

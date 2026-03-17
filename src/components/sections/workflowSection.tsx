@@ -40,10 +40,10 @@ export async function WorkflowSection() {
       <div className=" px-6 relative z-10">
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-[10px] font-mono tracking-[0.5em] uppercase text-blue-600 dark:text-blue-500 font-bold">
+            <span className="text-[10px] font-mono tracking-[0.5em] uppercase text-yellow-600 dark:text-yellow-500 font-bold">
               {t("tag")}
             </span>
-            <div className="h-px w-24 bg-blue-500/20" />
+            <div className="h-px w-24 bg-yellow-500/20" />
           </div>
           <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85]">
             {t("title_top")} <br />
@@ -53,14 +53,18 @@ export async function WorkflowSection() {
 
         <SectionAnimationWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900">
           {workflow.map((step) => (
-            <WorkflowCardClient key={step.id} step={step} cardLabel={t("card_label")} />
+            <WorkflowCardClient
+              key={step.id}
+              step={step}
+              cardLabel={t("card_label")}
+            />
           ))}
         </SectionAnimationWrapper>
 
         <div className="mt-12 flex justify-between items-center">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-500 animate-pulse" />
+              <div className="w-1.5 h-1.5 rounded-full bg-yellow-600 dark:bg-yellow-500 animate-pulse" />
               <span className="text-[9px] font-mono text-muted-foreground dark:text-zinc-600 uppercase tracking-widest text-nowrap font-bold">
                 {t("status_active")}
               </span>

@@ -2,7 +2,12 @@
 
 import React, { useRef, useCallback, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRightIcon, CaretLeftIcon, CaretRightIcon, PlusIcon } from "@phosphor-icons/react";
+import {
+  ArrowUpRightIcon,
+  CaretLeftIcon,
+  CaretRightIcon,
+  PlusIcon,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import { projectsData, Project } from "@/lib/projectsData";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
@@ -25,9 +30,9 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
       <Link href={`/project/${project.slug}`} className="block group">
-        <div className="relative aspect-[16/10] md:aspect-[16/8] bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-blue-500/50">
+        <div className="relative aspect-[16/10] md:aspect-[16/8] bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
           <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 flex items-center gap-3">
-            <span className="text-[10px] font-mono text-white bg-blue-600 px-2 py-0.5 font-bold">
+            <span className="text-[10px] font-mono text-white bg-yellow-600 px-2 py-0.5 font-bold">
               0{index + 1}
             </span>
             <div className="h-px w-8 bg-white/20 hidden md:block" />
@@ -43,7 +48,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
           />
 
           <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-80" />
-          <div className="absolute inset-0 z-10 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-700" />
+          <div className="absolute inset-0 z-10 bg-yellow-600/0 group-hover:bg-yellow-600/5 transition-colors duration-700" />
 
           <div className="absolute inset-0 z-20 p-6 md:p-12 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500 text-left">
             <div className="flex flex-wrap gap-2 mb-4">
@@ -68,7 +73,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
               </div>
 
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-600 transition-all duration-500 shadow-2xl backdrop-blur-sm">
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center group-hover:bg-yellow-600 group-hover:border-yellow-600 transition-all duration-500 shadow-2xl backdrop-blur-sm">
                   <ArrowUpRightIcon
                     size={24}
                     weight="light"
@@ -79,8 +84,8 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
             </div>
           </div>
 
-          <div className="absolute top-0 right-0 w-[2px] h-0 bg-blue-600 group-hover:h-full transition-all duration-700" />
-          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 group-hover:w-full transition-all duration-700 delay-100" />
+          <div className="absolute top-0 right-0 w-[2px] h-0 bg-yellow-600 group-hover:h-full transition-all duration-700" />
+          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-yellow-600 group-hover:w-full transition-all duration-700 delay-100" />
         </div>
       </Link>
     </div>
@@ -145,7 +150,7 @@ export function ProjectsSection() {
               className="flex items-center gap-4 mb-6"
               variants={fadeInUp}
             >
-              <span className="text-blue-600 dark:text-blue-500 text-[10px] font-mono tracking-[0.4em] uppercase underline underline-offset-8 font-bold">
+              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.4em] uppercase underline underline-offset-8 font-bold">
                 {t("tag")}
               </span>
             </motion.div>
@@ -162,13 +167,13 @@ export function ProjectsSection() {
               <div className="flex items-center gap-4">
                 <button
                   onClick={scrollPrev}
-                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-blue-600 transition-colors"
+                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 transition-colors"
                 >
                   <CaretLeftIcon size={20} />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-blue-600 transition-colors"
+                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 transition-colors"
                 >
                   <CaretRightIcon size={20} />
                 </button>
@@ -197,7 +202,7 @@ export function ProjectsSection() {
               onClick={() => scrollTo(index)}
               className={`h-1 transition-all duration-500 ${
                 index === selectedIndex
-                  ? "w-12 bg-blue-600"
+                  ? "w-12 bg-yellow-600"
                   : "w-4 bg-border dark:bg-white/10"
               }`}
             />
@@ -221,7 +226,7 @@ export function ProjectsSection() {
             <PlusIcon
               size={32}
               weight="bold"
-              className="text-blue-600 dark:text-blue-500 mb-8 transition-transform duration-700 group-hover:rotate-180"
+              className="text-yellow-600 dark:text-yellow-500 mb-8 transition-transform duration-700 group-hover:rotate-180"
             />
 
             <p className="text-muted-foreground font-mono text-xs uppercase tracking-[0.4em] mb-4 text-center">
@@ -230,7 +235,7 @@ export function ProjectsSection() {
 
             <motion.button
               onClick={openForm}
-              className="relative flex items-center gap-4 text-foreground dark:text-white font-black text-2xl md:text-5xl uppercase tracking-tighter transition-all hover:text-blue-600 dark:hover:text-blue-500 text-center cursor-pointer"
+              className="relative flex items-center gap-4 text-foreground dark:text-white font-black text-2xl md:text-5xl uppercase tracking-tighter transition-all hover:text-yellow-600 dark:hover:text-yellow-500 text-center cursor-pointer"
             >
               {t("cta_contact")}
             </motion.button>

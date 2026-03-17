@@ -20,7 +20,9 @@ export function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="w-17.5 h-10 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 animate-pulse" />;
+    return (
+      <div className="w-17.5 h-10 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 animate-pulse" />
+    );
   }
 
   const isLight = resolvedTheme === "light";
@@ -30,9 +32,7 @@ export function ThemeToggle() {
       <motion.div
         className={cn(
           "absolute h-8 w-8 z-0",
-          isLight 
-            ? "bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]" 
-            : "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+          isLight ? "bg-yellow-600" : "bg-yellow-500",
         )}
         initial={false}
         animate={{
@@ -41,7 +41,7 @@ export function ThemeToggle() {
         transition={{
           type: "spring",
           stiffness: 400,
-          damping: 30
+          damping: 30,
         }}
       />
 
@@ -49,16 +49,16 @@ export function ThemeToggle() {
         onClick={() => (isLight ? null : toggleTheme())}
         className={cn(
           "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/sun cursor-pointer",
-          isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
+          isLight
+            ? "text-white"
+            : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400",
         )}
         title={t("light")}
       >
-        <SunIcon 
-          weight={isLight ? "fill" : "bold"} 
-          size={16} 
-          className={cn(
-            "transition-transform duration-500",
-          )}
+        <SunIcon
+          weight={isLight ? "fill" : "bold"}
+          size={16}
+          className={cn("transition-transform duration-500")}
         />
       </button>
 
@@ -66,16 +66,16 @@ export function ThemeToggle() {
         onClick={() => (!isLight ? null : toggleTheme())}
         className={cn(
           "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/moon cursor-pointer",
-          !isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
+          !isLight
+            ? "text-white"
+            : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400",
         )}
         title={t("dark")}
       >
-        <MoonIcon 
-          weight={!isLight ? "fill" : "bold"} 
-          size={16} 
-          className={cn(
-            "transition-transform duration-500",
-          )}
+        <MoonIcon
+          weight={!isLight ? "fill" : "bold"}
+          size={16}
+          className={cn("transition-transform duration-500")}
         />
       </button>
     </div>

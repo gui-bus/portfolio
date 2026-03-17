@@ -50,7 +50,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger className="outline-none cursor-pointer">
-        <div className="h-10 px-4 flex items-center gap-3 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 hover:border-blue-600 dark:hover:border-blue-500 transition-all group backdrop-blur-md">
+        <div className="h-10 px-4 flex items-center gap-3 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 hover:border-yellow-600 dark:hover:border-yellow-500 transition-all group backdrop-blur-md">
           <ReactCountryFlag
             countryCode={flagCodes[currentLocale]}
             svg
@@ -64,7 +64,7 @@ export function LanguageSwitcher() {
           <CaretDownIcon
             size={10}
             weight="bold"
-            className="text-muted-foreground/50 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
+            className="text-muted-foreground/50 dark:text-zinc-600 group-hover:text-yellow-600 dark:group-hover:text-yellow-500 transition-colors"
           />
         </div>
       </DropdownMenuTrigger>
@@ -81,7 +81,7 @@ export function LanguageSwitcher() {
             className={cn(
               "flex items-center justify-between px-3 py-2.5 rounded-none transition-all cursor-pointer mb-1 last:mb-0 font-mono text-[10px] uppercase tracking-wider group",
               currentLocale === loc
-                ? "bg-blue-600 dark:bg-blue-500 text-white"
+                ? "bg-yellow-600 dark:bg-yellow-500 text-white"
                 : "text-muted-foreground hover:bg-muted/50 dark:hover:bg-white/5 hover:text-foreground dark:hover:text-white",
             )}
           >
@@ -91,7 +91,7 @@ export function LanguageSwitcher() {
                 svg
                 className={cn(
                   "rounded-sm transition-transform group-hover:scale-110",
-                  currentLocale === loc ? "opacity-100" : "opacity-60"
+                  currentLocale === loc ? "opacity-100" : "opacity-60",
                 )}
                 style={{ width: "1.4em", height: "1em" }}
               />

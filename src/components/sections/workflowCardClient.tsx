@@ -2,7 +2,13 @@
 
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { MagnifyingGlassIcon, PaintBrushIcon, CodeIcon, RocketLaunchIcon, Icon } from "@phosphor-icons/react";
+import {
+  MagnifyingGlassIcon,
+  PaintBrushIcon,
+  CodeIcon,
+  RocketLaunchIcon,
+  Icon,
+} from "@phosphor-icons/react";
 import { gsap } from "gsap";
 import { fadeInUp } from "@/lib/animations";
 
@@ -23,14 +29,17 @@ interface WorkflowCardClientProps {
   cardLabel: string;
 }
 
-export function WorkflowCardClient({ step, cardLabel }: WorkflowCardClientProps) {
+export function WorkflowCardClient({
+  step,
+  cardLabel,
+}: WorkflowCardClientProps) {
   const IconComponent = iconsMap[step.iconName] || CodeIcon;
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!cardRef.current) return;
     const line = cardRef.current.querySelector(".progress-line");
-    
+
     const tl = gsap.timeline({ paused: true });
     tl.to(line, { width: "100%", duration: 0.8, ease: "power3.inOut" });
 
@@ -55,12 +64,13 @@ export function WorkflowCardClient({ step, cardLabel }: WorkflowCardClientProps)
       className="group relative bg-background dark:bg-[#050505] p-10 flex flex-col justify-between min-h-[350px] transition-all hover:bg-muted/30 dark:hover:bg-zinc-900/20"
     >
       <div className="flex justify-between items-start mb-12">
-        <span className="text-[10px] font-mono text-muted-foreground/50 dark:text-zinc-700 group-hover:text-blue-600 dark:group-hover:text-blue-500/50 transition-colors font-bold">
-          {cardLabel}{step.id}
+        <span className="text-[10px] font-mono text-muted-foreground/50 dark:text-zinc-700 group-hover:text-yellow-600 dark:group-hover:text-yellow-500/50 transition-colors font-bold">
+          {cardLabel}
+          {step.id}
         </span>
         <motion.div
           whileHover={{ rotate: -10, scale: 1.2 }}
-          className="text-muted-foreground dark:text-zinc-500 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
+          className="text-muted-foreground dark:text-zinc-500 group-hover:text-yellow-600 dark:group-hover:text-yellow-500 transition-colors"
         >
           <IconComponent size={28} weight="thin" />
         </motion.div>
@@ -75,9 +85,9 @@ export function WorkflowCardClient({ step, cardLabel }: WorkflowCardClientProps)
         </p>
       </div>
 
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[1px] h-12 bg-border dark:bg-zinc-900 group-hover:bg-blue-600/30 dark:group-hover:bg-blue-500/30 transition-colors hidden lg:block" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[1px] h-12 bg-border dark:bg-zinc-900 group-hover:bg-yellow-600/30 dark:group-hover:bg-yellow-500/30 transition-colors hidden lg:block" />
 
-      <div className="progress-line absolute bottom-0 left-0 h-[2px] w-0 bg-blue-600 dark:bg-blue-500" />
+      <div className="progress-line absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-600 dark:bg-yellow-500" />
     </motion.div>
   );
 }

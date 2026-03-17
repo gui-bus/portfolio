@@ -34,17 +34,18 @@ export async function MethodologySection() {
       id="methodology"
       className="relative py-32 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
     >
-
-
       <div className=" px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
           <div className="lg:col-span-8">
-            <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-blue-600 dark:text-blue-500 mb-4 block font-bold">
+            <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-yellow-600 dark:text-yellow-500 mb-4 block font-bold">
               {t("tag")}
             </span>
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] text-foreground">
               {t("title_top")} <br />
-              <span className="outline-text-global">{t("title_outline")}</span> <br />
+              <span className="outline-text-global">
+                {t("title_outline")}
+              </span>{" "}
+              <br />
               {t("title_bottom")}
             </h2>
           </div>
@@ -58,10 +59,7 @@ export async function MethodologySection() {
 
         <SectionAnimationWrapper className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border">
           {steps.map((step) => (
-            <MethodologyCardClient
-              key={step.id}
-              step={step}
-            />
+            <MethodologyCardClient key={step.id} step={step} />
           ))}
         </SectionAnimationWrapper>
 

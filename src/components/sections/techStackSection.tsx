@@ -50,8 +50,8 @@ export async function TechStackSection() {
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-px bg-blue-600 dark:bg-blue-500" />
-              <span className="text-blue-600 dark:text-blue-500 text-[10px] font-mono tracking-[0.5em] uppercase font-bold">
+              <span className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
+              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.5em] uppercase font-bold">
                 {t("tag")}
               </span>
             </div>

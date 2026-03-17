@@ -30,8 +30,7 @@ export function Footer() {
   return (
     <footer className="relative bg-background dark:bg-[#050505] border-t border-border dark:border-white/5 overflow-hidden transition-colors pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        <motion.div 
+        <motion.div
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -39,10 +38,13 @@ export function Footer() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20"
         >
           {/* Brand Column */}
-          <motion.div variants={fadeInUp} className="lg:col-span-5 flex flex-col gap-8">
+          <motion.div
+            variants={fadeInUp}
+            className="lg:col-span-5 flex flex-col gap-8"
+          >
             <Logo width={130} height={40} />
             <p className="text-muted-foreground max-w-sm text-sm font-medium leading-relaxed">
-              Desenvolvendo interfaces de alta performance e sistemas escaláveis 
+              Desenvolvendo interfaces de alta performance e sistemas escaláveis
               com foco em experiência do usuário e excelência técnica.
             </p>
           </motion.div>
@@ -50,7 +52,7 @@ export function Footer() {
           {/* Links Columns */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
             <motion.div variants={fadeInUp} className="flex flex-col gap-6">
-              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-600 dark:text-blue-500 font-bold">
+              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-yellow-600 dark:text-yellow-500 font-bold">
                 {t("links_label")}
               </span>
               <nav className="flex flex-col gap-4">
@@ -58,7 +60,7 @@ export function Footer() {
                   <a
                     key={item.key}
                     href={item.href}
-                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
+                    className="text-xs text-muted-foreground hover:text-yellow-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
                   >
                     {tHeader(item.key)}
                   </a>
@@ -67,7 +69,7 @@ export function Footer() {
             </motion.div>
 
             <motion.div variants={fadeInUp} className="flex flex-col gap-6">
-              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-600 dark:text-blue-500 font-bold">
+              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-yellow-600 dark:text-yellow-500 font-bold">
                 {t("social_label")}
               </span>
               <nav className="flex flex-col gap-4">
@@ -77,7 +79,7 @@ export function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
+                    className="text-xs text-muted-foreground hover:text-yellow-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
                   >
                     {item.name}
                   </a>
@@ -85,14 +87,21 @@ export function Footer() {
               </nav>
             </motion.div>
 
-            <motion.div variants={fadeInUp} className="hidden sm:flex flex-col gap-6 items-end">
+            <motion.div
+              variants={fadeInUp}
+              className="hidden sm:flex flex-col gap-6 items-end"
+            >
               <button
                 onClick={scrollToTop}
-                className="group flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors cursor-pointer"
+                className="group flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground hover:text-yellow-600 dark:hover:text-white transition-colors cursor-pointer"
               >
                 Back to top
-                <div className="p-2 border border-border dark:border-white/10 group-hover:border-blue-600 transition-colors">
-                  <ArrowUpIcon weight="bold" size={14} className="group-hover:-translate-y-0.5 transition-transform" />
+                <div className="p-2 border border-border dark:border-white/10 group-hover:border-yellow-600 transition-colors">
+                  <ArrowUpIcon
+                    weight="bold"
+                    size={14}
+                    className="group-hover:-translate-y-0.5 transition-transform"
+                  />
                 </div>
               </button>
             </motion.div>
@@ -112,9 +121,13 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2.5 bg-blue-600/5 dark:bg-blue-500/10 px-4 py-2 border border-blue-600/10 dark:border-blue-500/10">
-              <ActivityIcon weight="bold" size={12} className="text-blue-600 dark:text-blue-500 animate-pulse" />
-              <span className="text-[9px] font-mono text-blue-600 dark:text-blue-500 uppercase tracking-widest font-bold">
+            <div className="flex items-center gap-2.5 bg-yellow-600/5 dark:bg-yellow-500/10 px-4 py-2 border border-yellow-600/10 dark:border-yellow-500/10">
+              <ActivityIcon
+                weight="bold"
+                size={12}
+                className="text-yellow-600 dark:text-yellow-500 animate-pulse"
+              />
+              <span className="text-[9px] font-mono text-yellow-600 dark:text-yellow-500 uppercase tracking-widest font-bold">
                 {t("status_label")}
               </span>
             </div>

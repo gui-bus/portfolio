@@ -42,7 +42,7 @@ function HUDCorner({ className }: { className?: string }) {
       <CornersOutIcon
         size={16}
         weight="bold"
-        className="text-blue-600 dark:text-blue-500"
+        className="text-yellow-600 dark:text-yellow-500"
       />
     </div>
   );
@@ -74,7 +74,7 @@ function TechMarquee({ techStack }: TechMarqueeProps) {
             >
               {tech}
             </span>
-            <div className="w-4 h-4 rotate-45 bg-blue-600 dark:bg-blue-500" />
+            <div className="w-4 h-4 rotate-45 bg-yellow-600 dark:bg-yellow-500" />
           </div>
         ))}
       </motion.div>
@@ -94,8 +94,8 @@ function StatItem({ label, value, icon: Icon }: StatItemProps) {
       variants={fadeInUp}
       className="flex flex-col gap-2 p-8 border border-border dark:border-white/10 bg-background transition-all duration-500 hover:bg-muted/5 group overflow-hidden relative"
     >
-      <div className="absolute top-0 left-0 w-1 h-0 transition-all duration-700 group-hover:h-full bg-blue-600 dark:bg-blue-500" />
-      <div className="flex items-center gap-3 mb-2 text-blue-600 dark:text-blue-500">
+      <div className="absolute top-0 left-0 w-1 h-0 transition-all duration-700 group-hover:h-full bg-yellow-600 dark:bg-yellow-500" />
+      <div className="flex items-center gap-3 mb-2 text-yellow-600 dark:text-yellow-500">
         <Icon
           size={20}
           weight="thin"
@@ -108,7 +108,7 @@ function StatItem({ label, value, icon: Icon }: StatItemProps) {
       <span className="text-2xl font-bold text-foreground uppercase tracking-tighter group-hover:translate-x-2 transition-transform duration-500">
         {value}
       </span>
-      <div className="absolute bottom-2 right-2 opacity-5 group-hover:opacity-20 transition-opacity text-blue-600 dark:text-blue-500">
+      <div className="absolute bottom-2 right-2 opacity-5 group-hover:opacity-20 transition-opacity text-yellow-600 dark:text-yellow-500">
         <Icon size={40} weight="fill" />
       </div>
     </motion.div>
@@ -143,7 +143,7 @@ function NextProjectFooter({
         <div className="relative z-10 text-center px-6">
           <motion.span
             variants={fadeInUp}
-            className="text-blue-600 dark:text-blue-500 font-mono text-xs tracking-[0.6em] uppercase mb-10 block font-black"
+            className="text-yellow-600 dark:text-yellow-500 font-mono text-xs tracking-[0.6em] uppercase mb-10 block font-black"
           >
             {"//"} {label}
           </motion.span>
@@ -154,7 +154,7 @@ function NextProjectFooter({
             {title}
           </motion.h2>
           <motion.div variants={fadeInUp} className="mt-20 flex justify-center">
-            <div className="px-16 py-8 border border-border dark:border-white/10 group-hover:border-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 backdrop-blur-xl flex items-center gap-8 shadow-2xl relative">
+            <div className="px-16 py-8 border border-border dark:border-white/10 group-hover:border-yellow-500 group-hover:bg-yellow-600 group-hover:text-white transition-all duration-500 backdrop-blur-xl flex items-center gap-8 shadow-2xl relative">
               <span className="text-sm font-mono uppercase tracking-[0.5em] font-black">
                 {cta}
               </span>
@@ -285,14 +285,14 @@ export function ProjectPageClient({
                 variants={slideInLeft}
               >
                 <div className="flex items-center gap-4 mb-10">
-                  <div className="w-10 h-10 border border-blue-600/20 flex items-center justify-center bg-blue-600/5 dark:bg-blue-500/5">
+                  <div className="w-10 h-10 border border-yellow-600/20 flex items-center justify-center bg-yellow-600/5 dark:bg-yellow-500/5">
                     <TargetIcon
                       size={24}
                       weight="thin"
-                      className="text-blue-600 dark:text-blue-500"
+                      className="text-yellow-600 dark:text-yellow-500"
                     />
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-[0.5em] font-black text-blue-600 dark:text-blue-500">
+                  <span className="text-xs font-mono uppercase tracking-[0.5em] font-black text-yellow-600 dark:text-yellow-500">
                     {"//"} {t("challenge_tag")}
                   </span>
                 </div>
@@ -354,14 +354,14 @@ export function ProjectPageClient({
                 variants={slideInRight}
               >
                 <div className="flex items-center gap-4 mb-10">
-                  <div className="w-10 h-10 border border-blue-600/20 flex items-center justify-center bg-blue-600/5 dark:bg-blue-500/5">
+                  <div className="w-10 h-10 border border-yellow-600/20 flex items-center justify-center bg-yellow-600/5 dark:bg-yellow-500/5">
                     <CpuIcon
                       size={24}
                       weight="thin"
-                      className="text-blue-600 dark:text-blue-500"
+                      className="text-yellow-600 dark:text-yellow-500"
                     />
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-[0.5em] font-black text-blue-600 dark:text-blue-500">
+                  <span className="text-xs font-mono uppercase tracking-[0.5em] font-black text-yellow-600 dark:text-yellow-500">
                     {"//"} {t("execution_tag")}
                   </span>
                 </div>
@@ -371,7 +371,7 @@ export function ProjectPageClient({
                     {t("execution_title_bottom")}
                   </span>
                 </h2>
-                <div className="prose prose-2xl dark:prose-invert max-w-none font-light leading-relaxed text-muted-foreground border-r-4 border-blue-600 dark:border-blue-500 pr-12 text-right lg:text-left lg:border-r-0 lg:border-l-4 lg:pr-0 lg:pl-12">
+                <div className="prose prose-2xl dark:prose-invert max-w-none font-light leading-relaxed text-muted-foreground border-r-4 border-yellow-600 dark:border-yellow-500 pr-12 text-right lg:text-left lg:border-r-0 lg:border-l-4 lg:pr-0 lg:pl-12">
                   <p>{solution}</p>
                 </div>
               </motion.div>
@@ -395,7 +395,7 @@ export function ProjectPageClient({
                 <RocketLaunchIcon
                   size={80}
                   weight="thin"
-                  className="mb-12 animate-pulse text-blue-600 dark:text-blue-500"
+                  className="mb-12 animate-pulse text-yellow-600 dark:text-yellow-500"
                 />
               </motion.div>
               <motion.h2
@@ -420,15 +420,15 @@ export function ProjectPageClient({
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  className="group p-16 md:p-24 border border-border bg-muted/5 backdrop-blur-3xl relative overflow-hidden transition-all duration-700 hover:bg-muted/10 hover:border-blue-600/50 dark:hover:border-blue-500/50"
+                  className="group p-16 md:p-24 border border-border bg-muted/5 backdrop-blur-3xl relative overflow-hidden transition-all duration-700 hover:bg-muted/10 hover:border-yellow-600/50 dark:hover:border-yellow-500/50"
                 >
-                  <div className="absolute top-0 right-0 p-10 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-700 text-blue-600 dark:text-blue-500">
+                  <div className="absolute top-0 right-0 p-10 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-700 text-yellow-600 dark:text-yellow-500">
                     <ChartBarIcon size={250} weight="fill" />
                   </div>
 
                   <div className="relative z-10 flex flex-col gap-12">
                     <div className="flex items-center gap-10">
-                      <span className="text-8xl md:text-[10rem] font-black opacity-10 group-hover:opacity-100 transition-all duration-700 leading-none text-blue-600 dark:text-blue-500">
+                      <span className="text-8xl md:text-[10rem] font-black opacity-10 group-hover:opacity-100 transition-all duration-700 leading-none text-yellow-600 dark:text-yellow-500">
                         {(index + 1).toString().padStart(2, "0")}
                       </span>
                     </div>

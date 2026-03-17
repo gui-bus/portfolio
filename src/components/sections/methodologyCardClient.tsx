@@ -3,7 +3,12 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { WindIcon, PencilCircleIcon, CodeIcon, Icon } from "@phosphor-icons/react";
+import {
+  WindIcon,
+  PencilCircleIcon,
+  CodeIcon,
+  Icon,
+} from "@phosphor-icons/react";
 import { fadeInUp } from "@/lib/animations";
 
 const iconsMap: Record<string, Icon> = {
@@ -28,10 +33,10 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
 
   useEffect(() => {
     if (!cardRef.current) return;
-    
+
     const card = cardRef.current;
     const line = card.querySelector(".animated-line");
-    
+
     const tl = gsap.timeline({ paused: true });
     tl.to(line, { width: "100%", duration: 0.5, ease: "power2.out" });
 
@@ -53,7 +58,7 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
       variants={fadeInUp}
       className="group relative bg-background p-10 md:p-14 overflow-hidden transition-colors hover:bg-muted/50 dark:hover:bg-zinc-900/20"
     >
-      <div className="absolute inset-0 bg-blue-500/[0.03] dark:bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-yellow-500/[0.03] dark:bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative z-10">
         <div className="flex justify-between items-center mb-12">
@@ -67,7 +72,7 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
             <IconComponent
               size={32}
               weight="thin"
-              className="text-blue-600 dark:text-blue-500"
+              className="text-yellow-600 dark:text-yellow-500"
             />
           </motion.div>
         </div>
@@ -75,7 +80,7 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
         <span className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground mb-2 block font-bold">
           [{step.tag}]
         </span>
-        <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-foreground">
+        <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors text-foreground">
           {step.title}
         </h3>
         <p className="text-muted-foreground text-sm leading-relaxed font-light">
@@ -83,7 +88,7 @@ export function MethodologyCardClient({ step }: MethodologyCardClientProps) {
         </p>
       </div>
 
-      <div className="animated-line absolute bottom-0 left-0 h-[2px] w-0 bg-blue-600 dark:bg-blue-500" />
+      <div className="animated-line absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-600 dark:bg-yellow-500" />
     </motion.div>
   );
 }
