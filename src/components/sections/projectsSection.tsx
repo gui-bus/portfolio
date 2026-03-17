@@ -134,12 +134,16 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative py-24 bg-background transition-colors duration-500 overflow-hidden grid-projects"
+      className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-projects"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:60px_60px] opacity-10 pointer-events-none" />
+
+      {/* Cinematic Glow */}
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10">
-        <div className="px-6 mb-16">
+        <div className="px-6 mb-24 max-w-[1400px] mx-auto">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -147,35 +151,36 @@ export function ProjectsSection() {
             viewport={{ once: true }}
           >
             <motion.div
-              className="flex items-center gap-4 mb-6"
+              className="flex items-center gap-4 mb-8"
               variants={fadeInUp}
             >
-              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.4em] uppercase underline underline-offset-8 font-bold">
+              <div className="w-12 h-px bg-yellow-600 dark:bg-yellow-500" />
+              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.5em] uppercase font-black">
                 {t("tag")}
               </span>
             </motion.div>
 
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
               <motion.h2
-                className="text-5xl md:text-8xl font-black text-foreground dark:text-white leading-[0.8] tracking-tighter uppercase"
+                className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground leading-[0.8] tracking-tighter uppercase"
                 variants={fadeInUp}
               >
                 {t("title_top")} <br />
-                <span className="outline-text-global">{t("title_bottom")}</span>
+                <span className="outline-text-global italic">{t("title_bottom")}</span>
               </motion.h2>
 
               <div className="flex items-center gap-4">
                 <button
                   onClick={scrollPrev}
-                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 transition-colors"
+                  className="w-14 h-14 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 hover:bg-yellow-600/5 transition-all group"
                 >
-                  <CaretLeftIcon size={20} />
+                  <CaretLeftIcon size={24} className="group-hover:-translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={scrollNext}
-                  className="w-12 h-12 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 transition-colors"
+                  className="w-14 h-14 flex items-center justify-center border border-border dark:border-white/10 hover:border-yellow-600 hover:bg-yellow-600/5 transition-all group"
                 >
-                  <CaretRightIcon size={20} />
+                  <CaretRightIcon size={24} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -195,47 +200,56 @@ export function ProjectsSection() {
           </div>
         </div>
 
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="flex justify-center gap-3 mt-16">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
               onClick={() => scrollTo(index)}
-              className={`h-1 transition-all duration-500 ${
+              className={`h-1 transition-all duration-700 ${
                 index === selectedIndex
-                  ? "w-12 bg-yellow-600"
-                  : "w-4 bg-border dark:bg-white/10"
+                  ? "w-16 bg-yellow-600"
+                  : "w-4 bg-border dark:bg-white/10 hover:bg-yellow-600/30"
               }`}
             />
           ))}
         </div>
 
-        <div className="px-6 mt-24">
+        {/* Decorative Side Label */}
+        <div className="hidden xl:block absolute top-0 -right-4 h-full pt-32 pointer-events-none">
+          <div className="sticky top-32 rotate-90 origin-top-right">
+            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
+              {t("tag")} — PROJECT_VAULT_2026
+            </span>
+          </div>
+        </div>
+
+        <div className="px-6 mt-32 max-w-[1400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-center p-12 md:p-24 relative overflow-hidden group"
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-center justify-center p-16 md:p-32 relative overflow-hidden group border border-border dark:border-white/5 bg-muted/5 backdrop-blur-sm"
           >
             <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
-              <span className="text-[12vw] font-black uppercase whitespace-nowrap tracking-tighter">
+              <span className="text-[12vw] font-black uppercase whitespace-nowrap tracking-tighter italic outline-text-global">
                 {t("decorative_label")}
               </span>
             </div>
 
             <PlusIcon
-              size={32}
+              size={40}
               weight="bold"
-              className="text-yellow-600 dark:text-yellow-500 mb-8 transition-transform duration-700 group-hover:rotate-180"
+              className="text-yellow-600 dark:text-yellow-500 mb-10 transition-transform duration-1000 group-hover:rotate-180"
             />
 
-            <p className="text-muted-foreground font-mono text-xs uppercase tracking-[0.4em] mb-4 text-center">
+            <p className="text-muted-foreground font-mono text-[10px] uppercase tracking-[0.5em] mb-6 text-center font-black">
               {t("more_projects")}
             </p>
 
             <motion.button
               onClick={openForm}
-              className="relative flex items-center gap-4 text-foreground dark:text-white font-black text-2xl md:text-5xl uppercase tracking-tighter transition-all hover:text-yellow-600 dark:hover:text-yellow-500 text-center cursor-pointer"
+              className="relative flex items-center gap-6 text-foreground font-black text-3xl md:text-6xl uppercase tracking-tighter transition-all hover:text-yellow-600 dark:hover:text-yellow-500 text-center cursor-pointer"
             >
               {t("cta_contact")}
             </motion.button>

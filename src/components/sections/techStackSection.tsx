@@ -46,29 +46,34 @@ export async function TechStackSection() {
       id="tech-stack"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-tech"
     >
-      <div className="relative z-10  px-6">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:60px_60px] opacity-10 pointer-events-none" />
+
+      {/* Cinematic Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6">
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
-              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.5em] uppercase font-bold">
+              <span className="text-yellow-600 dark:text-yellow-500 text-[10px] font-mono tracking-[0.5em] uppercase font-black">
                 {t("tag")}
               </span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-black text-foreground dark:text-white leading-[0.85] tracking-tighter uppercase">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground leading-[0.8] tracking-tighter uppercase">
               {t("title_top")} <br />
-              <span className="outline-text-global">{t("title_bottom")}</span>
+              <span className="outline-text-global italic">{t("title_bottom")}</span>
             </h2>
           </div>
 
           <div className="lg:col-span-4">
-            <p className="text-muted-foreground text-sm font-light leading-relaxed border-l border-border dark:border-zinc-800 pl-6">
+            <p className="text-muted-foreground text-lg font-light leading-relaxed border-l border-border dark:border-white/10 pl-8">
               {t("subtitle")}
             </p>
           </div>
         </div>
 
-        <SectionAnimationWrapper className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900 mb-24">
+        <SectionAnimationWrapper className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border dark:bg-white/5 border border-border dark:border-white/5 mb-24">
           {primaryTech.map((tech, index) => (
             <TechCardClient key={tech.name} tech={tech} index={index} />
           ))}
@@ -76,10 +81,10 @@ export async function TechStackSection() {
 
         <FadeInAnimationWrapper className="space-y-4">
           <div className="flex items-center gap-6 mb-8 px-2">
-            <p className="text-[9px] text-muted-foreground/60 dark:text-zinc-600 tracking-[0.6em] uppercase font-mono whitespace-nowrap font-bold">
+            <p className="text-[9px] text-muted-foreground/60 dark:text-zinc-600 tracking-[0.6em] uppercase font-mono whitespace-nowrap font-black">
               {t("marquee_label")}
             </p>
-            <div className="h-px w-full bg-border dark:bg-zinc-900" />
+            <div className="h-px w-full bg-border dark:bg-white/5" />
           </div>
 
           <div className="relative">
@@ -93,6 +98,15 @@ export async function TechStackSection() {
             />
           </div>
         </FadeInAnimationWrapper>
+
+        {/* Decorative Side Label */}
+        <div className="hidden xl:block absolute top-0 -right-4 h-full pt-32 pointer-events-none">
+          <div className="sticky top-32 rotate-90 origin-top-right">
+            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
+              {t("tag")} — STACK_MATRIX_OS
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
