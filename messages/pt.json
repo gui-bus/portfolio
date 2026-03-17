@@ -34,7 +34,10 @@
     "step3_tag": "Structure",
     "step3_title": "Escalabilidade Real",
     "step3_desc": "Código limpo e tipado com TypeScript. Preparado para crescer sem gerar dívida técnica acumulada.",
-    "footer_text": "// Focado em entregar resultados, não apenas arquivos."
+    "footer_text": "// Focado em entregar resultados, não apenas arquivos.",
+    "label_performance": "Performance",
+    "label_experience": "Experiência",
+    "label_scalability": "Escalabilidade"
   },
   "Workflow": {
     "tag": "Workflow",

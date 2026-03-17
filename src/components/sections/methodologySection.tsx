@@ -34,15 +34,22 @@ export async function MethodologySection() {
       id="methodology"
       className="relative py-32 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
     >
-      <div className=" px-6 relative z-10">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[60px_60px] opacity-10 pointer-events-none" />
+
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
           <div className="lg:col-span-8">
-            <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-yellow-600 dark:text-yellow-500 mb-4 block font-bold">
-              {t("tag")}
-            </span>
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.85] text-foreground">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
+              <span className="text-[10px] font-mono tracking-[0.4em] uppercase text-yellow-600 dark:text-yellow-500 font-black">
+                {t("tag")}
+              </span>
+            </div>
+            <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-foreground">
               {t("title_top")} <br />
-              <span className="outline-text-global">
+              <span className="outline-text-global italic">
                 {t("title_outline")}
               </span>{" "}
               <br />
@@ -51,7 +58,7 @@ export async function MethodologySection() {
           </div>
 
           <div className="lg:col-span-4 border-l border-border pl-8 pb-2">
-            <p className="text-muted-foreground text-sm font-light leading-relaxed max-w-xs">
+            <p className="text-muted-foreground text-lg font-light leading-relaxed max-w-xs">
               {t("subtitle")}
             </p>
           </div>
@@ -63,20 +70,39 @@ export async function MethodologySection() {
           ))}
         </SectionAnimationWrapper>
 
-        <div className="mt-16 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex gap-4">
-            {["Clean Code", "UX-First", "High-Fidelity"].map((label) => (
-              <span
+        <div className="mt-20 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-border pt-12">
+          <div className="flex flex-wrap gap-4">
+            {[
+              t("label_performance"),
+              t("label_experience"),
+              t("label_scalability"),
+            ].map((label) => (
+              <div
                 key={label}
-                className="text-[10px] font-mono text-muted-foreground uppercase border border-border px-3 py-1 bg-muted/20 font-bold"
+                className="flex items-center gap-2 px-4 py-2 bg-muted/30 border border-border backdrop-blur-sm group hover:border-yellow-600/30 transition-colors"
               >
-                {label}
-              </span>
+                <div className="w-1 h-1 rounded-full bg-yellow-600 dark:bg-yellow-500" />
+                <span className="text-[10px] font-mono text-muted-foreground uppercase font-black tracking-widest">
+                  {label}
+                </span>
+              </div>
             ))}
           </div>
-          <p className="text-[10px] font-mono text-muted-foreground italic font-bold">
-            {t("footer_text")}
-          </p>
+
+          <div className="flex items-center gap-6">
+            <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest font-bold">
+              {t("footer_text")}
+            </p>
+            <div className="hidden lg:block h-px w-12 bg-border" />
+          </div>
+        </div>
+
+        <div className="hidden xl:block absolute top-0 right-10 h-full pt-32 pointer-events-none">
+          <div className="sticky top-32 rotate-90 origin-top-right">
+            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
+              {t("tag")} — SYSTEM_PROTOCOL
+            </span>
+          </div>
         </div>
       </div>
     </section>
