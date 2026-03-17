@@ -61,7 +61,7 @@ pnpm prepare
 ### Communication
 - **Ask Before Acting:** If there are any doubts about the task requirements or implementation details, always ask for clarification before proceeding with the execution.
 - **No Filler Labels:** Avoid adding generic or 'nonsense' technical labels in English that do not add real value to the user (e.g., 'SYSTEM_v3.0_INITIALIZED', 'UTC_TIME', 'STATUS: STABLE_CONNECTION', 'PROTO_ID'). Focus on clean, meaningful content.
-- **Mandatory Internationalization:** NEVER use hardcoded English strings for user-facing content. All text MUST use the `next-intl` library (translations from `messages/`). This applies to UI labels, button text, and decorative background text.
+- **Mandatory Internationalization:** NEVER use hardcoded English or Portuguese strings for user-facing content. All text MUST use the `next-intl` library (translations from `messages/`). This applies to UI labels, button text, decorative background text, and technical placeholder strings. Hardcoded text is strictly prohibited.
 - **No Code Comments:** DO NOT add comments to the code (e.g., //, /* */, or {/* */}). The code should be clean, semantic, and self-explanatory.
 
 ## Key Files & Directories

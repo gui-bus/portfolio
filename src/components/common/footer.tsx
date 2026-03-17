@@ -16,10 +16,6 @@ export async function Footer() {
 
   return (
     <footer className="relative py-24 bg-background dark:bg-[#050505] border-t border-border dark:border-white/5 overflow-hidden transition-colors grid-footer">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none opacity-[0.4] dark:opacity-[0.1]" />
-
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-linear-to-r from-transparent via-blue-600/50 to-transparent dark:via-blue-500/30" />
-
       <div className="container px-6 md:px-12 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
           <div className="lg:col-span-6 flex flex-col gap-10">
@@ -40,7 +36,7 @@ export async function Footer() {
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:pl-12">
             <div className="flex flex-col gap-8">
               <div className="flex items-center gap-3">
-                <span className="h-[1px] w-8 bg-blue-600 dark:bg-blue-500" />
+                <span className="h-px w-8 bg-blue-600 dark:bg-blue-500" />
                 <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500 font-bold">
                   {t("links_label")}
                 </span>
@@ -52,7 +48,7 @@ export async function Footer() {
                     href={item.href}
                     className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-all font-medium uppercase tracking-[0.2em] group flex items-center gap-2"
                   >
-                    <span className="w-0 h-[1px] bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
+                    <span className="w-0 h-px bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
                     {tHeader(item.key)}
                   </a>
                 ))}
@@ -61,7 +57,7 @@ export async function Footer() {
 
             <div className="flex flex-col gap-8">
               <div className="flex items-center gap-3">
-                <span className="h-[1px] w-8 bg-blue-600 dark:bg-blue-500" />
+                <span className="h-px w-8 bg-blue-600 dark:bg-blue-500" />
                 <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500 font-bold">
                   {t("social_label")}
                 </span>
@@ -73,7 +69,7 @@ export async function Footer() {
                     href="#"
                     className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-all font-medium uppercase tracking-[0.2em] group flex items-center gap-2"
                   >
-                    <span className="w-0 h-[1px] bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
+                    <span className="w-0 h-px bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
                     {item}
                   </a>
                 ))}
@@ -87,7 +83,7 @@ export async function Footer() {
             <p className="text-[9px] font-mono text-muted-foreground dark:text-zinc-600 uppercase tracking-[0.3em] font-bold">
               © {new Date().getFullYear()} GUIBUS.DEV
             </p>
-            <div className="hidden sm:block h-4 w-[1px] bg-border dark:bg-zinc-800" />
+            <div className="hidden sm:block h-4 w-px bg-border dark:bg-zinc-800" />
             <p className="text-[9px] font-mono text-muted-foreground dark:text-zinc-600 uppercase tracking-[0.3em] font-bold text-center">
               {t("copyright_label")}
             </p>
@@ -104,7 +100,7 @@ export async function Footer() {
               </span>
             </div>
 
-            <div className="flex items-center gap-3 bg-muted/30 dark:bg-white/[0.02] px-5 py-2.5 border border-border dark:border-white/5 backdrop-blur-sm">
+            <div className="flex items-center gap-3 bg-muted/30 dark:bg-white/2 px-5 py-2.5 border border-border dark:border-white/5 backdrop-blur-sm">
               <span className="text-[9px] font-mono text-foreground/60 dark:text-white/60 uppercase tracking-widest font-black">
                 {t("loc_label")}
               </span>

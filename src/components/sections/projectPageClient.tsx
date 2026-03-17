@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowLeft, ArrowRight, Cpu, Target, Rocket } from "lucide-react";
 import Link from "next/link";
 import { ReadingProgress } from "@/components/sections/readingProgress";
-import { cn } from "@/lib/utils";
 import { Project } from "@/lib/projects-data";
 import { useTranslations } from "next-intl";
 
@@ -123,6 +122,7 @@ export function ProjectPageClient({
   try {
     results = tProjects.raw(`${project.slug}.results`) as string[];
   } catch (e) {
+    console.error(e);
     results = project.fullCaseStudy.results;
   }
 
@@ -139,11 +139,11 @@ export function ProjectPageClient({
   return (
     <div className="bg-background text-muted-foreground font-sans transition-colors duration-500">
       <ReadingProgress />
-      <div className="noise-overlay fixed inset-0 pointer-events-none z-[60] opacity-[0.03] dark:opacity-[0.02] mix-blend-overlay" />
+      <div className="noise-overlay fixed inset-0 pointer-events-none z-60 opacity-[0.03] dark:opacity-[0.02] mix-blend-overlay" />
 
       <main className="relative">
         <motion.div
-          className="fixed top-8 left-8 z-[70]"
+          className="fixed top-8 left-8 z-70"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
         >
@@ -161,7 +161,7 @@ export function ProjectPageClient({
           ref={heroRef}
           className="relative h-screen flex items-center justify-center overflow-hidden border-b border-border"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20" />
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-size-[40px_40px] opacity-20" />
 
           <motion.div
             className="absolute inset-0 z-0"

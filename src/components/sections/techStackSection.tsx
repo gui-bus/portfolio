@@ -46,8 +46,6 @@ export async function TechStackSection() {
       id="tech-stack"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-tech"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-50" />
-
       <div className="relative z-10  px-6">
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
@@ -70,7 +68,7 @@ export async function TechStackSection() {
           </div>
         </div>
 
-        <SectionAnimationWrapper className="grid grid-cols-2 lg:grid-cols-4 gap-[1px] bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900 mb-24">
+        <SectionAnimationWrapper className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900 mb-24">
           {primaryTech.map((tech, index) => (
             <TechCardClient key={tech.name} tech={tech} index={index} />
           ))}

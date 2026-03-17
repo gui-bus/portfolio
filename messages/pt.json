@@ -216,13 +216,6 @@
       ]
     }
   },
-  "Loading": {
-    "init": "INICIALIZANDO_SISTEMA",
-    "kernel": "CARREGANDO_KERNEL_CRIATIVO",
-    "assets": "SINCRONIZANDO_RECURSOS",
-    "ready": "PROTOCOLO_ATIVO",
-    "version": "SYS_v3.0.4"
-  },
   "Footer": {
     "title_top": "Transformando complexidade",
     "title_bottom": "em performance.",

@@ -37,8 +37,6 @@ export async function WorkflowSection() {
       id="workflow"
       className="relative py-32 bg-background text-foreground transition-colors duration-500 overflow-hidden grid-process"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:40px_40px] opacity-50 pointer-events-none" />
-
       <div className=" px-6 relative z-10">
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
@@ -53,7 +51,7 @@ export async function WorkflowSection() {
           </h2>
         </div>
 
-        <SectionAnimationWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900">
+        <SectionAnimationWrapper className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-border dark:bg-zinc-900/50 border border-border dark:border-zinc-900">
           {workflow.map((step) => (
             <WorkflowCardClient key={step.id} step={step} cardLabel={t("card_label")} />
           ))}

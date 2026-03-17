@@ -17,8 +17,6 @@ export async function ContactSection() {
       id="contact"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-contact"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:40px_40px] opacity:30 pointer-events-none" />
-
       <div className=" px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           <ContactHeaderClient 
