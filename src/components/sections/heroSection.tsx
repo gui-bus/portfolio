@@ -10,6 +10,7 @@ import {
   HeroDescriptionAnimation,
 } from "./heroSectionClient";
 import { ScrollArrowClient } from "./heroScrollArrowClient";
+import Link from "next/link";
 
 export async function HeroSection() {
   const t = await getTranslations("Hero");
@@ -93,7 +94,7 @@ export async function HeroSection() {
                         {t("status")}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 group cursor-pointer">
+                    <Link href="#projects" className="flex items-center gap-2 group cursor-pointer">
                       <span className="text-[10px] font-mono uppercase tracking-widest font-black group-hover:text-yellow-600 transition-colors">
                         {t("cta_projects")}
                       </span>
@@ -101,7 +102,7 @@ export async function HeroSection() {
                         size={12}
                         className="group-hover:translate-x-1 transition-transform"
                       />
-                    </div>
+                    </Link>
                   </div>
                 </div>
               </div>

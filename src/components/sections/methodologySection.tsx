@@ -34,9 +34,7 @@ export async function MethodologySection() {
       id="methodology"
       className="relative py-44 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[60px_60px] opacity-10 pointer-events-none" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-350 mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">

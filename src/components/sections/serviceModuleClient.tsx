@@ -33,7 +33,6 @@ interface ServiceModuleClientProps {
     tag: string;
     desc: string;
   };
-  index: number;
   isLarge?: boolean;
   ctaText?: string;
 }
@@ -48,7 +47,6 @@ function ModuleCorner() {
 
 export function ServiceModuleClient({
   cap,
-  index,
   isLarge = false,
   ctaText,
 }: ServiceModuleClientProps) {
@@ -58,7 +56,7 @@ export function ServiceModuleClient({
     <motion.div
       variants={fadeInUp}
       className={cn(
-        "group relative bg-muted/5 dark:bg-white/[0.02] border border-border dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-yellow-500/50",
+        "group relative bg-muted/5 dark:bg-white2 border border-border dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-yellow-500/50",
         isLarge ? "lg:col-span-2 lg:row-span-2 p-8 md:p-12" : "p-6 md:p-8",
       )}
     >
@@ -68,13 +66,11 @@ export function ServiceModuleClient({
 
       <ModuleCorner />
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-0 bg-yellow-500/50 group-hover:h-4 transition-all duration-500" />
-
       <div className="relative z-10 h-full flex flex-col">
         <div className="flex justify-between items-start mb-8">
           <div
             className={cn(
-              "flex items-center justify-center rounded-none border border-border dark:border-white/10 bg-background transition-all duration-500 group-hover:border-yellow-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]",
+              "flex items-center justify-center rounded-none border border-border dark:border-white/10 bg-background transition-all duration-500 group-hover:border-yellow-500/50",
               isLarge
                 ? "w-16 h-16 md:w-20 md:h-20"
                 : "w-12 h-12 md:w-14 md:h-14",
@@ -86,10 +82,6 @@ export function ServiceModuleClient({
               className="text-yellow-600 dark:text-yellow-500 group-hover:scale-110 transition-transform"
             />
           </div>
-
-          <span className="text-[10px] font-mono text-muted-foreground/40 font-bold group-hover:text-yellow-500 transition-colors uppercase tracking-widest">
-            {isLarge ? "CORE_SYS" : `MODULE_ID_0${index}`}
-          </span>
         </div>
 
         <div className="mt-auto">
