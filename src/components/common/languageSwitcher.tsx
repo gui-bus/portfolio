@@ -1,10 +1,12 @@
 "use client";
+
 import * as React from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { ChecksIcon } from "@phosphor-icons/react";
+import { Check, CaretDown } from "@phosphor-icons/react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
 import ReactCountryFlag from "react-country-flag";
+import { motion } from "framer-motion";
 
 import {
   DropdownMenu,
@@ -12,7 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
 import { locales } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 
@@ -28,74 +29,83 @@ export function LanguageSwitcher() {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    const timer = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   const handleLocaleChange = (newLocale: string) => {
     if (newLocale === currentLocale) return;
-
     Cookies.set("NEXT_LOCALE", newLocale, { expires: 365 });
     router.refresh();
   };
 
   if (!mounted) {
     return (
-      <div className="h-10 w-20 rounded-full bg-muted/30 border border-border/50 animate-pulse" />
+      <div className="h-9 w-20 bg-muted dark:bg-zinc-900/50 border border-border dark:border-zinc-800 animate-pulse" />
     );
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="sm"
-          className="h-10 px-4 rounded-full bg-muted/30 border-border/50 backdrop-blur-sm hover:bg-muted/50 transition-all duration-300 font-bold uppercase tracking-tighter cursor-pointer"
-        >
-          <div className="mr-2 flex items-center justify-center overflow-hidden rounded-sm border border-border/10">
-            <ReactCountryFlag
-              countryCode={flagCodes[currentLocale]}
-              svg
-              style={{
-                width: '1.2em',
-                height: '0.9em',
-              }}
-              title={flagCodes[currentLocale]}
-            />
-          </div>
-          {currentLocale}
-        </Button>
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger className="outline-none">
+        <div className="h-10 px-4 flex items-center gap-3 bg-muted/30 dark:bg-white/[0.03] border border-border dark:border-white/5 hover:border-blue-600 dark:hover:border-blue-500 transition-all group backdrop-blur-md">
+          <ReactCountryFlag
+            countryCode={flagCodes[currentLocale]}
+            svg
+            className="rounded-sm opacity-80 group-hover:opacity-100 transition-opacity"
+            style={{ width: "1.2em", height: "0.9em" }}
+          />
+
+          <span className="text-[10px] font-mono font-bold text-muted-foreground dark:text-zinc-400 group-hover:text-foreground dark:group-hover:text-white uppercase tracking-[0.2em] transition-colors">
+            {currentLocale}
+          </span>
+          <CaretDown
+            size={10}
+            weight="bold"
+            className="text-muted-foreground/50 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors"
+          />
+        </div>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent
         align="end"
-        className="w-44 rounded-2xl p-2 border-border/50 bg-background/80 backdrop-blur-xl"
+        sideOffset={8}
+        className="w-48 rounded-none border border-border dark:border-white/10 bg-background/95 dark:bg-[#0a0a0a]/95 backdrop-blur-xl p-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-[110] animate-in fade-in zoom-in-95 duration-200"
       >
         {locales.map((loc) => (
           <DropdownMenuItem
             key={loc}
             onClick={() => handleLocaleChange(loc)}
             className={cn(
-              "flex items-center justify-between px-3 py-2.5 rounded-xl transition-all duration-200 cursor-pointer mb-1 last:mb-0",
+              "flex items-center justify-between px-3 py-2.5 rounded-none transition-all cursor-pointer mb-1 last:mb-0 font-mono text-[10px] uppercase tracking-wider group",
               currentLocale === loc
-                ? "bg-primary/10 text-primary font-bold"
-                : "text-muted-foreground hover:bg-muted/50 hover:text-foreground",
+                ? "bg-blue-600 dark:bg-blue-500 text-white"
+                : "text-muted-foreground hover:bg-muted/50 dark:hover:bg-white/[0.05] hover:text-foreground dark:hover:text-white",
             )}
           >
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center overflow-hidden rounded-sm border border-border/10">
-                <ReactCountryFlag
-                  countryCode={flagCodes[loc]}
-                  svg
-                  style={{
-                    width: '1.4em',
-                    height: '1em',
-                  }}
-                  title={flagCodes[loc]}
-                />
-              </div>
-              <span className="uppercase tracking-tighter">{t(loc)}</span>
+              <ReactCountryFlag
+                countryCode={flagCodes[loc]}
+                svg
+                className={cn(
+                  "rounded-sm transition-transform group-hover:scale-110",
+                  currentLocale === loc ? "opacity-100" : "opacity-60"
+                )}
+                style={{ width: "1.4em", height: "1em" }}
+              />
+              <span className="font-bold tracking-[0.1em]">{t(loc)}</span>
             </div>
-            {currentLocale === loc && <ChecksIcon weight="bold" size={16} />}
+            {currentLocale === loc && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <Check weight="bold" size={14} />
+              </motion.div>
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

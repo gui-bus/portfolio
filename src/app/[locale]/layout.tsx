@@ -33,7 +33,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
-      <body className="antialiased selection:bg-primary selection:text-primary-foreground">
+      <body className="antialiased selection:bg-primary selection:text-primary-foreground w-full max-w-440 mx-auto">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -1,61 +1,85 @@
 "use client";
+
 import * as React from "react";
-import { MoonIcon, SunIcon } from "@phosphor-icons/react";
+import { Moon, Sun } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useThemeTransition } from "@/lib/hooks/useThemeTransition";
+import { useTranslations } from "next-intl";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useThemeTransition();
+  const t = useTranslations("ThemeToggle");
+  const { resolvedTheme, toggleTheme } = useThemeTransition();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    const timer = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   if (!mounted) {
-    return (
-      <div className="flex p-1 rounded-full bg-muted/30 border border-border/50 w-21 h-10.5" />
-    );
+    return <div className="w-[70px] h-10 bg-muted/30 dark:bg-white/[0.03] border border-border dark:border-white/5 animate-pulse" />;
   }
 
-  const isLight = theme === "light";
+  const isLight = resolvedTheme === "light";
 
   return (
-    <div className="flex p-1 rounded-full bg-muted/30 border border-border/50 backdrop-blur-sm relative overflow-hidden group">
-      <div
+    <div className="flex bg-muted/30 dark:bg-white/[0.03] border border-border dark:border-white/5 p-1 relative overflow-hidden group h-10 backdrop-blur-md">
+      <motion.div
         className={cn(
-          "absolute h-8.5 w-8.5 rounded-full bg-background shadow-sm transition-all duration-300 ease-in-out z-0",
-          isLight ? "translate-x-0" : "translate-x-10.5",
+          "absolute h-8 w-[32px] z-0",
+          isLight 
+            ? "bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)]" 
+            : "bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
         )}
+        initial={false}
+        animate={{
+          x: isLight ? 0 : 32,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 400,
+          damping: 30
+        }}
       />
 
       <button
         onClick={() => (isLight ? null : toggleTheme())}
-        disabled={isLight}
         className={cn(
-          "relative z-10 p-2 rounded-full transition-colors duration-300 cursor-pointer",
-          isLight
-            ? "text-primary"
-            : "text-muted-foreground hover:text-foreground",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-[32px] group/sun",
+          isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
         )}
-        title="Light Mode"
+        title={t("light")}
       >
-        <SunIcon weight={isLight ? "fill" : "bold"} size={18} />
+        <Sun 
+          weight={isLight ? "fill" : "bold"} 
+          size={16} 
+          className={cn(
+            "transition-transform duration-500",
+            isLight ? "rotate-0" : "rotate-45 group-hover/sun:rotate-12"
+          )}
+        />
       </button>
 
       <button
         onClick={() => (!isLight ? null : toggleTheme())}
-        disabled={!isLight}
         className={cn(
-          "relative z-10 p-2 rounded-full transition-colors duration-300 cursor-pointer",
-          !isLight
-            ? "text-primary"
-            : "text-muted-foreground hover:text-foreground",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-[32px] group/moon",
+          !isLight ? "text-white" : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400"
         )}
-        title="Dark Mode"
+        title={t("dark")}
       >
-        <MoonIcon weight={!isLight ? "fill" : "bold"} size={18} />
+        <Moon 
+          weight={!isLight ? "fill" : "bold"} 
+          size={16} 
+          className={cn(
+            "transition-transform duration-500",
+            !isLight ? "rotate-0" : "-rotate-45 group-hover/moon:rotate-0"
+          )}
+        />
       </button>
     </div>
   );
-}
+  }
