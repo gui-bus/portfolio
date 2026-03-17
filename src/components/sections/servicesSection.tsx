@@ -70,7 +70,7 @@ export async function ServicesSection() {
             }}
           />
 
-          {capabilities.map((cap, i) => (
+          {capabilities.map((cap) => (
             <ServiceModuleClient key={cap.title} cap={cap} />
           ))}
         </SectionAnimationWrapper>

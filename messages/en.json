@@ -243,10 +243,8 @@
     "title_top": "Transforming complexity",
     "title_bottom": "into performance.",
     "links_label": "Links",
-    "social_label": "Social",
     "copyright_label": "Full-stack Developer & Designer",
-    "status_label": "Status: Online",
-    "loc_label": "Loc: SJC, BR — 23.17° S"
+    "back_to_top": "Back to top"
   },
   "ThemeToggle": {
     "light": "Light Mode",

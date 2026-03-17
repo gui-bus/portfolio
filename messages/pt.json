@@ -247,12 +247,9 @@
     "title_top": "Transformando complexidade",
     "title_bottom": "em performance.",
     "links_label": "Links",
-    "social_label": "Social",
-    "copyright_label": "Full-stack Developer & Designer",
-    "status_label": "Status: Online",
-    "loc_label": "Loc: SJC, BR — 23.17° S"
-  },
-  "ThemeToggle": {
+    "copyright_label": "Desenvolvedor Full-stack & Designer",
+    "back_to_top": "Voltar ao topo"
+    },  "ThemeToggle": {
     "light": "Modo Claro",
     "dark": "Modo Escuro"
   },

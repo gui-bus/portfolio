@@ -46,12 +46,7 @@ export async function TechStackSection() {
       id="tech-stack"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-tech"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:60px_60px] opacity-10 pointer-events-none" />
-
-      {/* Cinematic Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6">
+      <div className="relative z-10 max-w-350 mx-auto px-6">
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">

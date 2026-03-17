@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useCallback, useState, useEffect } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowUpRightIcon,
@@ -30,7 +30,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
       <Link href={`/project/${project.slug}`} className="block group">
-        <div className="relative aspect-[16/10] md:aspect-[16/8] bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
+        <div className="relative aspect-16/10] md:aspect16/8 bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
           <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 flex items-center gap-3">
             <span className="text-[10px] font-mono text-white bg-yellow-600 px-2 py-0.5 font-bold">
               0{index + 1}
@@ -72,7 +72,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
                 </p>
               </div>
 
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center group-hover:bg-yellow-600 group-hover:border-yellow-600 transition-all duration-500 shadow-2xl backdrop-blur-sm">
                   <ArrowUpRightIcon
                     size={24}
@@ -84,8 +84,8 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
             </div>
           </div>
 
-          <div className="absolute top-0 right-0 w-[2px] h-0 bg-yellow-600 group-hover:h-full transition-all duration-700" />
-          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-yellow-600 group-hover:w-full transition-all duration-700 delay-100" />
+          <div className="absolute top-0 right-0 w-0.5 h-0 bg-yellow-600 group-hover:h-full transition-all duration-700" />
+          <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-700 delay-100" />
         </div>
       </Link>
     </div>
@@ -136,14 +136,8 @@ export function ProjectsSection() {
       id="projects"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-projects"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-[size:60px_60px] opacity-10 pointer-events-none" />
-
-      {/* Cinematic Glow */}
-      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-[100px] pointer-events-none" />
-
       <div className="relative z-10">
-        <div className="px-6 mb-24 max-w-[1400px] mx-auto">
+        <div className="px-6 mb-24 max-w-350 mx-auto">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -214,16 +208,7 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        {/* Decorative Side Label */}
-        <div className="hidden xl:block absolute top-0 -right-4 h-full pt-32 pointer-events-none">
-          <div className="sticky top-32 rotate-90 origin-top-right">
-            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
-              {t("tag")} — PROJECT_VAULT_2026
-            </span>
-          </div>
-        </div>
-
-        <div className="px-6 mt-32 max-w-[1400px] mx-auto">
+        <div className="px-6 mt-32 max-w-350 mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

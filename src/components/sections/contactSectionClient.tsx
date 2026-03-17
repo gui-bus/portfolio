@@ -26,7 +26,6 @@ interface ContactModuleClientProps {
   iconName: string;
   href: string;
   className?: string;
-  index: number;
 }
 
 export function ContactModuleClient({
@@ -35,7 +34,6 @@ export function ContactModuleClient({
   iconName,
   href,
   className,
-  index,
 }: ContactModuleClientProps) {
   const IconComponent = iconsMap[iconName] || EnvelopeSimpleIcon;
 
@@ -46,7 +44,7 @@ export function ContactModuleClient({
       rel="noopener noreferrer"
       variants={fadeInUp}
       className={cn(
-        "group relative bg-muted/5 dark:bg-white/[0.02] border border-border dark:border-white/5 p-6 md:p-8 overflow-hidden transition-all duration-500 hover:border-yellow-500/50 flex flex-col justify-between min-h-[160px]",
+        "group relative bg-muted/5 dark:bg-white/2 border border-border dark:border-white/5 p-6 md:p-8 overflow-hidden transition-all duration-500 hover:border-yellow-500/50 flex flex-col justify-between min-h-40",
         className,
       )}
     >
@@ -58,9 +56,6 @@ export function ContactModuleClient({
         <div className="w-10 h-10 border border-border dark:border-white/10 flex items-center justify-center bg-background group-hover:border-yellow-500/50 transition-colors">
           <IconComponent size={20} weight="thin" />
         </div>
-        <span className="text-[8px] font-mono text-muted-foreground/40 font-bold group-hover:text-yellow-500 transition-colors uppercase">
-          CH_0{index + 1}
-        </span>
       </div>
 
       <div>
