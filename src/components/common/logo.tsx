@@ -31,7 +31,7 @@ export function Logo({ className, width = 120, height = 40 }: LogoProps) {
   return (
     <div className={cn("relative flex items-center justify-center", className)}>
       <Image
-        src={isDark ? "/logos/logo/white_logo.png" : "/logos/logo/black_logo.png"}
+        src={isDark ? "/logos/logo/white_star_logo.png" : "/logos/logo/black_star_logo.png"}
         alt="Guibus Logo"
         width={width}
         height={height}

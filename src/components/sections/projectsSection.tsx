@@ -14,11 +14,13 @@ import { useContactForm } from "@/lib/providers/contactFormProvider";
 interface ProjectCardProps {
   project: Project;
   index: number;
-  tProjects: (key: string) => string;
+  tProjects: ReturnType<typeof useTranslations>;
 }
 
 function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
+  const title = tProjects(`${project.slug}.title`);
   const description = tProjects(`${project.slug}.description`);
+  const tags = tProjects.raw(`${project.slug}.tags`) as string[];
 
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
@@ -45,7 +47,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
 
           <div className="absolute inset-0 z-20 p-6 md:p-12 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 transition-transform duration-500 text-left">
             <div className="flex flex-wrap gap-2 mb-4">
-              {project.tags?.slice(0, 3).map((tag: string) => (
+              {tags?.slice(0, 3).map((tag: string) => (
                 <span
                   key={tag}
                   className="px-2 py-1 text-[8px] font-mono uppercase border border-white/20 bg-black/40 backdrop-blur-md text-white font-bold tracking-tighter"
@@ -58,7 +60,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="max-w-xl">
                 <h3 className="text-2xl md:text-5xl font-black text-white leading-none tracking-tighter mb-4 uppercase">
-                  {project.title}
+                  {title}
                 </h3>
                 <p className="text-white/60 text-xs md:text-sm font-light leading-relaxed line-clamp-2 max-w-md">
                   {description}
@@ -208,7 +210,7 @@ export function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col items-center justify-center p-12 md:p-24 border border-dashed border-border dark:border-zinc-800 bg-muted/5 relative overflow-hidden group"
+            className="flex flex-col items-center justify-center p-12 md:p-24 relative overflow-hidden group"
           >
             <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
               <span className="text-[12vw] font-black uppercase whitespace-nowrap tracking-tighter">

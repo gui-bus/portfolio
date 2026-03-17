@@ -152,10 +152,23 @@
     "impact_title_top": "Impacto no",
     "impact_title_bottom": "Sistema",
     "next_project_label": "Próximo Projeto _",
-    "cta_case_study": "Iniciar Estudo de Caso"
+    "cta_case_study": "Iniciar Estudo de Caso",
+    "label_category": "Categoria",
+    "label_year": "Ano",
+    "label_role": "Função",
+    "label_status": "Status",
+    "role_value": "Engenharia Líder",
+    "status_value": "Produção",
+    "label_architecture": "ARQUITETURA_SISTEMA",
+    "label_protocol": "Protocolo: Build_Segura",
+    "label_kernel": "Kernel_Sistema_Ativo",
+    "label_deep_dive": "IMERSÃO_TÉCNICA",
+    "label_ref_view": "REF_VISTA_01.PROTO",
+    "label_core_matrix": "MATRIZ_CORE_SISTEMA"
   },
   "Projects": {
     "power-fit": {
+      "title": "POWER.FIT",
       "category": "Plataforma Full-stack",
       "description": "A próxima geração de gestão fitness: IA Generativa, gamificação e arquitetura de alta performance.",
       "challenge": "O POWER.FIT foi desenvolvido para resolver a fragmentação entre o registro de treinos, acompanhamento nutricional e motivação social, utilizando o estado da arte do ecossistema TypeScript.",
@@ -165,9 +178,11 @@
         "Arquitetura 100% Type-Safe com sincronização Swagger/Orval",
         "Visualização de constância inspirada no grid do GitHub",
         "Pipeline de conquistas e XP assíncrono para retenção"
-      ]
+      ],
+      "tags": ["Full-stack", "IA", "Fitness", "Gamificação"]
     },
     "powervet": {
+      "title": "PowerVet",
       "category": "Medicina Veterinária",
       "description": "Cuidado especializado para felinos, combinando tecnologia médica avançada com atenção personalizada.",
       "challenge": "Criar uma presença digital que transmita confiança e especialização técnica no nicho de saúde felina, focando em bem-estar de longo prazo.",
@@ -177,9 +192,11 @@
         "Interface responsiva otimizada para agendamentos rápidos",
         "Módulos educativos integrados sobre medicina preventiva",
         "Performance técnica excepcional para melhor SEO orgânico"
-      ]
+      ],
+      "tags": ["Saúde", "Especialista Felino", "Responsivo"]
     },
     "horizon-travels": {
+      "title": "Horizon Travels",
       "category": "Agência de Viagens",
       "description": "Experiências imersivas que conectam viajantes a destinos autênticos com planejamento global sem fricção.",
       "challenge": "O mercado de turismo exige um storytelling visual impactante para converter desejo em agendamentos em um ambiente altamente competitivo.",
@@ -189,9 +206,11 @@
         "Fluxo de planejamento simplificado com cards interativos",
         "Estratégia de carregamento de imagens otimizada para alta resolução",
         "Design mobile-first para viajantes em movimento"
-      ]
+      ],
+      "tags": ["Viagem", "Storytelling Visual", "UX/UI"]
     },
     "voltage-festival": {
+      "title": "Voltage Festival",
       "category": "Evento de Música",
       "description": "Uma experiência imersiva de música eletrônica indoor com DJs de classe mundial e energia ininterrupta.",
       "challenge": "Capturar a energia vibrante e o pulso de uma rave techno em um ambiente web estático, mantendo alta performance.",
@@ -201,9 +220,11 @@
         "Design system neon com otimização de cores OKLCH",
         "Fluxo de integração de tickets de alta performance",
         "Landing page viral com recursos de compartilhamento social"
-      ]
+      ],
+      "tags": ["Música", "Evento", "Interativo", "Design Neon"]
     },
     "haven-barbershop": {
+      "title": "Barbearia Haven",
       "category": "Grooming Premium",
       "description": "Experiência de barbearia premium com cortes de precisão, técnicas clássicas e estilo moderno focado no ritual.",
       "challenge": "Transformar um serviço padrão em um ritual de luxo através de uma experiência digital que exala artesanato e cuidado.",
@@ -213,7 +234,8 @@
         "Sistema de agendamento integrado com fluxo intuitivo",
         "Galeria de rituais otimizada para dispositivos móveis",
         "Estratégia de SEO focada em palavras-chave locais de luxo"
-      ]
+      ],
+      "tags": ["Lifestyle", "Branding", "E-commerce", "Negócio Local"]
     }
   },
   "Footer": {

@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/common/header";
 import { ContactForm } from "@/components/sections/contactForm";
-import { ReadingProgress } from "@/components/sections/readingProgress";
 import { fadeIn } from "@/lib/animations";
 import {
   ContactFormProvider,
@@ -19,10 +18,6 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   return (
     <>
       <motion.div variants={fadeIn} initial="initial" animate="animate">
-        <ReadingProgress />
-
-        <div className="noise-overlay fixed inset-0 pointer-events-none z-60 opacity-[0.03] dark:opacity-[0.02] mix-blend-overlay" />
-
         <Header onStartProject={openForm} />
 
         <main className="relative">{children}</main>

@@ -1,9 +1,14 @@
-import { getTranslations } from "next-intl/server";
-import { Logo } from "./logo";
+"use client";
 
-export async function Footer() {
-  const t = await getTranslations("Footer");
-  const tHeader = await getTranslations("Header");
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { ArrowUpIcon, ActivityIcon } from "@phosphor-icons/react";
+import { Logo } from "./logo";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+
+export function Footer() {
+  const t = useTranslations("Footer");
+  const tHeader = useTranslations("Header");
 
   const navItems = [
     { key: "work", href: "#projects" },
@@ -12,97 +17,105 @@ export async function Footer() {
     { key: "contact", href: "#contact" },
   ];
 
-  const socialItems = ["GitHub", "LinkedIn", "Instagram"];
+  const socialItems = [
+    { name: "GitHub", href: "https://github.com/guibus" },
+    { name: "LinkedIn", href: "https://linkedin.com/in/guibus" },
+    { name: "Instagram", href: "https://instagram.com/guibus.dev" },
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="relative py-24 bg-background dark:bg-[#050505] border-t border-border dark:border-white/5 overflow-hidden transition-colors grid-footer">
-      <div className="container px-6 md:px-12 mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
-          <div className="lg:col-span-6 flex flex-col gap-10">
-            <div className="flex flex-col gap-6">
-              <Logo width={160} height={52} />
-              <p className="text-muted-foreground max-w-sm text-sm font-light leading-relaxed uppercase tracking-wider">
-                Crafting digital experiences with precision, purpose, and a
-                touch of future-forward design.
-              </p>
-            </div>
+    <footer className="relative bg-background dark:bg-[#050505] border-t border-border dark:border-white/5 overflow-hidden transition-colors pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        
+        <motion.div 
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20"
+        >
+          {/* Brand Column */}
+          <motion.div variants={fadeInUp} className="lg:col-span-5 flex flex-col gap-8">
+            <Logo width={130} height={40} />
+            <p className="text-muted-foreground max-w-sm text-sm font-medium leading-relaxed">
+              Desenvolvendo interfaces de alta performance e sistemas escaláveis 
+              com foco em experiência do usuário e excelência técnica.
+            </p>
+          </motion.div>
 
-            <h4 className="text-4xl md:text-6xl font-black uppercase text-foreground dark:text-white leading-[0.9] tracking-tighter">
-              {t("title_top")} <br />
-              <span className="outline-text-footer">{t("title_bottom")}</span>
-            </h4>
-          </div>
-
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-12 lg:pl-12">
-            <div className="flex flex-col gap-8">
-              <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-blue-600 dark:bg-blue-500" />
-                <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500 font-bold">
-                  {t("links_label")}
-                </span>
-              </div>
+          {/* Links Columns */}
+          <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
+            <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-600 dark:text-blue-500 font-bold">
+                {t("links_label")}
+              </span>
               <nav className="flex flex-col gap-4">
                 {navItems.map((item) => (
                   <a
                     key={item.key}
                     href={item.href}
-                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-all font-medium uppercase tracking-[0.2em] group flex items-center gap-2"
+                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
                   >
-                    <span className="w-0 h-px bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
                     {tHeader(item.key)}
                   </a>
                 ))}
               </nav>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col gap-8">
-              <div className="flex items-center gap-3">
-                <span className="h-px w-8 bg-blue-600 dark:bg-blue-500" />
-                <span className="text-[10px] font-mono uppercase tracking-[0.4em] text-blue-600 dark:text-blue-500 font-bold">
-                  {t("social_label")}
-                </span>
-              </div>
+            <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+              <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-600 dark:text-blue-500 font-bold">
+                {t("social_label")}
+              </span>
               <nav className="flex flex-col gap-4">
                 {socialItems.map((item) => (
                   <a
-                    key={item}
-                    href="#"
-                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-all font-medium uppercase tracking-[0.2em] group flex items-center gap-2"
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors font-bold uppercase tracking-widest"
                   >
-                    <span className="w-0 h-px bg-blue-600 dark:bg-blue-500 transition-all duration-300 group-hover:w-4" />
-                    {item}
+                    {item.name}
                   </a>
                 ))}
               </nav>
-            </div>
-          </div>
-        </div>
+            </motion.div>
 
-        <div className="pt-12 border-t border-border dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <p className="text-[9px] font-mono text-muted-foreground dark:text-zinc-600 uppercase tracking-[0.3em] font-bold">
+            <motion.div variants={fadeInUp} className="hidden sm:flex flex-col gap-6 items-end">
+              <button
+                onClick={scrollToTop}
+                className="group flex items-center gap-3 text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground hover:text-blue-600 dark:hover:text-white transition-colors cursor-pointer"
+              >
+                Back to top
+                <div className="p-2 border border-border dark:border-white/10 group-hover:border-blue-600 transition-colors">
+                  <ArrowUpIcon weight="bold" size={14} className="group-hover:-translate-y-0.5 transition-transform" />
+                </div>
+              </button>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Bottom Bar */}
+        <div className="pt-12 border-t border-border dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <p className="text-[10px] font-mono text-muted-foreground dark:text-zinc-500 uppercase tracking-widest font-bold">
               © {new Date().getFullYear()} GUIBUS.DEV
             </p>
-            <div className="hidden sm:block h-4 w-px bg-border dark:bg-zinc-800" />
-            <p className="text-[9px] font-mono text-muted-foreground dark:text-zinc-600 uppercase tracking-[0.3em] font-bold text-center">
+            <div className="hidden md:block h-3 w-px bg-border dark:bg-zinc-800" />
+            <p className="text-[10px] font-mono text-muted-foreground dark:text-zinc-500 uppercase tracking-widest font-bold">
               {t("copyright_label")}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <div className="flex items-center gap-3 bg-blue-600/5 dark:bg-blue-500/10 px-5 py-2.5 border border-blue-600/10 dark:border-blue-500/10 backdrop-blur-sm">
-              <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-blue-500"></span>
-              </div>
-              <span className="text-[9px] font-mono text-blue-600 dark:text-blue-500 uppercase tracking-widest font-black">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2.5 bg-blue-600/5 dark:bg-blue-500/10 px-4 py-2 border border-blue-600/10 dark:border-blue-500/10">
+              <ActivityIcon weight="bold" size={12} className="text-blue-600 dark:text-blue-500 animate-pulse" />
+              <span className="text-[9px] font-mono text-blue-600 dark:text-blue-500 uppercase tracking-widest font-bold">
                 {t("status_label")}
-              </span>
-            </div>
-
-            <div className="flex items-center gap-3 bg-muted/30 dark:bg-white/2 px-5 py-2.5 border border-border dark:border-white/5 backdrop-blur-sm">
-              <span className="text-[9px] font-mono text-foreground/60 dark:text-white/60 uppercase tracking-widest font-black">
-                {t("loc_label")}
               </span>
             </div>
           </div>

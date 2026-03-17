@@ -5,6 +5,8 @@ import {
   projectsData,
 } from "@/lib/projectsData";
 import { ProjectPageClient } from "@/components/sections/projectPageClient";
+import { getTranslations } from "next-intl/server";
+import { MainClientLayout } from "@/components/common/mainClientLayout";
 
 export function generateStaticParams() {
   return projectsData.map((project) => ({
@@ -19,14 +21,18 @@ export async function generateMetadata({
 }) {
   const resolvedParams = await params;
   const project = getProjectBySlug(resolvedParams.slug);
+  const t = await getTranslations("Projects");
 
   if (!project) {
     return { title: "Project Not Found" };
   }
 
+  const title = t(`${project.slug}.title`);
+  const description = t(`${project.slug}.description`);
+
   return {
-    title: `${project.title} | Case Study`,
-    description: project.description,
+    title: `${title} | Case Study`,
+    description: description,
   };
 }
 
@@ -44,6 +50,8 @@ export default async function ProjectPage({
   }
 
   return (
-    <ProjectPageClient project={project} nextProject={nextProject} />
+    <MainClientLayout>
+      <ProjectPageClient project={project} nextProject={nextProject} />
+    </MainClientLayout>
   );
 }

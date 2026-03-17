@@ -148,10 +148,23 @@
     "impact_title_top": "System",
     "impact_title_bottom": "Impact",
     "next_project_label": "Next Project _",
-    "cta_case_study": "Initialize Case Study"
+    "cta_case_study": "Initialize Case Study",
+    "label_category": "Category",
+    "label_year": "Year",
+    "label_role": "Role",
+    "label_status": "Status",
+    "role_value": "Lead Engineering",
+    "status_value": "Production",
+    "label_architecture": "SYSTEM_ARCHITECTURE",
+    "label_protocol": "Protocol: Secure_Build",
+    "label_kernel": "Kernel_System_Active",
+    "label_deep_dive": "DEEP_DIVE",
+    "label_ref_view": "REF_VIEW_01.PROTO",
+    "label_core_matrix": "SYSTEM_CORE_MATRIX"
   },
   "Projects": {
     "power-fit": {
+      "title": "POWER.FIT",
       "category": "Full-stack Platform",
       "description": "The next generation of fitness management: Generative AI, gamification and high-performance architecture.",
       "challenge": "POWER.FIT was developed to solve the fragmentation between workout logging, nutritional tracking and social motivation, using the state of the art of the TypeScript ecosystem.",
@@ -161,9 +174,11 @@
         "100% Type-Safe architecture with Swagger/Orval sync",
         "Consistency visualization inspired by GitHub's grid",
         "Asynchronous achievement and XP pipeline for retention"
-      ]
+      ],
+      "tags": ["Full-stack", "AI", "Fitness", "Gamification"]
     },
     "powervet": {
+      "title": "PowerVet",
       "category": "Veterinary Medicine",
       "description": "Expert veterinary care for cats, combining advanced medical treatment with personalized attention for feline wellbeing.",
       "challenge": "Creating a digital presence that reflects technical specialization and trust in the feline health niche, focusing on long-term wellness.",
@@ -173,9 +188,11 @@
         "Responsive interface optimized for quick bookings",
         "Integrated educational modules on preventive care",
         "Exceptional technical performance for organic SEO"
-      ]
+      ],
+      "tags": ["Healthcare", "Feline Specialist", "Responsive"]
     },
     "horizon-travels": {
+      "title": "Horizon Travels",
       "category": "Travel Agency",
       "description": "Immersive journeys connecting travelers with authentic experiences and seamless global planning.",
       "challenge": "The travel industry requires high-impact visual storytelling to convert interest into bookings in a highly competitive environment.",
@@ -185,9 +202,11 @@
         "Simplified planning flow with interactive cards",
         "Image loading strategy optimized for high resolution",
         "Mobile-first design for travelers on the go"
-      ]
+      ],
+      "tags": ["Travel", "Visual Storytelling", "UX/UI"]
     },
     "voltage-festival": {
+      "title": "Voltage Festival",
       "category": "Music Event",
       "description": "An immersive indoor electronic music experience featuring world-class DJs and nonstop energy.",
       "challenge": "Capturing the vibrant energy and pulse of a techno rave in a static web environment while maintaining performance.",
@@ -197,9 +216,11 @@
         "Neon design system with OKLCH color optimization",
         "High-performance ticket integration flow",
         "Viral landing page with social sharing features"
-      ]
+      ],
+      "tags": ["Music", "Event", "Interactive", "Neon Design"]
     },
     "haven-barbershop": {
+      "title": "Haven Barbershop",
       "category": "Premium Grooming",
       "description": "Premium barbershop experience with precision cuts, classic techniques, and modern ritual-focused style.",
       "challenge": "Transforming a standard service into a luxury ritual through a digital experience that exudes craftsmanship.",
@@ -209,7 +230,8 @@
         "Integrated booking system with intuitive flow",
         "Ritual gallery optimized for mobile devices",
         "SEO strategy focused on local luxury keywords"
-      ]
+      ],
+      "tags": ["Lifestyle", "Branding", "E-commerce", "Local Business"]
     }
   },
   "Footer": {
