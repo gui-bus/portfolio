@@ -76,9 +76,9 @@ export function Header({ onStartProject }: HeaderProps) {
   const t = useTranslations("Header");
 
   const navItems = [
-    { key: "work", href: "#projects" },
     { key: "about", href: "#methodology" },
     { key: "services", href: "#services" },
+    { key: "work", href: "#projects" },
     { key: "contact", href: "#contact" },
   ];
 
@@ -98,7 +98,13 @@ export function Header({ onStartProject }: HeaderProps) {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+          const id = entry.target.id;
+          setActiveSection(id);
+          
+          // Update URL hash without adding to history
+          if (id && window.location.hash !== `#${id}`) {
+            window.history.replaceState(null, "", `#${id}`);
+          }
         }
       });
     };
@@ -107,7 +113,7 @@ export function Header({ onStartProject }: HeaderProps) {
       observerCallback,
       observerOptions,
     );
-    const sections = ["projects", "methodology", "services", "contact"];
+    const sections = ["methodology", "services", "projects", "contact"];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);

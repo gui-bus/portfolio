@@ -5,7 +5,7 @@ import {
   projectsData,
 } from "@/lib/projectsData";
 import { ProjectPageClient } from "@/components/sections/projectPageClient";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { MainClientLayout } from "@/components/common/mainClientLayout";
 
 export function generateStaticParams() {
@@ -22,6 +22,8 @@ export async function generateMetadata({
   const resolvedParams = await params;
   const project = getProjectBySlug(resolvedParams.slug);
   const t = await getTranslations("Projects");
+  const locale = await getLocale();
+  const baseUrl = 'https://guibus.dev';
 
   if (!project) {
     return { title: "Project Not Found" };
@@ -33,6 +35,22 @@ export async function generateMetadata({
   return {
     title: `${title} | Case Study`,
     description: description,
+    alternates: {
+      canonical: `${baseUrl}/${locale}/project/${project.slug}`,
+    },
+    openGraph: {
+      title: `${title} | Case Study`,
+      description: description,
+      url: `${baseUrl}/${locale}/project/${project.slug}`,
+      images: [
+        {
+          url: project.images.hero,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
   };
 }
 
