@@ -6,7 +6,6 @@
 
 <p align="center">
   <a href="https://guibus.dev/"><img src="https://img.shields.io/badge/Live_Portfolio-guibus.dev-orange?style=for-the-badge&logo=vercel" alt="Live Portfolio" /></a>
-  <a href="https://github.com/guibus/portfolio"><img src="https://img.shields.io/badge/GitHub-Portfolio-blue?style=for-the-badge&logo=github" alt="GitHub Repo" /></a>
 </p>
 
 <p align="center">
