@@ -1,21 +1,244 @@
 {
-  "Index": {
-    "title": "Em Breve",
-    "subtitle": "Portfólio & Espaço Criativo",
-    "description": "Estou criando uma nova experiência digital para apresentar meus trabalhos e ideias. Uma fusão de design, código e estética minimalista.",
-    "backSoon": "Em Construção",
-    "social": {
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "email": "Email"
+  "Header": {
+    "work": "Trabalhos",
+    "about": "Abordagem",
+    "services": "Especialidades",
+    "contact": "Contato",
+    "cta": "Iniciar Projeto"
+  },
+  "Hero": {
+    "status": "Disponível para novos desafios",
+    "location": "Sediado no Brasil / Remoto Worldwide",
+    "branding": "Guilherme Bustamante // Portfólio 2026",
+    "title_top": "Estrategista",
+    "title_bottom": "Digital",
+    "description": "Transformando visões de negócio em experiências interativas através de design estratégico e tecnologia de ponta.",
+    "stack_expert": "Especialista React / Next.js",
+    "design_specialist": "Especialista UI/UX",
+    "cta_projects": "Explorar Projetos",
+    "tech_stack_label": "Tech Stack",
+    "presence_label": "Presença Digital"
+  },
+  "Methodology": {
+    "tag": "Metodologia",
+    "title_top": "Onde a lógica",
+    "title_outline": "encontra o",
+    "title_bottom": "sentimento.",
+    "subtitle": "Minha filosofia de trabalho é baseada na redução de fricção. Menos ruído visual, mais velocidade de execução.",
+    "step1_tag": "Engine",
+    "step1_title": "Arquitetura de Performance",
+    "step1_desc": "Não apenas código, mas sistemas otimizados. Foco total em Core Web Vitals e renderização eficiente com Next.js.",
+    "step2_tag": "Aesthetics",
+    "step2_title": "Design de Interface",
+    "step2_desc": "Interfaces que respiram. Utilizo Figma e Tailwind para criar sistemas de design consistentes e visualmente impactantes.",
+    "step3_tag": "Structure",
+    "step3_title": "Escalabilidade Real",
+    "step3_desc": "Código limpo e tipado com TypeScript. Preparado para crescer sem gerar dívida técnica acumulada.",
+    "footer_text": "// Focado em entregar resultados, não apenas arquivos.",
+    "label_performance": "Performance",
+    "label_experience": "Experiência",
+    "label_scalability": "Escalabilidade"
+  },
+  "Workflow": {
+    "tag": "Workflow",
+    "title_top": "Do conceito",
+    "title_bottom": "ao deploy.",
+    "card_label": "PROCESS_STAGE_",
+    "step1_title": "Discovery",
+    "step1_desc": "Análise profunda do problema, definição de objetivos e mapeamento de requisitos técnicos.",
+    "step2_title": "Design & UX",
+    "step2_desc": "Criação de interfaces intuitivas e prototipagem de alta fidelidade focada em conversão.",
+    "step3_title": "Development",
+    "step3_desc": "Transformação do design em código limpo, performático e escalável usando React/Next.js.",
+    "step4_title": "Deployment",
+    "step4_desc": "Otimização final, testes rigorosos e lançamento em infraestrutura de borda (Edge).",
+    "status_active": "Sistema Ativo",
+    "status_agile": "Framework Ágil",
+    "footer_text": "// Otimizado para crescimento escalável"
+  },
+  "Services": {
+    "tag": "Expertise & Serviços",
+    "title_top": "Soluções",
+    "title_bottom": "Sob Medida.",
+    "main_card_title": "Desenvolvimento Full-stack",
+    "main_card_tag": "Sistema Full-Stack",
+    "main_card_desc": "Criação de aplicações web completas, do design à API. Utilizo o ecossistema React para entregar interfaces rápidas, seguras e prontas para escala.",
+    "main_card_cta": "Solicitar Proposta",
+    "cta_initialize": "Iniciar Protocolo",
+    "step1_tag": "Core Vitals",
+    "step1_title": "Otimização de Performance",
+    "step1_desc": "Refatoração de código e estratégias de cache para aplicações que carregam instantaneamente.",
+    "step2_tag": "Back-end",
+    "step2_title": "Sistemas Escaláveis",
+    "step2_desc": "Arquiteturas robustas utilizando Node.js e integração com bancos de dados relacionais.",
+    "step3_tag": "Design",
+    "step3_title": "UI/UX High-Fidelity",
+    "step3_desc": "Prototipagem e implementação de designs modernos com foco em usabilidade e estética.",
+    "step4_tag": "Quality",
+    "step4_title": "Segurança e SEO",
+    "step4_desc": "Melhores práticas de segurança e otimização para motores de busca desde o primeiro dia.",
+    "step5_tag": "Frontend",
+    "step5_title": "Desenvolvimento Frontend",
+    "step5_desc": "Criação de interfaces responsivas, acessíveis e focadas na experiência do usuário utilizando as tecnologias mais modernas do mercado."
+  },
+  "TechStack": {
+    "tag": "Tech Stack",
+    "title_top": "Ferramentas",
+    "title_bottom": "de Elite.",
+    "subtitle": "Construindo aplicações resilientes com as tecnologias mais avançadas do ecossistema JavaScript e design de interface.",
+    "marquee_label": "// Ecossistema Adicional",
+    "desc_frontend": "Framework Frontend",
+    "desc_typing": "Tipagem Forte",
+    "desc_css": "CSS Utilitário",
+    "desc_design": "Design de Interface",
+    "desc_react": "Biblioteca de Componentes",
+    "desc_runtime": "Runtime Server-side",
+    "desc_cloud": "Deployment & Edge",
+    "desc_mobile": "Desenvolvimento Mobile"
+  },
+  "ProjectsSection": {
+    "tag": "Projetos Selecionados",
+    "title_top": "Trabalhos em",
+    "title_bottom": "destaque.",
+    "more_projects": "Quer ver mais?",
+    "cta_contact": "Entre em contato",
+    "cta_live": "Projeto Online",
+    "cta_github": "GitHub",
+    "decorative_label": "TRABALHOS_SELECIONADOS",
+    "scroll_hint": "[ Arraste ou Scroll para Explorar ]"
+  },
+  "Contact": {
+    "status": "Disponível para trabalho",
+    "title_top": "Vamos construir",
+    "title_bottom": "o futuro.",
+    "cta_start": "Iniciar um Projeto",
+    "description": "Estou sempre aberto a novas oportunidades e parcerias estratégicas. Inicie o protocolo para construirmos algo memorável.",
+    "location": "Sediado no Brasil // Remoto Worldwide",
+    "form_tag": "// Iniciar Protocolo",
+    "form_title_top": "Inicie o",
+    "form_title_bottom": "Protocolo.",
+    "success_title": "Inquiry Recebido.",
+    "success_message": "Protocolo estabelecido. Analisarei seus requisitos e responderei em até 24 horas.",
+    "label_name": "01. Nome",
+    "placeholder_name": "Seu nome ou empresa",
+    "label_email": "02. Email",
+    "placeholder_email": "email@exemplo.com",
+    "label_project": "03. Tipo de Projeto",
+    "type_fullstack": "Full-stack",
+    "type_design": "UI/UX Design",
+    "type_consulting": "Consultoria",
+    "type_other": "Outro",
+    "label_company": "04. Empresa (Opcional)",
+    "placeholder_company": "Nome da sua empresa",
+    "label_budget": "05. Orçamento Estimado",
+    "label_deadline": "06. Prazo Desejado",
+    "label_briefing": "07. Briefing do Projeto",
+    "placeholder_briefing": "Descreva seu desafio, objetivos e referências...",
+    "budget_range_1": "Até R$ 5k",
+    "budget_range_2": "R$ 5k - 15k",
+    "budget_range_3": "R$ 15k - 50k",
+    "budget_range_4": "R$ 50k+",
+    "deadline_1": "Extremamente Urgente",
+    "deadline_2": "1-2 meses",
+    "deadline_3": "3-6 meses",
+    "deadline_4": "Sem pressa",
+    "validation_required": "Este campo é obrigatório",
+    "validation_email": "Email inválido",
+    "validation_min_length": "Mínimo de {min} caracteres",
+    "btn_sending": "Enviando Protocolo...",
+    "btn_send": "Enviar Mensagem"
+  },
+  "Projects": {
+    "power-fit": {
+      "title": "POWER.FIT",
+      "category": "Plataforma Full-stack",
+      "description": "A próxima geração de gestão fitness: IA Generativa, gamificação e arquitetura de alta performance.",
+      "challenge": "O POWER.FIT foi desenvolvido para resolver a fragmentação entre o registro de treinos, acompanhamento nutricional e motivação social, utilizando o estado da arte do ecossistema TypeScript.",
+      "solution": "Arquitetamos uma SPA com performance de SSR, IA nativa integrada via Vercel AI SDK para geração de treinos e uma arquitetura orientada a contratos para erro zero em integração.",
+      "results": [
+        "Geração automática de treinos via linguagem natural",
+        "Arquitetura 100% Type-Safe com sincronização Swagger/Orval",
+        "Visualização de constância inspirada no grid do GitHub",
+        "Pipeline de conquistas e XP assíncrono para retenção"
+      ],
+      "tags": ["Full-stack", "IA", "Fitness", "Gamificação"]
+    },
+    "powervet": {
+      "title": "PowerVet",
+      "category": "Medicina Veterinária",
+      "description": "Cuidado especializado para felinos, combinando tecnologia médica avançada com atenção personalizada.",
+      "challenge": "Criar uma presença digital que transmita confiança e especialização técnica no nicho de saúde felina, focando em bem-estar de longo prazo.",
+      "solution": "Desenvolvimento de uma landing page de alta conversão com foco em acessibilidade, utilizando padrões modernos de React para uma experiência fluida.",
+      "results": [
+        "Posicionamento de marca premium no setor veterinário",
+        "Interface responsiva otimizada para agendamentos rápidos",
+        "Módulos educativos integrados sobre medicina preventiva",
+        "Performance técnica excepcional para melhor SEO orgânico"
+      ],
+      "tags": ["Saúde", "Especialista Felino", "Responsivo"]
+    },
+    "horizon-travels": {
+      "title": "Horizon Travels",
+      "category": "Agência de Viagens",
+      "description": "Experiências imersivas que conectam viajantes a destinos autênticos com planejamento global sem fricção.",
+      "challenge": "O mercado de turismo exige um storytelling visual impactante para converter desejo em agendamentos em um ambiente altamente competitivo.",
+      "solution": "Plataforma rica em mídia com animações de scroll imersivas e uma UX curada que guia o usuário por destinos globais.",
+      "results": [
+        "Aumento de 120% no engajamento através de storytelling imersivo",
+        "Fluxo de planejamento simplificado com cards interativos",
+        "Estratégia de carregamento de imagens otimizada para alta resolução",
+        "Design mobile-first para viajantes em movimento"
+      ],
+      "tags": ["Viagem", "Storytelling Visual", "UX/UI"]
+    },
+    "voltage-festival": {
+      "title": "Voltage Festival",
+      "category": "Evento de Música",
+      "description": "Uma experiência imersiva de música eletrônica indoor com DJs de classe mundial e energia ininterrupta.",
+      "challenge": "Capturar a energia vibrante e o pulso de uma rave techno em um ambiente web estático, mantendo alta performance.",
+      "solution": "Interface dark de alta intensidade com acentos neon e elementos visuais dinâmicos que reagem ao ritmo da música eletrônica.",
+      "results": [
+        "Exploração interativa do lineup com status de DJ em tempo real",
+        "Design system neon com otimização de cores OKLCH",
+        "Fluxo de integração de tickets de alta performance",
+        "Landing page viral com recursos de compartilhamento social"
+      ],
+      "tags": ["Música", "Evento", "Interativo", "Design Neon"]
+    },
+    "haven-barbershop": {
+      "title": "Barbearia Haven",
+      "category": "Grooming Premium",
+      "description": "Experiência de barbearia premium com cortes de precisão, técnicas clássicas e estilo moderno focado no ritual.",
+      "challenge": "Transformar um serviço padrão em um ritual de luxo através de uma experiência digital que exala artesanato e cuidado.",
+      "solution": "Paleta de cores baseada em Zinc com tipografia de alto contraste e foco em layout arquitetônico e fotografia de alta qualidade.",
+      "results": [
+        "Elevação da percepção de marca como experiência de ritual",
+        "Sistema de agendamento integrado com fluxo intuitivo",
+        "Galeria de rituais otimizada para dispositivos móveis",
+        "Estratégia de SEO focada em palavras-chave locais de luxo"
+      ],
+      "tags": ["Lifestyle", "Branding", "E-commerce", "Negócio Local"]
     }
+  },
+  "Footer": {
+    "title_top": "Transformando complexidade",
+    "title_bottom": "em performance.",
+    "links_label": "Links",
+    "copyright_label": "Desenvolvedor Full-stack & Designer",
+    "back_to_top": "Voltar ao topo"
+    },  "ThemeToggle": {
+    "light": "Modo Claro",
+    "dark": "Modo Escuro"
   },
   "Locale": {
     "en": "Inglês",
-    "pt": "Português"
+    "pt": "Português",
+    "es": "Espanhol",
+    "de": "Alemão",
+    "fr": "Francês"
   },
   "Metadata": {
-    "title": "Guibus | Portfólio & Espaço Criativo",
-    "description": "Portfólio minimalista apresentando experimentos de design e código."
+    "title": "Guibus | Engenheiro Criativo & Especialista Tech",
+    "description": "Portfólio de um Tecnologista Criativo especializado na construção de produtos digitais de alta performance e sistemas escaláveis."
   }
 }

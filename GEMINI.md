@@ -42,6 +42,11 @@ pnpm prepare
 
 ## Development Conventions
 
+### Code Standards
+- **ZERO ANY:** No `any` type is allowed in the project. Always use strong types or interfaces.
+- **Naming Convention:** All filenames, variables, and internal functions must use camelCase. React components must use PascalCase for their function/variable names to remain compatible with JSX.
+- **Next.js Image Component:** ALWAYS use the `Image` component from `next/image` for all images. NEVER use the standard HTML `<img>` tag. This ensures automatic image optimization, proper sizing, and performance best practices.
+
 ### Internationalization (i18n)
 - **Route Prefixing:** The project is configured to **not** show the locale prefix in the URL (`localePrefix: 'never'`).
 - **Adding Translations:** Add new keys to both `messages/en.json` and `messages/pt.json`.
@@ -54,9 +59,12 @@ pnpm prepare
 - **shadcn/ui:** Components are located in `src/components/ui`. Use `npx shadcn@latest add [component]` to add more.
 - **Design Tokens:** CSS variables are defined in `globals.css` using the OKLCH color space.
 
-### Git Workflow
-- **Commit Messages:** Must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification (e.g., `feat:`, `fix:`, `docs:`, `chore:`). This is enforced by `commitlint`.
-- **Pre-commit Hooks:** `lint-staged` runs automatically to ensure code quality.
+### Communication
+- **Ask Before Acting:** If there are any doubts about the task requirements or implementation details, always ask for clarification before proceeding with the execution.
+- **No Filler Labels:** STRICTLY PROHIBITED. Do not add generic or 'nonsense' technical labels in English that do not add real value (e.g., 'SYSTEM_v3.0_INITIALIZED', 'UTC_TIME', 'STATUS: STABLE_CONNECTION', 'PROTO_ID', 'v2026.LIVE'). Focus on clean, meaningful content.
+- **Mandatory Internationalization:** NEVER use hardcoded English or Portuguese strings for user-facing content. All text MUST use the `next-intl` library (translations from `messages/`). This applies to UI labels, button text, decorative background text, and technical placeholder strings. Hardcoded text is strictly prohibited.
+- **No Code Comments:** DO NOT add comments to the code (e.g., //, /* */, or {/* */}). The code should be clean, semantic, and self-explanatory.
+- **Phosphor Icons Naming:** All Phosphor icons MUST be imported and used directly with the "Icon" suffix (e.g., `FingerprintIcon`, `CpuIcon`, `EnvelopeSimpleIcon`). Aliasing (e.g., `import { Cpu as CpuIcon }`) is STRICTLY PROHIBITED. The icons must be used exactly as exported by the library with the suffix.
 
 ## Key Files & Directories
 - `src/app/[locale]`: Root of the application with locale support.

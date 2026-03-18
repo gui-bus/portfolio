@@ -1,60 +1,82 @@
 "use client";
+
 import * as React from "react";
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useThemeTransition } from "@/lib/hooks/useThemeTransition";
+import { useTranslations } from "next-intl";
 
 export function ThemeToggle() {
-  const { theme, toggleTheme } = useThemeTransition();
+  const t = useTranslations("ThemeToggle");
+  const { resolvedTheme, toggleTheme } = useThemeTransition();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    const timer = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(timer);
   }, []);
 
   if (!mounted) {
     return (
-      <div className="flex p-1 rounded-full bg-muted/30 border border-border/50 w-21 h-10.5" />
+      <div className="w-17.5 h-10 bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 animate-pulse" />
     );
   }
 
-  const isLight = theme === "light";
+  const isLight = resolvedTheme === "light";
 
   return (
-    <div className="flex p-1 rounded-full bg-muted/30 border border-border/50 backdrop-blur-sm relative overflow-hidden group">
-      <div
+    <div className="flex bg-muted/30 dark:bg-white/3 border border-border dark:border-white/5 p-1 relative overflow-hidden group h-10 backdrop-blur-md">
+      <motion.div
         className={cn(
-          "absolute h-8.5 w-8.5 rounded-full bg-background shadow-sm transition-all duration-300 ease-in-out z-0",
-          isLight ? "translate-x-0" : "translate-x-10.5",
+          "absolute h-8 w-8 z-0",
+          isLight ? "bg-yellow-600" : "bg-yellow-500",
         )}
+        initial={false}
+        animate={{
+          x: isLight ? 0 : 32,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 400,
+          damping: 30,
+        }}
       />
 
       <button
         onClick={() => (isLight ? null : toggleTheme())}
-        disabled={isLight}
         className={cn(
-          "relative z-10 p-2 rounded-full transition-colors duration-300 cursor-pointer",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/sun cursor-pointer",
           isLight
-            ? "text-primary"
-            : "text-muted-foreground hover:text-foreground",
+            ? "text-white"
+            : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400",
         )}
-        title="Light Mode"
+        title={t("light")}
       >
-        <SunIcon weight={isLight ? "fill" : "bold"} size={18} />
+        <SunIcon
+          weight={isLight ? "fill" : "bold"}
+          size={16}
+          className={cn("transition-transform duration-500")}
+        />
       </button>
 
       <button
         onClick={() => (!isLight ? null : toggleTheme())}
-        disabled={!isLight}
         className={cn(
-          "relative z-10 p-2 rounded-full transition-colors duration-300 cursor-pointer",
+          "relative z-10 p-2 transition-colors duration-300 flex items-center justify-center w-8 group/moon cursor-pointer",
           !isLight
-            ? "text-primary"
-            : "text-muted-foreground hover:text-foreground",
+            ? "text-white"
+            : "text-muted-foreground/50 dark:text-zinc-600 hover:text-foreground dark:hover:text-zinc-400",
         )}
-        title="Dark Mode"
+        title={t("dark")}
       >
-        <MoonIcon weight={!isLight ? "fill" : "bold"} size={18} />
+        <MoonIcon
+          weight={!isLight ? "fill" : "bold"}
+          size={16}
+          className={cn("transition-transform duration-500")}
+        />
       </button>
     </div>
   );

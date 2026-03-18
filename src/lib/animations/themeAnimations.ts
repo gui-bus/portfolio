@@ -18,7 +18,7 @@ export function createAnimation() {
     ::view-transition-new(root) {
       z-index: 9999;
       animation: 800ms cubic-bezier(0.85, 0, 0.15, 1) both diagonal-wipe;
-      outline: 100vh solid transparent; /* Garante cobertura total */
+      outline: 100vh solid transparent;
     }
 
     @keyframes diagonal-wipe {
