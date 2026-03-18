@@ -11,34 +11,28 @@ export async function TechStackSection() {
 
   const primaryTech = [
     { name: "Next.js", iconName: "Globe", description: t("desc_frontend") },
+    { name: "React", iconName: "Lightning", description: t("desc_react") },
     { name: "TypeScript", iconName: "Code", description: t("desc_typing") },
     { name: "Tailwind", iconName: "PaintBrush", description: t("desc_css") },
+    { name: "Fastify", iconName: "Zap", description: t("desc_backend") },
     { name: "Figma", iconName: "BoundingBox", description: t("desc_design") },
-    { name: "React", iconName: "Lightning", description: t("desc_react") },
-    { name: "Node.js", iconName: "Database", description: t("desc_runtime") },
-    { name: "Vercel", iconName: "Cloud", description: t("desc_cloud") },
     {
-      name: "React Native",
-      iconName: "DeviceMobile",
-      description: t("desc_mobile"),
+      name: "UX/UI Design",
+      iconName: "UserFocus",
+      description: t("desc_ux_ui"),
     },
+    { name: "Vercel", iconName: "Cloud", description: t("desc_cloud") },
   ];
 
   const secondaryTools = [
-    "Framer Motion",
-    "Three.js",
-    "PostgreSQL",
-    "Redis",
-    "Docker",
-    "GraphQL",
-    "Prisma",
-    "Supabase",
-    "AWS",
-    "Python",
-    "Git",
-    "Linux",
     "TanStack Query",
+    "Prisma",
+    "PostgreSQL",
+    "Zod",
+    "Framer Motion",
+    "Git",
     "Biome",
+    "Node.js",
   ];
 
   return (
@@ -57,7 +51,9 @@ export async function TechStackSection() {
             </div>
             <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground leading-[0.8] tracking-tighter uppercase">
               {t("title_top")} <br />
-              <span className="outline-text-global italic">{t("title_bottom")}</span>
+              <span className="outline-text-global italic">
+                {t("title_bottom")}
+              </span>
             </h2>
           </div>
 
