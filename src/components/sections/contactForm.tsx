@@ -18,7 +18,7 @@ interface ContactFormProps {
   onClose: () => void;
 }
 
-const contactSchema = z.object({
+export const contactSchema = z.object({
   name: z.string().min(2, "Min 2 characters"),
   email: z.string().email("Invalid email"),
   company: z.string().optional(),
