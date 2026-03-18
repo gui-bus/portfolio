@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
     icon: "/projects/powerfit.png",
     color: "#38B2AC",
     liveUrl: "https://powerfit.guibus.dev",
-    githubUrl: "https://github.com/guibus/powerfit"
+    githubUrl: "https://github.com/gui-bus"
   },
   {
     id: 2,
@@ -34,13 +34,13 @@ export const projectsData: Project[] = [
     year: "2024",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn UI"],
     images: {
-      hero: "/logos/logo/white_logo.png",
+      hero: "/projects/powervet.png",
       gallery: []
     },
-    icon: "/logos/icon/white_icon.png",
+    icon: "/projects/powervet.png",
     color: "#14b8a6",
     liveUrl: "https://powervet.guibus.dev",
-    githubUrl: "https://github.com/guibus/powervet"
+    githubUrl: "https://github.com/gui-bus"
   },
   {
     id: 3,
@@ -48,13 +48,13 @@ export const projectsData: Project[] = [
     year: "2024",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
     images: {
-      hero: "/logos/logo/white_logo.png",
+      hero: "/projects/horizon.png",
       gallery: []
     },
-    icon: "/logos/icon/white_icon.png",
+    icon: "/projects/horizon.png",
     color: "#f97316",
     liveUrl: "https://horizon.guibus.dev",
-    githubUrl: "https://github.com/guibus/horizon-travels"
+    githubUrl: "https://github.com/gui-bus"
   },
   {
     id: 4,
@@ -62,13 +62,13 @@ export const projectsData: Project[] = [
     year: "2024",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"],
     images: {
-      hero: "/logos/logo/white_logo.png",
+      hero: "/projects/voltage.png",
       gallery: []
     },
-    icon: "/logos/icon/white_icon.png",
+    icon: "/projects/voltage.png",
     color: "#8b5cf6",
     liveUrl: "https://voltage.guibus.dev",
-    githubUrl: "https://github.com/guibus/voltage-festival"
+    githubUrl: "https://github.com/gui-bus"
   },
   {
     id: 5,
@@ -76,12 +76,12 @@ export const projectsData: Project[] = [
     year: "2024",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     images: {
-      hero: "/logos/logo/white_logo.png",
+      hero: "/projects/haven.png",
       gallery: []
     },
-    icon: "/logos/icon/white_icon.png",
+    icon: "/projects/haven.png",
     color: "#71717a",
     liveUrl: "https://haven.guibus.dev",
-    githubUrl: "https://github.com/guibus/haven-barbershop"
+    githubUrl: "https://github.com/gui-bus"
   }
 ];

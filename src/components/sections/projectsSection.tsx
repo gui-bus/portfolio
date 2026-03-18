@@ -10,6 +10,7 @@ import {
   GlobeIcon,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+import Image from "next/image";
 import { projectsData, Project } from "@/lib/projectsData";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { useTranslations } from "next-intl";
@@ -32,7 +33,7 @@ function ProjectCard({ project, index, tProjects, tSection }: ProjectCardProps) 
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
       <div className="block group">
-        <div className="relative aspect-16/10 md:aspect-16/8 bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
+        <div className="relative aspect-video bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
           <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 flex items-center gap-3">
             <span className="text-[10px] font-mono text-white bg-yellow-600 px-2 py-0.5 font-bold">
               0{index + 1}
@@ -40,15 +41,17 @@ function ProjectCard({ project, index, tProjects, tSection }: ProjectCardProps) 
             <div className="h-px w-8 bg-white/20 hidden md:block" />
           </div>
 
-          <div
-            className="absolute inset-0 z-0 grayscale-[0.2] dark:grayscale-[0.4] group-hover:grayscale-0 transition-all duration-1000 ease-out group-hover:scale-110"
-            style={{
-              backgroundImage: `url(${project.images.hero})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+          <div className="absolute inset-0 z-0 overflow-hidden bg-zinc-950/50">
+            <Image
+              src={project.images.hero}
+              alt={title}
+              fill
+              className="object-contain grayscale-[0.2] dark:grayscale-[0.4] group-hover:grayscale-0 transition-all duration-1000 ease-out"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw, 70vw"
+            />
+          </div>
 
+          <div className="absolute inset-0 z-10 bg-black/60 transition-colors duration-700" />
           <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-80" />
           <div className="absolute inset-0 z-10 bg-yellow-600/0 group-hover:bg-yellow-600/5 transition-colors duration-700" />
 
