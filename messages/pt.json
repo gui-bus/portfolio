@@ -97,11 +97,13 @@
     "desc_mobile": "Desenvolvimento Mobile"
   },
   "ProjectsSection": {
-    "tag": "Selected Projects",
-    "title_top": "Trabalhos",
-    "title_bottom": "em destaque.",
+    "tag": "Projetos Selecionados",
+    "title_top": "Trabalhos em",
+    "title_bottom": "destaque.",
     "more_projects": "Quer ver mais?",
     "cta_contact": "Entre em contato",
+    "cta_live": "Projeto Online",
+    "cta_github": "GitHub",
     "decorative_label": "TRABALHOS_SELECIONADOS",
     "scroll_hint": "[ Arraste ou Scroll para Explorar ]"
   },
@@ -145,33 +147,6 @@
     "validation_min_length": "Mínimo de {min} caracteres",
     "btn_sending": "Enviando Protocolo...",
     "btn_send": "Enviar Mensagem"
-  },
-  "ProjectPage": {
-    "btn_exit": "Exit_Project",
-    "label_release": "Release_",
-    "challenge_tag": "01 / O Desafio",
-    "challenge_title_top": "Identificando os",
-    "challenge_title_bottom": "Pain Points",
-    "tech_stack_label": "Core Tech Stack",
-    "execution_tag": "02 / Execução",
-    "execution_title_top": "Engenharia de uma",
-    "execution_title_bottom": "Solução Escalável",
-    "impact_title_top": "Impacto no",
-    "impact_title_bottom": "Sistema",
-    "next_project_label": "Próximo Projeto _",
-    "cta_case_study": "Iniciar Estudo de Caso",
-    "label_category": "Categoria",
-    "label_year": "Ano",
-    "label_role": "Função",
-    "label_status": "Status",
-    "role_value": "Engenharia Líder",
-    "status_value": "Produção",
-    "label_architecture": "ARQUITETURA_SISTEMA",
-    "label_protocol": "Protocolo: Build_Segura",
-    "label_kernel": "Kernel_Sistema_Ativo",
-    "label_deep_dive": "IMERSÃO_TÉCNICA",
-    "label_ref_view": "REF_VISTA_01.PROTO",
-    "label_core_matrix": "MATRIZ_CORE_SISTEMA"
   },
   "Projects": {
     "power-fit": {

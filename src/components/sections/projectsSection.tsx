@@ -3,10 +3,11 @@
 import { useCallback, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowUpRightIcon,
   CaretLeftIcon,
   CaretRightIcon,
   PlusIcon,
+  GithubLogoIcon,
+  GlobeIcon,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 import { projectsData, Project } from "@/lib/projectsData";
@@ -20,16 +21,17 @@ interface ProjectCardProps {
   project: Project;
   index: number;
   tProjects: ReturnType<typeof useTranslations>;
+  tSection: ReturnType<typeof useTranslations>;
 }
 
-function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
+function ProjectCard({ project, index, tProjects, tSection }: ProjectCardProps) {
   const title = tProjects(`${project.slug}.title`);
   const description = tProjects(`${project.slug}.description`);
   const tags = tProjects.raw(`${project.slug}.tags`) as string[];
 
   return (
     <div className="embla__slide flex-[0_0_100%] min-w-0 sm:flex-[0_0_85%] lg:flex-[0_0_70%] px-4">
-      <Link href={`/project/${project.slug}`} className="block group">
+      <div className="block group">
         <div className="relative aspect-16/10 md:aspect-16/8 bg-muted/20 dark:bg-zinc-900/10 border border-border dark:border-zinc-800/50 overflow-hidden transition-all duration-700 group-hover:border-yellow-500/50">
           <div className="absolute top-4 left-4 md:top-8 md:left-8 z-20 flex items-center gap-3">
             <span className="text-[10px] font-mono text-white bg-yellow-600 px-2 py-0.5 font-bold">
@@ -72,14 +74,35 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
                 </p>
               </div>
 
-              <div className="shrink-0">
-                <div className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center group-hover:bg-yellow-600 group-hover:border-yellow-600 transition-all duration-500 shadow-2xl backdrop-blur-sm">
-                  <ArrowUpRightIcon
-                    size={24}
-                    weight="light"
-                    className="text-white group-hover:rotate-45 transition-transform duration-500"
-                  />
-                </div>
+              <div className="flex gap-4 shrink-0">
+                {project.liveUrl && (
+                  <Link
+                    href={project.liveUrl}
+                    target="_blank"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center hover:bg-yellow-600 hover:border-yellow-600 transition-all duration-500 shadow-2xl backdrop-blur-sm group/btn"
+                    title={tSection("cta_live")}
+                  >
+                    <GlobeIcon
+                      size={24}
+                      weight="light"
+                      className="text-white group-hover/btn:scale-110 transition-transform duration-500"
+                    />
+                  </Link>
+                )}
+                {project.githubUrl && (
+                  <Link
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-none border border-white/20 flex items-center justify-center hover:bg-yellow-600 hover:border-yellow-600 transition-all duration-500 shadow-2xl backdrop-blur-sm group/btn"
+                    title={tSection("cta_github")}
+                  >
+                    <GithubLogoIcon
+                      size={24}
+                      weight="light"
+                      className="text-white group-hover/btn:scale-110 transition-transform duration-500"
+                    />
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -87,7 +110,7 @@ function ProjectCard({ project, index, tProjects }: ProjectCardProps) {
           <div className="absolute top-0 right-0 w-0.5 h-0 bg-yellow-600 group-hover:h-full transition-all duration-700" />
           <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-600 group-hover:w-full transition-all duration-700 delay-100" />
         </div>
-      </Link>
+      </div>
     </div>
   );
 }
@@ -189,6 +212,7 @@ export function ProjectsSection() {
                 project={project}
                 index={index}
                 tProjects={tProjects}
+                tSection={t}
               />
             ))}
           </div>

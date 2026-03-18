@@ -102,6 +102,8 @@
     "title_bottom": "works.",
     "more_projects": "Want to see more?",
     "cta_contact": "Get in touch",
+    "cta_live": "Live Project",
+    "cta_github": "GitHub",
     "decorative_label": "SELECTED_WORKS",
     "scroll_hint": "[ Drag or Scroll to Explore ]"
   },
@@ -141,33 +143,6 @@
     "validation_min_length": "Minimum {min} characters",
     "btn_sending": "Sending Protocol...",
     "btn_send": "Send Message"
-  },
-  "ProjectPage": {
-    "btn_exit": "Exit_Project",
-    "label_release": "Release_",
-    "challenge_tag": "01 / The Challenge",
-    "challenge_title_top": "Identifying the",
-    "challenge_title_bottom": "Pain Points",
-    "tech_stack_label": "Core Tech Stack",
-    "execution_tag": "02 / Execution",
-    "execution_title_top": "Engineering a",
-    "execution_title_bottom": "Scalable Solution",
-    "impact_title_top": "System",
-    "impact_title_bottom": "Impact",
-    "next_project_label": "Next Project _",
-    "cta_case_study": "Initialize Case Study",
-    "label_category": "Category",
-    "label_year": "Year",
-    "label_role": "Role",
-    "label_status": "Status",
-    "role_value": "Lead Engineering",
-    "status_value": "Production",
-    "label_architecture": "SYSTEM_ARCHITECTURE",
-    "label_protocol": "Protocol: Secure_Build",
-    "label_kernel": "Kernel_System_Active",
-    "label_deep_dive": "DEEP_DIVE",
-    "label_ref_view": "REF_VIEW_01.PROTO",
-    "label_core_matrix": "SYSTEM_CORE_MATRIX"
   },
   "Projects": {
     "power-fit": {

@@ -9,6 +9,8 @@ export interface Project {
   };
   icon: string;
   color: string;
+  liveUrl?: string;
+  githubUrl?: string;
 }
 
 export const projectsData: Project[] = [
@@ -18,11 +20,13 @@ export const projectsData: Project[] = [
     year: "2025",
     techStack: ["Next.js", "Fastify", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "BetterAuth", "Vercel AI SDK"],
     images: {
-      hero: "/logos/logo/white_logo.png",
+      hero: "/projects/powerfit.png",
       gallery: []
     },
-    icon: "/logos/icon/white_icon.png",
-    color: "#38B2AC"
+    icon: "/projects/powerfit.png",
+    color: "#38B2AC",
+    liveUrl: "https://powerfit.guibus.dev",
+    githubUrl: "https://github.com/guibus/powerfit"
   },
   {
     id: 2,
@@ -34,7 +38,9 @@ export const projectsData: Project[] = [
       gallery: []
     },
     icon: "/logos/icon/white_icon.png",
-    color: "#14b8a6"
+    color: "#14b8a6",
+    liveUrl: "https://powervet.guibus.dev",
+    githubUrl: "https://github.com/guibus/powervet"
   },
   {
     id: 3,
@@ -46,7 +52,9 @@ export const projectsData: Project[] = [
       gallery: []
     },
     icon: "/logos/icon/white_icon.png",
-    color: "#f97316"
+    color: "#f97316",
+    liveUrl: "https://horizon.guibus.dev",
+    githubUrl: "https://github.com/guibus/horizon-travels"
   },
   {
     id: 4,
@@ -58,7 +66,9 @@ export const projectsData: Project[] = [
       gallery: []
     },
     icon: "/logos/icon/white_icon.png",
-    color: "#8b5cf6"
+    color: "#8b5cf6",
+    liveUrl: "https://voltage.guibus.dev",
+    githubUrl: "https://github.com/guibus/voltage-festival"
   },
   {
     id: 5,
@@ -70,17 +80,8 @@ export const projectsData: Project[] = [
       gallery: []
     },
     icon: "/logos/icon/white_icon.png",
-    color: "#71717a"
+    color: "#71717a",
+    liveUrl: "https://haven.guibus.dev",
+    githubUrl: "https://github.com/guibus/haven-barbershop"
   }
 ];
-
-export function getProjectBySlug(slug: string): Project | undefined {
-  return projectsData.find((project) => project.slug === slug);
-}
-
-export function getNextProject(currentSlug: string): Project | undefined {
-  const currentIndex = projectsData.findIndex((p) => p.slug === currentSlug);
-  if (currentIndex === -1) return undefined;
-  const nextIndex = (currentIndex + 1) % projectsData.length;
-  return projectsData[nextIndex];
-}
