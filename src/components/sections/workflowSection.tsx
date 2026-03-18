@@ -80,15 +80,6 @@ export async function WorkflowSection() {
             {t("footer_text")}
           </span>
         </div>
-
-        {/* Decorative Side Label */}
-        <div className="hidden xl:block absolute top-0 -right-4 h-full pt-32 pointer-events-none">
-          <div className="sticky top-32 rotate-90 origin-top-right">
-            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
-              {t("tag")} — PROTOCOL_PIPELINE
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

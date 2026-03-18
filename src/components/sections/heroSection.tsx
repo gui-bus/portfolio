@@ -17,14 +17,6 @@ export async function HeroSection() {
 
   return (
     <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden transition-colors duration-500 grid-hero py-44!">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-color)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-color)_1px,transparent_1px)] bg-size-[60px_60px] opacity-20 pointer-events-none" />
-
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-yellow-500/4 rounded-full blur-[140px]" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[50%] h-[50%] bg-amber-500/4 rounded-full blur-[120px]" />
-        <div className="absolute inset-0 noise-overlay opacity-[0.03] mix-blend-overlay" />
-      </div>
-
       <div className="max-w-350 mx-auto w-full relative z-10">
         <HeroSectionClient>
           <div className="lg:col-span-10 flex flex-col">
