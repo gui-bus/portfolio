@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://guibus.dev';
-  const locales = ['en', 'pt'];
+  const locales = ['en', 'pt', 'es', 'de', 'fr'];
   
   const routes = ['', '#methodology', '#services', '#projects', '#contact'];
   

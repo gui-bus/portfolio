@@ -20,6 +20,9 @@ import { cn } from "@/lib/utils";
 const flagCodes: Record<string, string> = {
   en: "US",
   pt: "BR",
+  es: "ES",
+  de: "DE",
+  fr: "FR",
 };
 
 export function LanguageSwitcher() {

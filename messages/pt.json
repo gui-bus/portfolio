@@ -232,7 +232,10 @@
   },
   "Locale": {
     "en": "Inglês",
-    "pt": "Português"
+    "pt": "Português",
+    "es": "Espanhol",
+    "de": "Alemão",
+    "fr": "Francês"
   },
   "Metadata": {
     "title": "Guibus | Engenheiro Criativo & Especialista Tech",

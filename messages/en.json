@@ -124,6 +124,10 @@
     "label_email": "02. Email",
     "placeholder_email": "email@example.com",
     "label_project": "03. Project Type",
+    "type_fullstack": "Full-stack",
+    "type_design": "UI/UX Design",
+    "type_consulting": "Consulting",
+    "type_other": "Other",
     "label_company": "04. Company (Optional)",
     "placeholder_company": "Your company name",
     "label_budget": "05. Estimated Budget",
@@ -229,7 +233,10 @@
   },
   "Locale": {
     "en": "English",
-    "pt": "Portuguese"
+    "pt": "Portuguese",
+    "es": "Spanish",
+    "de": "German",
+    "fr": "French"
   },
   "Metadata": {
     "title": "Guibus | Creative Engineer & Tech Specialist",
