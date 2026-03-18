@@ -6,7 +6,6 @@ import {
   XIcon,
   ArrowRightIcon,
   CheckCircleIcon,
-  WarningIcon,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
@@ -46,7 +45,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
-      project_type: "Full-stack",
+      project_type: "type_fullstack",
       budget: "budget_range_2",
       deadline: "deadline_2",
     },
@@ -56,6 +55,13 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const selectedBudget = watch("budget");
   const selectedDeadline = watch("deadline");
 
+  const projectTypes = [
+    { key: "type_fullstack", label: t("type_fullstack") },
+    { key: "type_design", label: t("type_design") },
+    { key: "type_consulting", label: t("type_consulting") },
+    { key: "type_other", label: t("type_other") },
+  ];
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
 
@@ -64,7 +70,7 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
     formData.append("name", data.name);
     formData.append("email", data.email);
     formData.append("company", data.company || "N/A");
-    formData.append("project_type", data.project_type);
+    formData.append("project_type", t(data.project_type));
     formData.append("budget", t(data.budget));
     formData.append("deadline", t(data.deadline));
     formData.append("message", data.message);
@@ -107,50 +113,58 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
           exit={{ opacity: 0 }}
         >
           <div
-            className="absolute inset-0 bg-background/80 dark:bg-black/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-background/80 dark:bg-black/80 backdrop-blur-md"
             onClick={onClose}
           />
 
           <motion.div
-            className="relative w-full max-w-2xl h-full bg-background dark:bg-[#050505] border-l border-border dark:border-zinc-800 p-8 md:p-16 overflow-y-auto"
+            className="relative w-full max-w-2xl h-full bg-background border-l border-border dark:border-white/5 p-8 md:p-16 overflow-y-auto overflow-x-hidden shadow-2xl"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 200 }}
+            transition={{ type: "spring", damping: 35, stiffness: 250 }}
           >
+            {/* Cinematic Background Glow */}
+            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-yellow-500/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-amber-500/5 rounded-full blur-[80px] pointer-events-none" />
+
             <button
               onClick={onClose}
-              className="absolute top-8 right-8 text-muted-foreground hover:text-foreground transition-colors z-20"
+              className="absolute top-8 right-8 text-muted-foreground hover:text-yellow-600 transition-all z-20 group"
             >
-              <XIcon size={32} weight="light" />
+              <XIcon size={32} weight="thin" className="group-hover:rotate-90 transition-transform duration-500" />
             </button>
 
             {isSuccess ? (
-              <div className="h-full flex flex-col items-center justify-center text-center space-y-6">
+              <div className="h-full flex flex-col items-center justify-center text-center space-y-8 relative z-10">
                 <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="w-24 h-24 bg-yellow-600 rounded-full flex items-center justify-center text-white"
+                  initial={{ scale: 0, rotate: -45 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  className="w-24 h-24 bg-yellow-600 rounded-full flex items-center justify-center text-white shadow-[0_0_40px_rgba(202,138,4,0.3)]"
                 >
                   <CheckCircleIcon size={56} weight="bold" />
                 </motion.div>
-                <h3 className="text-4xl font-black uppercase tracking-tighter text-foreground dark:text-white leading-none">
-                  Inquiry Received.
-                </h3>
-                <p className="text-muted-foreground max-w-xs text-lg">
-                  Protocol established. I will review your requirements and
-                  respond within 24 hours.
-                </p>
+                <div className="space-y-4">
+                  <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-foreground leading-none">
+                    {t("success_title")}
+                  </h3>
+                  <p className="text-muted-foreground max-w-xs mx-auto text-lg font-light leading-relaxed uppercase tracking-wider">
+                    {t("success_message")}
+                  </p>
+                </div>
               </div>
             ) : (
-              <div className="relative">
+              <div className="relative z-10">
                 <div className="mb-16">
-                  <span className="text-[10px] font-mono tracking-[0.5em] text-yellow-600 dark:text-yellow-500 uppercase mb-4 block font-black">
-                    PROJECT_INQUIRY_FORM
-                  </span>
-                  <h3 className="text-5xl font-black text-foreground dark:text-white tracking-tighter uppercase leading-none">
-                    {t("form_title_top")} <br />{" "}
-                    <span className="outline-text-form">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
+                    <span className="text-[10px] font-mono tracking-[0.5em] text-yellow-600 dark:text-yellow-500 uppercase font-black">
+                      {t("form_tag")}
+                    </span>
+                  </div>
+                  <h3 className="text-5xl md:text-6xl font-black text-foreground tracking-tighter uppercase leading-[0.8]">
+                    {t("form_title_top")} <br />
+                    <span className="outline-text-form italic">
                       {t("form_title_bottom")}
                     </span>
                   </h3>
@@ -164,20 +178,20 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                           "group border-b transition-colors py-2",
                           errors.name
                             ? "border-red-500"
-                            : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                            : "border-border dark:border-white/10 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
                         )}
                       >
-                        <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                        <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black group-focus-within:text-yellow-600 transition-colors">
                           {t("label_name")}
                         </label>
                         <input
                           {...register("name")}
-                          className="w-full bg-transparent outline-none text-foreground pt-2 font-light italic placeholder:text-muted-foreground/30"
+                          className="w-full bg-transparent outline-none text-foreground pt-2 text-lg font-light italic placeholder:text-muted-foreground/20"
                           placeholder={t("placeholder_name")}
                         />
                       </div>
                       {errors.name && (
-                        <span className="text-[10px] text-red-500 font-mono uppercase">
+                        <span className="text-[10px] text-red-500 font-mono uppercase font-black tracking-widest">
                           {errors.name.message}
                         </span>
                       )}
@@ -189,68 +203,63 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                           "group border-b transition-colors py-2",
                           errors.email
                             ? "border-red-500"
-                            : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                            : "border-border dark:border-white/10 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
                         )}
                       >
-                        <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                        <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black group-focus-within:text-yellow-600 transition-colors">
                           {t("label_email")}
                         </label>
                         <input
                           {...register("email")}
-                          className="w-full bg-transparent outline-none text-foreground pt-2 font-light italic placeholder:text-muted-foreground/30"
+                          className="w-full bg-transparent outline-none text-foreground pt-2 text-lg font-light italic placeholder:text-muted-foreground/20"
                           placeholder={t("placeholder_email")}
                         />
                       </div>
                       {errors.email && (
-                        <span className="text-[10px] text-red-500 font-mono uppercase">
+                        <span className="text-[10px] text-red-500 font-mono uppercase font-black tracking-widest">
                           {errors.email.message}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="group border-b border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500 transition-colors py-2">
-                    <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                  <div className="group border-b border-border dark:border-white/10 focus-within:border-yellow-600 dark:focus-within:border-yellow-500 transition-colors py-2">
+                    <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black group-focus-within:text-yellow-600 transition-colors">
                       {t("label_company")}
                     </label>
                     <input
                       {...register("company")}
-                      className="w-full bg-transparent outline-none text-foreground pt-2 font-light italic placeholder:text-muted-foreground/30"
+                      className="w-full bg-transparent outline-none text-foreground pt-2 text-lg font-light italic placeholder:text-muted-foreground/20"
                       placeholder={t("placeholder_company")}
                     />
                   </div>
 
-                  <div className="space-y-4">
-                    <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                  <div className="space-y-6">
+                    <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black">
                       {t("label_project")}
                     </label>
                     <div className="flex flex-wrap gap-3">
-                      {[
-                        "Full-stack",
-                        "UI/UX Design",
-                        "Consultoria",
-                        "Outro",
-                      ].map((type) => (
+                      {projectTypes.map((type) => (
                         <button
-                          key={type}
+                          key={type.key}
                           type="button"
-                          onClick={() => setValue("project_type", type)}
+                          onClick={() => setValue("project_type", type.key)}
                           className={cn(
-                            "px-5 py-2 border text-[10px] font-mono uppercase tracking-widest transition-all",
-                            selectedType === type
-                              ? "bg-yellow-600 border-yellow-600 text-white"
-                              : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600 dark:hover:border-yellow-500 bg-muted/20 dark:bg-transparent",
+                            "px-6 py-3 border text-[10px] font-mono uppercase tracking-widest font-black transition-all",
+                            selectedType === type.key
+                              ? "bg-yellow-600 border-yellow-600 text-white shadow-[0_0_20px_rgba(202,138,4,0.2)]"
+                              : "border-border dark:border-white/5 text-muted-foreground hover:border-yellow-600 dark:hover:border-yellow-500 bg-muted/5 dark:bg-transparent",
                           )}
                         >
-                          {type}
+                          {type.label}
                         </button>
                       ))}
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="space-y-4">
-                      <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                    <div className="space-y-6">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black">
                         {t("label_budget")}
                       </label>
                       <div className="flex flex-col gap-2">
@@ -265,10 +274,10 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                             type="button"
                             onClick={() => setValue("budget", range)}
                             className={cn(
-                              "px-4 py-2 border text-[9px] font-mono uppercase text-left transition-all",
+                              "px-5 py-3 border text-[10px] font-mono uppercase text-left transition-all font-black tracking-widest",
                               selectedBudget === range
-                                ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white"
-                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600/50",
+                                ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white shadow-lg"
+                                : "border-border dark:border-white/5 text-muted-foreground hover:border-yellow-600/40 hover:bg-yellow-600/5",
                             )}
                           >
                             {t(range)}
@@ -277,8 +286,8 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                       </div>
                     </div>
 
-                    <div className="space-y-4">
-                      <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                    <div className="space-y-6">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black">
                         {t("label_deadline")}
                       </label>
                       <div className="flex flex-col gap-2">
@@ -293,10 +302,10 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                             type="button"
                             onClick={() => setValue("deadline", dl)}
                             className={cn(
-                              "px-4 py-2 border text-[9px] font-mono uppercase text-left transition-all",
+                              "px-5 py-3 border text-[10px] font-mono uppercase text-left transition-all font-black tracking-widest",
                               selectedDeadline === dl
-                                ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white"
-                                : "border-border dark:border-zinc-900 text-muted-foreground hover:border-yellow-600/50",
+                                ? "bg-foreground dark:bg-white text-background dark:text-black border-foreground dark:border-white shadow-lg"
+                                : "border-border dark:border-white/5 text-muted-foreground hover:border-yellow-600/40 hover:bg-yellow-600/5",
                             )}
                           >
                             {t(dl)}
@@ -312,21 +321,21 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                         "group border-b transition-colors py-2",
                         errors.message
                           ? "border-red-500"
-                          : "border-border dark:border-zinc-800 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
+                          : "border-border dark:border-white/10 focus-within:border-yellow-600 dark:focus-within:border-yellow-500",
                       )}
                     >
-                      <label className="text-[9px] font-mono uppercase tracking-widest text-muted-foreground font-bold">
+                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/60 font-black group-focus-within:text-yellow-600 transition-colors">
                         {t("label_briefing")}
                       </label>
                       <textarea
                         {...register("message")}
                         rows={4}
-                        className="w-full bg-transparent outline-none text-foreground pt-2 font-light italic resize-none placeholder:text-muted-foreground/30"
+                        className="w-full bg-transparent outline-none text-foreground pt-2 text-lg font-light italic resize-none placeholder:text-muted-foreground/20"
                         placeholder={t("placeholder_briefing")}
                       />
                     </div>
                     {errors.message && (
-                      <span className="text-[10px] text-red-500 font-mono uppercase">
+                      <span className="text-[10px] text-red-500 font-mono uppercase font-black tracking-widest">
                         {errors.message.message}
                       </span>
                     )}
@@ -335,10 +344,10 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-6 bg-yellow-600 text-white font-black text-xs uppercase tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full py-8 bg-yellow-600 text-white font-black text-xs md:text-sm uppercase tracking-[0.5em] flex items-center justify-center gap-6 hover:bg-foreground dark:hover:bg-white dark:hover:text-black transition-all shadow-[0_20px_40px_rgba(202,138,4,0.2)] disabled:opacity-50 disabled:cursor-not-allowed group"
                   >
                     {isSubmitting ? t("btn_sending") : t("btn_send")}{" "}
-                    <ArrowRightIcon size={18} />
+                    <ArrowRightIcon size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
                   </button>
                 </form>
               </div>

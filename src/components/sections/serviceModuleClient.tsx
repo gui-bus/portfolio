@@ -56,7 +56,7 @@ export function ServiceModuleClient({
     <motion.div
       variants={fadeInUp}
       className={cn(
-        "group relative bg-muted/5 dark:bg-white2 border border-border dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-yellow-500/50",
+        "group relative bg-muted/5 dark:bg-white/2 border border-border dark:border-white/5 overflow-hidden transition-all duration-500 hover:border-yellow-500/50",
         isLarge ? "lg:col-span-2 lg:row-span-2 p-8 md:p-12" : "p-6 md:p-8",
       )}
     >
@@ -124,7 +124,7 @@ export function ServiceModuleClient({
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-yellow-500/[0.03] to-transparent h-1/2 -translate-y-full group-hover:animate-[scan_2s_linear_infinite] pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-yellow-500/3 to-transparent h-1/2 -translate-y-full group-hover:animate-[scan_2s_linear_infinite] pointer-events-none" />
     </motion.div>
   );
 }

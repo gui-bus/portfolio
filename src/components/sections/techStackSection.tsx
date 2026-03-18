@@ -93,15 +93,6 @@ export async function TechStackSection() {
             />
           </div>
         </FadeInAnimationWrapper>
-
-        {/* Decorative Side Label */}
-        <div className="hidden xl:block absolute top-0 -right-4 h-full pt-32 pointer-events-none">
-          <div className="sticky top-32 rotate-90 origin-top-right">
-            <span className="text-[9px] font-mono text-muted-foreground/20 uppercase tracking-[1.5em] font-black whitespace-nowrap">
-              {t("tag")} — STACK_MATRIX_OS
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );

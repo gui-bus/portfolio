@@ -115,6 +115,8 @@
     "form_tag": "// Inquiry Form",
     "form_title_top": "Initiate the",
     "form_title_bottom": "Protocol.",
+    "success_title": "Inquiry Received.",
+    "success_message": "Protocol established. I will review your requirements and respond within 24 hours.",
     "label_name": "01. Name",
     "placeholder_name": "Your name or company",
     "label_email": "02. Email",
