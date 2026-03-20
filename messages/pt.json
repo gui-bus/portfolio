@@ -94,7 +94,9 @@
     "desc_react": "Biblioteca de Componentes",
     "desc_runtime": "Runtime Server-side",
     "desc_cloud": "Deployment & Edge",
-    "desc_mobile": "Desenvolvimento Mobile"
+    "desc_mobile": "Desenvolvimento Mobile",
+    "desc_backend": "Backend Escalável",
+    "desc_ux_ui": "UX/UI Design"
   },
   "ProjectsSection": {
     "tag": "Projetos Selecionados",
@@ -218,6 +220,25 @@
         "Estratégia de SEO focada em palavras-chave locais de luxo"
       ],
       "tags": ["Lifestyle", "Branding", "E-commerce", "Negócio Local"]
+    },
+    "onyx": {
+      "title": "Onyx",
+      "category": "High-End Legal Services",
+      "description": "Boutique jurídica internacional especializada em arquitetura estratégica para questões de alta complexidade e gestão de grandes patrimônios.",
+      "challenge": "Comunicar autoridade inabalável e discrição absoluta em uma interface digital que reflete o prestígio de uma banca de advocacia global.",
+      "solution": "Design minimalista e atemporal com tipografia clássica, paleta monocromática de luxo e uma narrativa visual focada em legado e precisão.",
+      "results": [
+        "Identidade visual que transpira sofisticação e rigor técnico",
+        "Arquitetura de informação focada em privacidade e confiança",
+        "Plataforma multilíngue otimizada para mercados de luxo globais",
+        "Interface de contato criptografada para máxima confidencialidade"
+      ],
+      "tags": [
+        "Legal",
+        "Wealth Management",
+        "Corporate Strategy",
+        "Luxury Branding"
+      ]
     }
   },
   "Footer": {
@@ -226,7 +247,8 @@
     "links_label": "Links",
     "copyright_label": "Desenvolvedor Full-stack & Designer",
     "back_to_top": "Voltar ao topo"
-    },  "ThemeToggle": {
+  },
+  "ThemeToggle": {
     "light": "Modo Claro",
     "dark": "Modo Escuro"
   },

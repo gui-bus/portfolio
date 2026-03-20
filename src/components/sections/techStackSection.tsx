@@ -49,7 +49,7 @@ export async function TechStackSection() {
                 {t("tag")}
               </span>
             </div>
-            <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground leading-[0.8] tracking-tighter uppercase">
+            <h2 className="text-5xl md:text-8xl lg:text-9xl font-black text-foreground leading-[0.8] tracking-tighter uppercase">
               {t("title_top")} <br />
               <span className="outline-text-global italic">
                 {t("title_bottom")}

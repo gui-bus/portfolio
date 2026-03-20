@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
   {
     id: 1,
     slug: "power-fit",
-    year: "2025",
+    year: "2026",
     techStack: ["Next.js", "Fastify", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS", "BetterAuth", "Vercel AI SDK"],
     images: {
       hero: "/projects/powerfit.png",
@@ -31,7 +31,7 @@ export const projectsData: Project[] = [
   {
     id: 2,
     slug: "powervet",
-    year: "2024",
+    year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn UI"],
     images: {
       hero: "/projects/powervet.png",
@@ -45,7 +45,7 @@ export const projectsData: Project[] = [
   {
     id: 3,
     slug: "horizon-travels",
-    year: "2024",
+    year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
     images: {
       hero: "/projects/horizon.png",
@@ -59,7 +59,7 @@ export const projectsData: Project[] = [
   {
     id: 4,
     slug: "voltage-festival",
-    year: "2024",
+    year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"],
     images: {
       hero: "/projects/voltage.png",
@@ -73,7 +73,7 @@ export const projectsData: Project[] = [
   {
     id: 5,
     slug: "haven-barbershop",
-    year: "2024",
+    year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
     images: {
       hero: "/projects/haven.png",
@@ -82,6 +82,20 @@ export const projectsData: Project[] = [
     icon: "/projects/haven.png",
     color: "#71717a",
     liveUrl: "https://haven.guibus.dev",
+    githubUrl: "https://github.com/gui-bus"
+  },
+  {
+    id: 6,
+    slug: "onyx",
+    year: "2026",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    images: {
+      hero: "/projects/onyx.png",
+      gallery: []
+    },
+    icon: "/projects/onyx.png",
+    color: "#71717a",
+    liveUrl: "https://onyx.guibus.dev",
     githubUrl: "https://github.com/gui-bus"
   }
 ];

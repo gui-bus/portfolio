@@ -94,7 +94,9 @@
     "desc_react": "Component Library",
     "desc_runtime": "Server-side Runtime",
     "desc_cloud": "Deployment & Edge",
-    "desc_mobile": "Mobile Development"
+    "desc_mobile": "Mobile Development",
+    "desc_backend": "Scalable Backend",
+    "desc_ux_ui": "UX/UI Design"
   },
   "ProjectsSection": {
     "tag": "Selected Projects",
@@ -218,6 +220,25 @@
         "SEO strategy focused on local luxury keywords"
       ],
       "tags": ["Lifestyle", "Branding", "E-commerce", "Local Business"]
+    },
+    "onyx": {
+      "title": "Onyx",
+      "category": "High-End Legal Services",
+      "description": "International legal boutique specialized in strategic architecture for highly complex matters and large wealth management.",
+      "challenge": "To convey unwavering authority and absolute discretion through a digital interface that reflects the prestige of a global law firm.",
+      "solution": "Minimalist and timeless design with classic typography, a monochromatic luxury palette, and a visual narrative focused on legacy and precision.",
+      "results": [
+        "Visual identity that exudes sophistication and technical rigor",
+        "Information architecture focused on privacy and trust",
+        "Multilingual platform optimized for global luxury markets",
+        "Encrypted contact interface for maximum confidentiality"
+      ],
+      "tags": [
+        "Legal",
+        "Wealth Management",
+        "Corporate Strategy",
+        "Luxury Branding"
+      ]
     }
   },
   "Footer": {

@@ -30,7 +30,7 @@ export async function HeroSection() {
                 </div>
               </div>
 
-              <h1 className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black leading-[0.8] tracking-[-0.07em] uppercase text-foreground mb-12">
+              <h1 className="text-5xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black leading-[0.8] tracking-[-0.07em] uppercase text-foreground mb-12">
                 {t("title_top")} <br />
                 <span className="outline-text-global italic">
                   {t("title_bottom")}
