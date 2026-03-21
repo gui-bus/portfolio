@@ -239,6 +239,25 @@
         "Corporate Strategy",
         "Luxury Branding"
       ]
+    },
+    "starkfit": {
+      "title": "StarkFit",
+      "category": "Premium Fitness & Elite Performance",
+      "description": "Digital ecosystem for an elite performance club, focused on transforming raw effort into legacy through advanced technology and luxury infrastructure.",
+      "challenge": "Designing an interface that conveys technical aggressiveness and unwavering exclusivity, balancing a brutalist aesthetic with the sophistication of a high-end brand.",
+      "solution": "Using Next.js and Framer Motion to create an immersive visual narrative, with high-impact typography, a high-contrast 'Dark Mode' palette, and information architecture focused on premium conversion.",
+      "results": [
+        "Visual identity that breathes strength, precision, and elite culture",
+        "Fluid navigation experience with animations that reinforce the workout dynamics",
+        "Robust internationalization (i18n) system for scaling in global markets",
+        "Interface optimized for high-ticket membership plan conversion"
+      ],
+      "tags": [
+        "Fitness Luxury",
+        "Elite Performance",
+        "Brutalist Design",
+        "Next.js i18n"
+      ]
     }
   },
   "Footer": {

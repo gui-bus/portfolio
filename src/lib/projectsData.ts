@@ -97,5 +97,19 @@ export const projectsData: Project[] = [
     color: "#71717a",
     liveUrl: "https://onyx.guibus.dev",
     githubUrl: "https://github.com/gui-bus"
+  },
+  {
+    id: 7,
+    slug: "starkfit",
+    year: "2026",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    images: {
+      hero: "/projects/starkfit.png",
+      gallery: []
+    },
+    icon: "/projects/starkfit.png",
+    color: "#71717a",
+    liveUrl: "https://starkfit.guibus.dev",
+    githubUrl: "https://github.com/gui-bus"
   }
 ];

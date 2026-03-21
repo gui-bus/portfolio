@@ -218,6 +218,25 @@
         "SEO-Strategie fokussiert auf lokale Luxus-Keywords"
       ],
       "tags": ["Lifestyle", "Branding", "E-Commerce", "Lokales Business"]
+    },
+    "starkfit": {
+      "title": "StarkFit",
+      "category": "Premium Fitness & Elite Performance",
+      "description": "Digitales Ökosystem für einen Elite-Performance-Club, das darauf ausgerichtet ist, rohe Anstrengung durch fortschrittliche Technologie und luxuriöse Infrastruktur in ein Vermächtnis zu verwandeln.",
+      "challenge": "Entwurf eines Interfaces, das technische Aggressivität und unerschütterliche Exklusivität vermittelt und dabei eine brutalistische Ästhetik mit der Raffinesse einer High-End-Marke in Einklang bringt.",
+      "solution": "Einsatz von Next.js und Framer Motion, um eine immersive visuelle Erzählung zu schaffen, mit wirkungsvoller Typografie, einer kontrastreichen 'Dark Mode'-Palette und einer auf Premium-Konversion ausgerichteten Informationsarchitektur.",
+      "results": [
+        "Visuelle Identität, die Stärke, Präzision und Elite-Kultur atmet",
+        "Flüssiges Navigationserlebnis mit Animationen, die die Trainingsdynamik verstärken",
+        "Robustes Internationalisierungssystem (i18n) für die Skalierung in globalen Märkten",
+        "Optimiertes Interface für die Konversion von High-Ticket-Mitgliedschaftsplänen"
+      ],
+      "tags": [
+        "Fitness Luxury",
+        "Elite Performance",
+        "Brutalist Design",
+        "Next.js i18n"
+      ]
     }
   },
   "Footer": {
