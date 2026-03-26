@@ -1,21 +1,18 @@
-# <p align="center"><img src="./public/logos/logo/white_logo.png" alt="Portfolio Logo" width="300" /></p>
+# <div align="center"><img src="./public/logos/logo/white_logo.png" alt="Portfolio Logo" width="200" /></p>
 
 <p align="center">
-  <strong>Meu portfólio interativo, construído com as tecnologias mais modernas para apresentar minhas habilidades em engenharia de software e design.</strong>
-</p>
-
-<p align="center">
-  <a href="https://guibus.dev/"><img src="https://img.shields.io/badge/Live_Portfolio-guibus.dev-orange?style=for-the-badge&logo=vercel" alt="Live Portfolio" /></a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.1.6-black?style=flat-square&logo=next.js" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-19.2.3-blue?style=flat-square&logo=react" alt="React" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/next-intl-red?style=flat-square" alt="next-intl" />
-  <img src="https://img.shields.io/badge/shadcn/ui-green?style=flat-square&logo=shadcnui" alt="shadcn/ui" />
-  <img src="https://img.shields.io/badge/Vitest-4.x-yellow?style=flat-square&logo=vitest" alt="Vitest" />
+  <img alt="React" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/React.svg">
+  <img alt="NextJS" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/NextJS.svg">
+  <img alt="Typescript" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Typescript.svg">
+  <img alt="Tailwind" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/TailwindCSS.svg">
+  <img alt="ShadCN" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/ShadCNUI.svg">
+  <img alt="Framer Motion" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Framer%20Motion.svg">
+  <img alt="Phosphor Icons" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Phosphor%20Icons.svg">
+  <img alt="Vitest" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Vitest.svg">
+  <img alt="Husky" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Husky.svg">
+  <img alt="Conventional Commits" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Conventional%20Commits.svg">
+  <img alt="Gemini" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Gemini.svg">
+  <img alt="Windsurf" height="60" width="60" src="https://github.com/gui-bus/TechIcons/blob/main/Dark/Windsurf.svg">
 </p>
 
 ---
@@ -60,67 +57,3 @@ Este portfólio é uma demonstração interativa das minhas capacidades como eng
 - **Animações:** Framer Motion, GSAP
 - **Testes:** Vitest, Testing Library
 - **Gerenciador de Pacotes:** pnpm
-- **Editor:** VS Code com ESLint e Prettier configurados
-
----
-
-## 🏗️ Estrutura do Projeto
-
-```text
-├── public/               # Assets estáticos (imagens, fontes)
-├── src/
-│   ├── app/              # Next.js App Router
-│   │   ├── [locale]/     # Roteamento por locale
-│   │   ├── globals.css   # Configurações globais de CSS e Tailwind
-│   │   └── ...
-│   ├── components/       # Componentes reutilizáveis (UI, Sections, Common)
-│   ├── hooks/            # Custom Hooks
-│   ├── lib/              # Camada de lógica de negócio e utilitários
-│   └── i18n/             # Configuração e handlers de internacionalização
-├── messages/             # Arquivos de tradução (.json)
-├── tests/                # Testes unitários e de integração
-├── .commitlintrc.json    # Configuração do Commitlint
-├── .gitignore            # Arquivos ignorados pelo Git
-├── components.json       # Configuração do shadcn/ui
-├── next.config.ts        # Configurações do Next.js
-├── package.json          # Dependências e scripts
-├── tsconfig.json         # Configurações do TypeScript
-└── ...                   # Outros arquivos de configuração
-```
-
----
-
-## 🚀 Como Executar
-
-### Desenvolvimento
-```bash
-pnpm dev
-```
-
-### Build para Produção
-```bash
-pnpm build
-```
-
-### Linting e Formatação
-```bash
-pnpm lint
-```
-### Preparar Hooks do Git
-```bash
-pnpm prepare
-```
-
----
-
-## 🧪 Qualidade e Testes
-
-A qualidade do código é garantida por:
-- **ESLint e Prettier:** Configurados para manter um padrão de código consistente.
-- **Vitest:** Para testes unitários e de integração.
-- **Husky & lint-staged:** Hooks de Git que rodam linters e testes em arquivos modificados antes do commit.
-
-Para rodar os testes:
-```bash
-pnpm test
-```
