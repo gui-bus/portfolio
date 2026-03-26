@@ -1,4 +1,4 @@
-# <p align="center"><img src="./public/logos/logo/black_logo.png" alt="Portfolio Logo" width="300" /></p>
+# <p align="center"><img src="./public/logos/logo/white_logo.png" alt="Portfolio Logo" width="300" /></p>
 
 <p align="center">
   <strong>Meu portfólio interativo, construído com as tecnologias mais modernas para apresentar minhas habilidades em engenharia de software e design.</strong>
