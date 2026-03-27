@@ -15,6 +15,7 @@
     "description": "Transformando visões de negócio em experiências interativas através de design estratégico e tecnologia de ponta.",
     "stack_expert": "Especialista React / Next.js",
     "design_specialist": "Especialista UI/UX",
+    "cv_cta": "Currículo Digital",
     "cta_projects": "Explorar Projetos",
     "tech_stack_label": "Tech Stack",
     "presence_label": "Presença Digital"
@@ -116,6 +117,7 @@
     "cta_start": "Iniciar um Projeto",
     "description": "Estou sempre aberto a novas oportunidades e parcerias estratégicas. Inicie o protocolo para construirmos algo memorável.",
     "location": "Sediado no Brasil // Remoto Worldwide",
+    "cv": "Currículo",
     "form_tag": "// Iniciar Protocolo",
     "form_title_top": "Inicie o",
     "form_title_bottom": "Protocolo.",

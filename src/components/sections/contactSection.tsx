@@ -6,6 +6,7 @@ export async function ContactSection() {
   const t = await getTranslations("Contact");
 
   const channels = [
+    { name: t("cv"), value: "Guilherme Bustamante", iconName: "IdentificationCard", href: "https://lume.guibus.dev/pt/share/guilherme-bustamante-frontend" },
     { name: "GitHub", value: "@gui-bus", iconName: "GithubLogo", href: "https://github.com/gui-bus" },
     { name: "LinkedIn", value: "Guilherme Bustamante", iconName: "LinkedinLogo", href: "https://linkedin.com/in/guibus" },
     { name: "Instagram", value: "@guibus.dev", iconName: "InstagramLogo", href: "https://instagram.com/guibus.dev" },

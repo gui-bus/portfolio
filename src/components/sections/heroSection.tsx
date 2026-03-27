@@ -2,6 +2,7 @@ import {
   FingerprintIcon,
   CpuIcon,
   ArrowRightIcon,
+  FileTextIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { getTranslations } from "next-intl/server";
 import {
@@ -39,7 +40,7 @@ export async function HeroSection() {
             </HeroTitleAnimation>
 
             <HeroDescriptionAnimation>
-              <div className="max-w-xl">
+              <div className="max-w-5xl">
                 <p className="text-xl md:text-2xl font-light text-muted-foreground leading-tight tracking-tight mb-12">
                   {t("description")}
                 </p>
@@ -72,6 +73,24 @@ export async function HeroSection() {
                       </span>
                     </div>
                   </div>
+
+                  <Link 
+                    href="https://lume.guibus.dev/pt/share/guilherme-bustamante-frontend" 
+                    target="_blank" 
+                    className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-yellow-600/40 transition-all duration-500 relative overflow-hidden"
+                  >
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-yellow-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
+                    <FileTextIcon
+                      size={24}
+                      weight="thin"
+                      className="text-yellow-600 dark:text-yellow-500 group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-[11px] font-mono uppercase tracking-widest font-black">
+                        {t("cv_cta")}
+                      </span>
+                    </div>
+                  </Link>
                 </div>
 
                 <div className="flex items-center gap-8">

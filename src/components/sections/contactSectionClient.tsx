@@ -11,6 +11,7 @@ import {
   LinkedinLogoIcon,
   InstagramLogoIcon,
   EnvelopeSimpleIcon,
+  IdentificationCardIcon,
 } from "@phosphor-icons/react";
 
 const iconsMap: Record<string, Icon> = {
@@ -18,6 +19,7 @@ const iconsMap: Record<string, Icon> = {
   LinkedinLogo: LinkedinLogoIcon,
   InstagramLogo: InstagramLogoIcon,
   EnvelopeSimple: EnvelopeSimpleIcon,
+  IdentificationCard: IdentificationCardIcon,
 };
 
 interface ContactModuleClientProps {

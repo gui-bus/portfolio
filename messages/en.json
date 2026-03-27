@@ -15,6 +15,7 @@
     "description": "Transforming business visions into interactive experiences through strategic design and high-end technology.",
     "stack_expert": "React / Next.js Expert",
     "design_specialist": "UI/UX Specialist",
+    "cv_cta": "Digital CV",
     "cta_projects": "Explore Projects",
     "tech_stack_label": "Tech Stack",
     "presence_label": "Digital Presence"
@@ -116,6 +117,7 @@
     "cta_start": "Start a Project",
     "description": "I'm always open to new opportunities and strategic partnerships. Initiate the protocol to build something memorable.",
     "location": "Based in Brazil // Remote Worldwide",
+    "cv": "Curriculum",
     "form_tag": "// Inquiry Form",
     "form_title_top": "Initiate the",
     "form_title_bottom": "Protocol.",
