@@ -28,8 +28,22 @@ export const projectsData: Project[] = [
     liveUrl: "https://powerfit.guibus.dev",
     githubUrl: "https://github.com/gui-bus"
   },
-  {
+    {
     id: 2,
+    slug: "lume",
+    year: "2026",
+    techStack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Clerk"],
+    images: {
+      hero: "/projects/lume.png",
+      gallery: []
+    },
+    icon: "/projects/lume.png",
+    color: "#38B2AC",
+    liveUrl: "https://lume.guibus.dev",
+    githubUrl: "https://github.com/gui-bus"
+  },
+  {
+    id: 3,
     slug: "powervet",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn UI"],
@@ -43,7 +57,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/gui-bus"
   },
   {
-    id: 3,
+    id: 4,
     slug: "horizon-travels",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
@@ -57,7 +71,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/gui-bus"
   },
   {
-    id: 4,
+    id: 5,
     slug: "voltage-festival",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"],
@@ -71,7 +85,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/gui-bus"
   },
   {
-    id: 5,
+    id: 6,
     slug: "haven-barbershop",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
@@ -85,7 +99,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/gui-bus"
   },
   {
-    id: 6,
+    id: 7,
     slug: "onyx",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
@@ -99,7 +113,7 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/gui-bus"
   },
   {
-    id: 7,
+    id: 8,
     slug: "starkfit",
     year: "2026",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],

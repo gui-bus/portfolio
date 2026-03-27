@@ -237,6 +237,25 @@
         "Brutalista Design",
         "Next.js i18n"
       ]
+    },
+    "lume": {
+      "title": "Lume",
+      "category": "Ingeniería de Carreras y ATS de Alto Rendimiento",
+      "description": "Plataforma de ingeniería de carreras diseñada para profesionales de élite, eliminando la fricción entre la experiencia técnica y la aprobación en algoritmos de reclutamiento (ATS).",
+      "challenge": "Desarrollar una interfaz de edición en tiempo real que armonice la complejidad de los datos estructurados con una experiencia de usuario fluida, garantizando una precisión quirúrgica en la generación de documentos optimizados.",
+      "solution": "Arquitectura basada en Next.js y Server Actions, integrando un motor de renderizado de PDF en vivo, validación rigurosa con Zod/Prisma y una interfaz de usuario minimalista potenciada por Framer Motion y View Transitions.",
+      "results": [
+        "Experiencia de edición 'Zero Latency' con vista previa instantánea de alta fidelidad",
+        "Sistema de validación ATS Health Check que eleva la tasa de conversión en procesos selectivos",
+        "Arquitectura modular que permite la internacionalización dinámica y la gestión de múltiples perfiles",
+        "Interfaz premium con micro-interacciones fluidas y sistema de autenticación empresarial vía Clerk"
+      ],
+      "tags": [
+        "Career Tech",
+        "Optimización ATS",
+        "Excelencia Fullstack",
+        "Next.js & Prisma"
+      ]
     }
   },
   "Footer": {
