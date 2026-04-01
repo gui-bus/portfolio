@@ -8,6 +8,7 @@ import {
   FadeInAnimationWrapper,
 } from "@/components/common/sectionAnimationWrapper";
 import { ContactCTAClient } from "./contactSectionClient";
+import Image from "next/image";
 
 interface ContactHeaderClientProps {
   statusText: string;
@@ -32,11 +33,21 @@ export function ContactHeaderClient({
         <PaperPlaneTiltIcon size={300} weight="fill" />
       </div>
 
-      <FadeInAnimationWrapper className="flex items-center gap-4 mb-8">
-        <div className="w-2 h-2 rounded-full bg-yellow-600 dark:bg-yellow-500 animate-pulse" />
-        <span className="text-[10px] font-mono tracking-[0.4em] text-yellow-600 dark:text-yellow-500 uppercase font-black">
-          {statusText}
-        </span>
+      <FadeInAnimationWrapper className="flex items-center gap-4 mb-8 group">
+        <div className="relative w-8 h-8 rounded-full overflow-hidden border border-yellow-600/20 group-hover:border-yellow-600/50 transition-colors duration-500">
+          <Image 
+            src="/images/profile.jpg" 
+            alt="Guilherme Bustamante" 
+            fill 
+            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+        </div>
+        <div className="flex items-center gap-2.5">
+          <div className="w-2 h-2 rounded-full bg-yellow-600 dark:bg-yellow-500 animate-pulse" />
+          <span className="text-[10px] font-mono tracking-[0.4em] text-yellow-600 dark:text-yellow-500 uppercase font-black">
+            {statusText}
+          </span>
+        </div>
       </FadeInAnimationWrapper>
 
       <FadeInAnimationWrapper>

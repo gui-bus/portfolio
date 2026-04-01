@@ -9,9 +9,11 @@ import {
   HeroSectionClient,
   HeroTitleAnimation,
   HeroDescriptionAnimation,
+  HeroImageAnimation,
 } from "./heroSectionClient";
 import { ScrollArrowClient } from "./heroScrollArrowClient";
 import Link from "next/link";
+import Image from "next/image";
 
 export async function HeroSection() {
   const t = await getTranslations("Hero");
@@ -117,6 +119,21 @@ export async function HeroSection() {
                   </div>
                 </div>
               </div>
+
+              <HeroImageAnimation>
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-yellow-600/10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative cinematic-card cinematic-border overflow-hidden rounded-2xl w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt={t("branding")}
+                      fill
+                      className="object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                      priority
+                    />
+                  </div>
+                </div>
+              </HeroImageAnimation>
             </HeroDescriptionAnimation>
           </div>
 

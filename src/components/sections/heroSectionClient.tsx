@@ -61,7 +61,30 @@ export function HeroDescriptionAnimation({
           },
         },
       }}
-      className="flex flex-col md:flex-row gap-12 lg:gap-24 items-start"
+      className="flex flex-col xl:flex-row gap-12 lg:gap-24 items-start"
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function HeroImageAnimation({ children }: { children: React.ReactNode }) {
+  return (
+    <motion.div
+      variants={{
+        initial: { opacity: 0, scale: 0.9, filter: "blur(10px)" },
+        animate: {
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          transition: {
+            duration: 1.5,
+            delay: 0.6,
+            ease: [0.22, 1, 0.36, 1],
+          },
+        },
+      }}
+      className="relative w-full xl:w-auto mt-8 xl:mt-0"
     >
       {children}
     </motion.div>
