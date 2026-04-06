@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages, getTranslations} from 'next-intl/server';
 import { ThemeProvider } from "@/lib/providers/themeProvider";
-import Script from "next/script";
+//@ts-expect-error Globals import
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,6 +19,7 @@ export async function generateMetadata() {
   const t = await getTranslations('Metadata');
   const locale = await getLocale();
   const baseUrl = 'https://guibus.dev';
+  const ogImage = "/projects/portfolio.png";
  
   return {
     metadataBase: new URL(baseUrl),
@@ -27,7 +28,7 @@ export async function generateMetadata() {
       template: `%s | ${t('title')}`
     },
     description: t('description'),
-    keywords: ["Full-stack Developer", "Software Engineer", "Next.js", "React", "TypeScript", "UI/UX Design", "Guilherme Bustamante", "Portfolio"],
+    keywords: ["Full-stack Developer", "Software Engineer", "Frontend developer", "Desenvolvedor Frontend", "Next.js", "React", "TypeScript", "UI/UX Design", "Guilherme Bustamante", "Portfolio"],
     authors: [{ name: "Guilherme Bustamante", url: baseUrl }],
     creator: "Guilherme Bustamante",
     alternates: {
@@ -46,7 +47,7 @@ export async function generateMetadata() {
       siteName: "Guibus Portfolio",
       images: [
         {
-          url: "/logos/logo/white_logo.png",
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: "Guibus | Creative Engineer",
@@ -57,7 +58,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title: t('title'),
       description: t('description'),
-      images: ["/logos/logo/white_logo.png"],
+      images: [ogImage],
       creator: "@guibus",
     },
     robots: {
