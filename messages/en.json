@@ -279,6 +279,25 @@
         "Fullstack Excellence",
         "Next.js & Prisma"
       ]
+    },
+    "thais": {
+      "title": "Thaís Crisley - Appear and Sell",
+      "category": "Conversion Infrastructure & High-Performance Marketing",
+      "description": "High-performance infrastructure for conversion landing pages, designed to eliminate latency between ad click and sales experience, using the state of the art of the React ecosystem.",
+      "challenge": "Develop a technical foundation that supports massive traffic with instant loading, while maintaining a premium, accessible interface (AA level) with multi-language support.",
+      "solution": "Modular engine based on Next.js 16 and Tailwind v4, prioritizing Server Components for extreme performance, typed i18n without URL prefixes, and an industrial scaffolding workflow via Plop.js.",
+      "results": [
+        "'Instant-Load' navigation experience with total focus on Core Web Vitals and server-side rendering",
+        "Minimalist and responsive interface with fluid micro-interactions via Framer Motion and Phosphor icons",
+        "Accelerated development workflow with automated component generation and i18n synchronization",
+        "Industrial-grade quality pipeline with regression testing (Vitest/Playwright) and continuous security auditing"
+      ],
+      "tags": [
+        "Performance Engineering",
+        "Conversion Optimization",
+        "Next.js 16 & React 19",
+        "Industrial Architecture"
+      ]
     }
   },
   "Footer": {

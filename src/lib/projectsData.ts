@@ -125,5 +125,19 @@ export const projectsData: Project[] = [
     color: "#71717a",
     liveUrl: "https://starkfit.guibus.dev",
     githubUrl: "https://github.com/gui-bus"
+  },
+  {
+    id: 9,
+    slug: "thais",
+    year: "2026",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    images: {
+      hero: "/projects/thais.png",
+      gallery: []
+    },
+    icon: "/projects/thais.png",
+    color: "#623828",
+    liveUrl: "https://www.thaiscrisley.com.br/",
+    githubUrl: "https://github.com/gui-bus"
   }
 ];
