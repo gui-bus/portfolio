@@ -19,8 +19,8 @@ export async function HeroSection() {
   const t = await getTranslations("Hero");
 
   return (
-    <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden transition-colors duration-500 grid-hero py-44!">
-      <div className="max-w-350 mx-auto w-full relative z-10">
+    <section className="relative bg-background text-foreground flex flex-col justify-center px-6 md:px-12 lg:px-20 overflow-hidden transition-colors duration-500 grid-hero py-44!">
+      <div className="max-w-400 mx-auto w-full relative z-10">
         <HeroSectionClient>
           <div className="lg:col-span-10 flex flex-col">
             <HeroTitleAnimation>
@@ -76,9 +76,9 @@ export async function HeroSection() {
                     </div>
                   </div>
 
-                  <Link 
-                    href="https://lume.guibus.dev/pt/share/guilherme-bustamante-frontend" 
-                    target="_blank" 
+                  <Link
+                    href="https://lume.guibus.dev/pt/share/guilherme-bustamante-frontend"
+                    target="_blank"
                     className="flex items-center gap-4 px-6 py-4 cinematic-card group hover:border-yellow-600/40 transition-all duration-500 relative overflow-hidden"
                   >
                     <div className="absolute top-0 left-0 w-full h-0.5 bg-yellow-600/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
@@ -107,7 +107,10 @@ export async function HeroSection() {
                         {t("status")}
                       </span>
                     </div>
-                    <Link href="#projects" className="flex items-center gap-2 group cursor-pointer">
+                    <Link
+                      href="#projects"
+                      className="flex items-center gap-2 group cursor-pointer"
+                    >
                       <span className="text-[10px] font-mono uppercase tracking-widest font-black group-hover:text-yellow-600 transition-colors">
                         {t("cta_projects")}
                       </span>

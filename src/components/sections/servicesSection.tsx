@@ -43,7 +43,7 @@ export async function ServicesSection() {
       id="services"
       className="relative py-32 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-services"
     >
-      <div className="max-w-350 mx-auto px-6 relative z-10">
+      <div className="max-w-400 mx-auto px-6 relative z-10">
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-px bg-yellow-600 dark:bg-yellow-500" />
@@ -54,7 +54,9 @@ export async function ServicesSection() {
 
           <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-foreground leading-[0.8] uppercase max-w-4xl">
             {t("title_top")} <br />
-            <span className="outline-text-global italic">{t("title_bottom")}</span>
+            <span className="outline-text-global italic">
+              {t("title_bottom")}
+            </span>
           </h2>
         </div>
 

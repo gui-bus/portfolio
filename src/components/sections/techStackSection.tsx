@@ -40,7 +40,7 @@ export async function TechStackSection() {
       id="tech-stack"
       className="relative py-32 bg-background transition-colors duration-500 overflow-hidden grid-tech"
     >
-      <div className="relative z-10 max-w-350 mx-auto px-6">
+      <div className="relative z-10 max-w-400 mx-auto px-6">
         <div className="mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">

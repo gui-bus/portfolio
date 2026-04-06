@@ -34,9 +34,7 @@ export async function MethodologySection() {
       id="methodology"
       className="relative py-44 bg-background text-foreground overflow-hidden transition-colors duration-500 grid-approach"
     >
-
-
-      <div className="max-w-350 mx-auto px-6 relative z-10">
+      <div className="max-w-400 mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">

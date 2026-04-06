@@ -37,7 +37,7 @@ export async function WorkflowSection() {
       id="workflow"
       className="relative py-32 bg-background text-foreground transition-colors duration-500 overflow-hidden grid-process"
     >
-      <div className="max-w-350 mx-auto px-6 relative z-10">
+      <div className="max-w-400 mx-auto px-6 relative z-10">
         <div className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-px bg-yellow-600 dark:bg-yellow-500" />
@@ -47,7 +47,9 @@ export async function WorkflowSection() {
           </div>
           <h2 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-8">
             {t("title_top")} <br />
-            <span className="outline-text-process italic">{t("title_bottom")}</span>
+            <span className="outline-text-process italic">
+              {t("title_bottom")}
+            </span>
           </h2>
         </div>
 

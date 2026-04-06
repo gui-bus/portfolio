@@ -23,7 +23,7 @@ export function Footer() {
 
   return (
     <footer className="relative bg-background border-t border-border dark:border-white/5 overflow-hidden transition-colors pt-32 pb-12 grid-footer">
-      <div className="max-w-350 mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-400 mx-auto px-6 md:px-12 relative z-10">
         <div className="absolute -top-12 left-0 w-full flex justify-center opacity-[0.03] pointer-events-none select-none overflow-hidden">
           <span className="text-[20vw] font-black uppercase whitespace-nowrap tracking-tighter italic outline-text-footer">
             GUIBUS.DEV
@@ -47,7 +47,10 @@ export function Footer() {
 
           {/* Links Column */}
           <div className="lg:col-span-8 flex flex-col sm:flex-row justify-between items-center gap-12">
-            <motion.div variants={fadeInUp} className="flex items-center gap-12">
+            <motion.div
+              variants={fadeInUp}
+              className="flex items-center gap-12"
+            >
               <nav className="flex flex-wrap justify-center sm:justify-start gap-x-12 gap-y-6">
                 {navItems.map((item) => (
                   <a
