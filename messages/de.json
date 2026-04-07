@@ -116,6 +116,8 @@
     "description": "Ich bin immer offen für neue Möglichkeiten und strategische Partnerschaften. Starten Sie das Protokoll, um etwas Denkwürdiges zu schaffen.",
     "location": "Ansässig in Brasilien // Weltweit remote",
     "cv": "Lebenslauf",
+    "referral_badge": "Rabatt-Protokoll Aktiviert",
+    "referral_text": "Sie haben 10% Rabatt über die Empfehlung von {name} erhalten",
     "form_tag": "// Anfrageformular",
     "form_title_top": "Protokoll",
     "form_title_bottom": "initiieren.",

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { fadeInUp, staggerContainer, fadeIn } from "@/lib/animations";
+import { staggerContainer } from "@/lib/animations";
 
 interface HeroSectionClientProps {
   children: React.ReactNode;

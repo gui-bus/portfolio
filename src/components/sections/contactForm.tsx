@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   XIcon,
   ArrowRightIcon,
   CheckCircleIcon,
+  TicketIcon,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
@@ -32,6 +34,8 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 export function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const t = useTranslations("Contact");
+  const searchParams = useSearchParams();
+  const referral = searchParams.get("referral");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -76,6 +80,11 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
     formData.append("message", data.message);
     formData.append("from_name", "Portfolio Inquiry");
     formData.append("subject", `New Project Inquiry from ${data.name}`);
+
+    if (referral) {
+      formData.append("referral_source", referral);
+      formData.append("discount_applied", "10% Referral Discount");
+    }
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -156,6 +165,25 @@ export function ContactForm({ isOpen, onClose }: ContactFormProps) {
             ) : (
               <div className="relative z-10">
                 <div className="mb-16">
+                  {referral && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="mb-8 p-4 bg-yellow-600/10 border border-yellow-600/20 rounded-sm flex items-start gap-4"
+                    >
+                      <div className="w-10 h-10 bg-yellow-600 flex-shrink-0 flex items-center justify-center text-white rounded-sm">
+                        <TicketIcon size={24} weight="bold" />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="text-[10px] font-mono uppercase font-black text-yellow-600 tracking-widest">
+                          {t("referral_badge")}
+                        </h4>
+                        <p className="text-xs text-muted-foreground uppercase font-light leading-relaxed tracking-wider">
+                          {t("referral_text", { name: referral })}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-8 h-px bg-yellow-600 dark:bg-yellow-500" />
                     <span className="text-[10px] font-mono tracking-[0.5em] text-yellow-600 dark:text-yellow-500 uppercase font-black">

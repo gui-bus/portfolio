@@ -116,6 +116,8 @@
     "description": "Je suis toujours ouvert à de nouvelles opportunités et à des partenariats stratégiques. Initiez le protocole pour construire quelque chose de mémorable.",
     "location": "Basé au Brésil // Remote dans le monde entier",
     "cv": "Curriculum",
+    "referral_badge": "Protocole de Remise Activé",
+    "referral_text": "Vous avez reçu 10% de remise via le parrainage de {name}",
     "form_tag": "// Formulaire de demande",
     "form_title_top": "Initier le",
     "form_title_bottom": "Protocole.",

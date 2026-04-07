@@ -118,6 +118,8 @@
     "description": "I'm always open to new opportunities and strategic partnerships. Initiate the protocol to build something memorable.",
     "location": "Based in Brazil // Remote Worldwide",
     "cv": "Curriculum",
+    "referral_badge": "Discount Protocol Activated",
+    "referral_text": "You received a 10% discount via {name}'s referral",
     "form_tag": "// Inquiry Form",
     "form_title_top": "Initiate the",
     "form_title_bottom": "Protocol.",

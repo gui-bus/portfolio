@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { PaperPlaneTiltIcon } from "@phosphor-icons/react";
 import { useContactForm } from "@/lib/providers/contactFormProvider";
 import {

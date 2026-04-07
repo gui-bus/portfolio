@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 interface ContactFormContextType {
   isOpen: boolean;
@@ -12,9 +13,17 @@ const ContactFormContext = createContext<ContactFormContextType | undefined>(und
 
 export function ContactFormProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const searchParams = useSearchParams();
 
   const openForm = () => setIsOpen(true);
   const closeForm = () => setIsOpen(false);
+
+  useEffect(() => {
+    const referral = searchParams.get("referral");
+    if (referral) {
+      requestAnimationFrame(() => openForm());
+    }
+  }, [searchParams]);
 
   return (
     <ContactFormContext.Provider value={{ isOpen, openForm, closeForm }}>

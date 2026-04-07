@@ -37,8 +37,9 @@ export function WorkflowCardClient({
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!cardRef.current) return;
-    const line = cardRef.current.querySelector(".progress-line");
+    const currentCard = cardRef.current;
+    if (!currentCard) return;
+    const line = currentCard.querySelector(".progress-line");
 
     const tl = gsap.timeline({ paused: true });
     tl.to(line, { width: "100%", duration: 0.8, ease: "power3.inOut" });
@@ -46,14 +47,12 @@ export function WorkflowCardClient({
     const handleMouseEnter = () => tl.play();
     const handleMouseLeave = () => tl.reverse();
 
-    cardRef.current.addEventListener("mouseenter", handleMouseEnter);
-    cardRef.current.addEventListener("mouseleave", handleMouseLeave);
+    currentCard.addEventListener("mouseenter", handleMouseEnter);
+    currentCard.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      if (cardRef.current) {
-        cardRef.current.removeEventListener("mouseenter", handleMouseEnter);
-        cardRef.current.removeEventListener("mouseleave", handleMouseLeave);
-      }
+      currentCard.removeEventListener("mouseenter", handleMouseEnter);
+      currentCard.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 

@@ -116,6 +116,8 @@
     "description": "Siempre estoy abierto a nuevas oportunidades y asociaciones estratégicas. Inicia el protocolo para construir algo memorable.",
     "location": "Sede en Brasil // Remoto a nivel mundial",
     "cv": "Currículo",
+    "referral_badge": "Protocolo de Descuento Activado",
+    "referral_text": "Has recibido un 10% de descuento vía recomendación de {name}",
     "form_tag": "// Formulario de Consulta",
     "form_title_top": "Inicia el",
     "form_title_bottom": "Protocolo.",
