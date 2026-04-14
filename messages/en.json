@@ -300,6 +300,25 @@
         "Next.js 16 & React 19",
         "Industrial Architecture"
       ]
+    },
+    "magui": {
+      "title": "MAGUI.studio",
+      "category": "High-End Visual Strategy & Professional Interface Engineering",
+      "description": "Visual engineering and interfaces focused on performance and results for digital systems.",
+      "challenge": "Building an ultra-high-level universal template that unifies engineering rigor (Next.js 16/React 19) with the visual sophistication of authority design, ensuring 100/100 in all Core Web Vitals.",
+      "solution": "Architecture based on Next.js App Router, Tailwind CSS v4 and prefix-less i18n, incorporating an industrial workflow with Plop.js generators, unit/E2E testing and automated security and performance auditing.",
+      "results": [
+        "Ultra-fast loading via Server Components and native asset optimization",
+        "Authority interface with Luxury typography and fluid micro-interactions via Framer Motion",
+        "Automated translation synchronization and strict typing for global scale",
+        "Robust CI/CD pipeline with mandatory build, lint and security validation"
+      ],
+      "tags": [
+        "Interface Engineering",
+        "Visual Strategy",
+        "Next.js 16 & React 19",
+        "Authority Design"
+      ]
     }
   },
   "Footer": {
